@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.lutron.vive</groupId>
+  <groupId>com.autothon</groupId>
   <packaging>jar</packaging>
   <name>Test</name>
   <artifactId>Test</artifactId>
@@ -256,10 +256,6 @@
             <!-- TestNG suite XML files -->
             <suiteXmlFile xmlns="">TestNG.xml</suiteXmlFile>
           </suiteXmlFiles>
-          <suiteXmlFiles>
- 			<!-- Need to pass testng.xml files as argument from command line -->
-			<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
-		  </suiteXmlFiles>
         </configuration>
       </plugin>
       <plugin>
