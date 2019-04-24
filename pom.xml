@@ -94,6 +94,46 @@
 			<version>${cucumber.version}</version>
 			<type>pom</type>
 		</dependency>
+		
+		
+		
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+		
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>3.0.2</version>
+		</dependency>
+	
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/json-path -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-path</artifactId>
+			<version>3.0.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-schema-validator</artifactId>
+			<version>3.0.2</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/xml-path -->
+		<dependency>
+    		<groupId>io.rest-assured</groupId>
+    		<artifactId>xml-path</artifactId>
+    		<version>3.0.0</version>
+		</dependency>
+		
+		
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20180813</version>
+		</dependency>
+		
+		
 	</dependencies>
 	<modules>
 		<module>Clients</module>
