@@ -1,0 +1,1486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Modules>
+<!-- Start of Web App Elements -->
+	<General>
+		<ElementProperty NameOfElement="Spinner" Type="xpath">//div[@class='processing-image-container text-center']</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="xpath">//div[@id='left-link-content']/span</ElementProperty>
+		<ElementProperty NameOfElement="Save" Type="id">right-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="Cancel" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="ConfirmationDialogPopUp" Type="id">confirmation-dialog-container</ElementProperty>
+		<ElementProperty NameOfElement="ConfirmationDeleteButton" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="ConfirmationCancelButton" Type="id">default-btn</ElementProperty>
+	</General>
+	
+	<NativeAppPopup>
+		<ElementProperty NameOfElement="ViveAppLogo" Type="xpath">//a[@class='link-active link-text fn-use-web-browser']</ElementProperty>
+	</NativeAppPopup>
+	
+	<Login>
+		<ElementProperty NameOfElement="PasswordTextBox" Type="id">field-password</ElementProperty>
+		<ElementProperty NameOfElement="LoginButton" Type="id">btn-login</ElementProperty>
+		<ElementProperty NameOfElement="InvalidPassword" Type="id">error-message</ElementProperty>
+		<ElementProperty NameOfElement="UsernameTextBox" Type="id">field-userName</ElementProperty>
+	</Login>
+	
+	<Dashboard>
+		<ElementProperty NameOfElement="ProjectName" Type="xpath">//div[@class='page-title']/div</ElementProperty>
+		<ElementProperty NameOfElement="SettingsIcon" Type="id">right-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="Hubs" Type="xpath">//span[contains(text(),'Hubs')]</ElementProperty>
+		<ElementProperty NameOfElement="RoomsAreas" Type="id">area</ElementProperty>
+		<ElementProperty NameOfElement="Energy" Type="id">energy</ElementProperty>
+		<ElementProperty NameOfElement="Schedule" Type="xpath">//div[@id='schedule']/div/div/div/div[1]/div[1]/div/div[2]/span</ElementProperty>
+		<ElementProperty NameOfElement="NextScheduleName" Type="id">schedule-name</ElementProperty>
+		<ElementProperty NameOfElement="LoadShed" Type="id">loadshed</ElementProperty>
+		<ElementProperty NameOfElement="TilesGrid" Type="xpath">//div[@class="tiles-content"]</ElementProperty>
+		<ElementProperty NameOfElement="TileNameInGrid" Type="xpath">//span[@class="sub-title"]</ElementProperty>
+	</Dashboard>
+	
+	<EnergyRoot>
+		<ElementProperty NameOfElement="LightWattage" Type="id">define-wattage</ElementProperty>	
+	</EnergyRoot>
+	
+	<LightWattageAreaListEnergyRoot>
+		<ElementProperty NameOfElement="AreaList" Type="xpath">//div[contains(@class,'custom-area-list')]</ElementProperty>
+		<ElementProperty NameOfElement="AreaNameInList" Type="xpath">//span[contains(@class,'name-container')]</ElementProperty>	
+	</LightWattageAreaListEnergyRoot>
+	
+	<LightWattageRootEnergy>
+		<ElementProperty NameOfElement="Header" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="FixtureWattageTextBox" Type="id">generic-textbox-1</ElementProperty>
+		<ElementProperty NameOfElement="HelpMeCalculateWattageLink" Type="id">wattage-calculator</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="Flash" Type="id">identify-btn</ElementProperty>
+		<ElementProperty NameOfElement="StopFlash" Type="id">stop-identify-btn</ElementProperty>
+	</LightWattageRootEnergy>
+	
+	<LoadShed>
+		<ElementProperty NameOfElement="LoadShedStatusbutton" Type="id">loadShed-status-btn</ElementProperty>
+		<ElementProperty NameOfElement="LoadShedLinkStatus" Type="xpath">//*[@id="loadShed-status"]</ElementProperty>
+		<ElementProperty NameOfElement="ClientNotificationText" Type="id">helperText</ElementProperty>
+		<ElementProperty NameOfElement="ClientNotificationOk" Type="id">confirm-btn</ElementProperty>
+		<ElementProperty NameOfElement="LoadShedStatus" Type="id">loadShed-status-text</ElementProperty>
+		<ElementProperty NameOfElement="LoadShedLinkStatus" Type="xpath">//a[@id='loadShed-status']</ElementProperty>
+		<ElementProperty NameOfElement="LoadShedProgressBarText" Type="id">text</ElementProperty>
+		<ElementProperty NameOfElement="SettingsLink" Type="id">loadShed-settings-btn</ElementProperty>
+		<ElementProperty NameOfElement="SettingsLinkText" Type="xpath">//a[@class="menu-item link-active"]</ElementProperty>
+		<ElementProperty NameOfElement="ConfirmationButton" Type="id">primary-btn</ElementProperty>
+	</LoadShed>
+	
+	<SchedulePage>
+		<ElementProperty NameOfElement="TimeclockAccessedCoachMark" Type="id">disabled-layover</ElementProperty>
+		<ElementProperty NameOfElement="Month_Year" Type="xpath">//*[@id='datepicker-slider']/ul/li[3]/div/div/div[1]/table/thead/tr[2]/th[2]</ElementProperty>
+		<ElementProperty NameOfElement="date" Type="xpath">//td[@class='today active day']/div</ElementProperty>
+		<ElementProperty NameOfElement="ScheduleTitle" Type="xpath">//*[@id='main']/div/div[1]/div/div/div/div/div[1]/div/div/div[1]/div/header/nav/div[1]/div/div/div</ElementProperty>
+		<ElementProperty NameOfElement="TodayButton" Type="id">today-btn</ElementProperty>
+		<ElementProperty NameOfElement="CreateEventIcon" Type="id">right-link-icon</ElementProperty> 
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="Next" Type="xpath">(//div[@id='right-link-content']/span)[2]</ElementProperty>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">.//*[@id='layover-container']/div/div/div[1]/div/div/div[1]/div/header/nav/div[1]/div/div[2]/div</ElementProperty>
+		<ElementProperty NameOfElement="NoScheduleEvents" Type="xpath">//div[contains(text(),'No scheduled events')]</ElementProperty>
+	</SchedulePage>
+	
+	<ScheduleGeneral>
+		<ElementProperty NameOfElement="ProgressBar" Type="xpath">//div[@class='progress']</ElementProperty>
+		<ElementProperty NameOfElement="ProgressBarText" Type="xpath">//div[@id='main']/div/div[6]/div/div[1]</ElementProperty>
+	</ScheduleGeneral>
+	
+	<ScheduledEvents>
+		<ElementProperty NameOfElement="CalendarBackwardArrow" Type="xpath">//li[@class="itemslide-active"]//div[@class='datepicker-days']//div[contains(@class,'svg-common-universal-btn-backarrow')]</ElementProperty>
+		<ElementProperty NameOfElement="CalendarForwardArrow" Type="xpath">//li[@class="itemslide-active"]//div[@class='datepicker-days']//div[contains(@class,'svg-common-universal-btn-rightarrow-active')]</ElementProperty>
+		<ElementProperty NameOfElement="MonthYear" Type="xpath">//li[@class='itemslide-active']//div[@class='datepicker-days']//th[@class='datepicker-switch']</ElementProperty>
+		<ElementProperty NameOfElement="CreateEventIcon" Type="id">right-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">//div[@class='page-title']/div</ElementProperty>
+		<ElementProperty NameOfElement="CreatedEventsGrid" Type="xpath">//div[@class='fn-event-list-container']//div[contains(@class,'fn-event-list')]</ElementProperty>
+		<ElementProperty NameOfElement="ThisOccurenceOnPopup" Type="id">option-one</ElementProperty>
+		<ElementProperty NameOfElement="EntireSeriesOnPopup" Type="id">option-two</ElementProperty>
+		<ElementProperty NameOfElement="EventListGrid" Type="xpath">//div[@class='fn-event-list-container']//div[contains(@class,'fn-event-list')]</ElementProperty>
+		<ElementProperty NameOfElement="EventName" Type="className">menu-item</ElementProperty>
+		<ElementProperty NameOfElement="EventTime" Type="className">event-time</ElementProperty>
+		<ElementProperty NameOfElement="EventTitle" Type="className">event-title</ElementProperty>
+		<ElementProperty NameOfElement="EditAsOccurenceOption" Type="id">option-one</ElementProperty>
+		<ElementProperty NameOfElement="EditAsSeriesOption" Type="id">option-two</ElementProperty>
+		<ElementProperty NameOfElement="DatesAccordian" Type="xpath">//div[@id='datepicker-slider']/ul</ElementProperty>
+		<ElementProperty NameOfElement="TodayButton" Type="id">today-btn</ElementProperty>
+		<ElementProperty NameOfElement="EventItemRow" Type="id">event-detail</ElementProperty>
+		<ElementProperty NameOfElement="RecurringIcon" Type="className">svg-common-schedules-recurring-darkgray</ElementProperty>
+		<ElementProperty NameOfElement="EditEventPopup" Type="className">modal-dialog</ElementProperty>
+		<ElementProperty NameOfElement="EditEventPopupMessage" Type="xpath">//div[@id='modal-dialog']//div[contains(@class, 'menu-item')]</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrow" Type="xpath">//div[@class='header-container']//span[@id='left-link-icon']</ElementProperty>
+	</ScheduledEvents>
+	
+	<NameEvent>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">//div[contains(@id,'layover-container')]//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="EventNameTextField" Type="id">generic-textbox-1</ElementProperty>
+		<ElementProperty NameOfElement="NextButton" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="NameErrorMessage" Type="id">error-name-required</ElementProperty>
+		<ElementProperty NameOfElement="NextLinkAttribute" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link']</ElementProperty>
+		<ElementProperty NameOfElement="CancelButton" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='left-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="DiscardChangesPopupMessage" Type="id">popup-confirmation-text</ElementProperty>
+		<ElementProperty NameOfElement="PopupContinueButton" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="PopupNoButton" Type="id">default-btn</ElementProperty>
+	</NameEvent>
+	
+	<Days>
+		<ElementProperty NameOfElement="StartDate" Type="id">start-date</ElementProperty>
+		<ElementProperty NameOfElement="EndDate" Type="id">end-date</ElementProperty>
+		<ElementProperty NameOfElement="NextButton" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="NextLinkText" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link']</ElementProperty>
+		<ElementProperty NameOfElement="CancelButton" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='left-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="DatesAccordian" Type="xpath">//div[@id="info-dailog-container"]//div[@id="datepicker-slider"]/ul</ElementProperty>
+		<ElementProperty NameOfElement="ExceptionDatesAccordian" Type="xpath">//div[@id='bydate-calendar']//div[@id='datepicker-slider']/ul</ElementProperty>
+		<ElementProperty NameOfElement="TodayButtonStartDate" Type="xpath">//div[@id='info-dailog-container']//div[@id='today-btn']</ElementProperty>
+		<ElementProperty NameOfElement="ForeverButtonEndDate" Type="xpath">//div[@id='info-dailog-container']//div[@id='forever-btn']</ElementProperty>
+		<ElementProperty NameOfElement="PopupForwardArrow" Type="xpath">//div[@id='info-dailog-container']//li[@class='itemslide-active']//div[@class='datepicker-days']//div[contains(@class,'svg-common-universal-btn-rightarrow-active')]</ElementProperty>
+		<ElementProperty NameOfElement="PopupBackwardArrow" Type="xpath">//div[@id='info-dailog-container']//li[@class='itemslide-active']//div[@class='datepicker-days']//div[contains(@class,'svg-common-universal-btn-backarrow')]</ElementProperty>
+		<ElementProperty NameOfElement="PopupCancelButton" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="PopupDoneButton" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="EventDateError" Type="id">event-date-error</ElementProperty>
+		<ElementProperty NameOfElement="ExceptionSelectDateLink" Type="id">select-dates</ElementProperty>
+		<ElementProperty NameOfElement="ExceptionPopUpTitle" Type="xpath">//div[contains(@class, 'dialog-title')]</ElementProperty>
+		<ElementProperty NameOfElement="ImportExceptionText" Type="id">import-exceptions</ElementProperty>
+		<ElementProperty NameOfElement="PageTitleSetLightActions" Type="xpath">//div[contains(text(),'Days') and contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="Weekly" Type="id">weekly</ElementProperty>
+		<ElementProperty NameOfElement="Sunday" Type="id">sunday</ElementProperty>
+		<ElementProperty NameOfElement="Monday" Type="id">monday</ElementProperty>
+		<ElementProperty NameOfElement="Tuesday" Type="id">tuesday</ElementProperty>
+		<ElementProperty NameOfElement="Wednesday" Type="id">wednesday</ElementProperty>
+		<ElementProperty NameOfElement="Thursday" Type="id">thursday</ElementProperty>
+		<ElementProperty NameOfElement="Friday" Type="id">friday</ElementProperty>
+		<ElementProperty NameOfElement="Saturday" Type="id">saturday</ElementProperty>
+		<ElementProperty NameOfElement="NoDaysSelectedValidation" Type="id">event-day-error</ElementProperty>
+		<ElementProperty NameOfElement="ImportExceptionText" Type="id">import-exceptions</ElementProperty>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">//div[contains(@id,'layover-container')]//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="WeeklyTypeOption" Type="id">weekly</ElementProperty>
+		<ElementProperty NameOfElement="SelectedDatesCountText" Type="id">total-exceptions</ElementProperty>
+		<ElementProperty NameOfElement="RemoveAllDatesLink" Type="id">remove-year-dates</ElementProperty>
+		<ElementProperty NameOfElement="NoDatesSelectedText" Type="className">fn-no-exception-message</ElementProperty>
+		<ElementProperty NameOfElement="ExceptionDatesGrid" Type="id">exceptions-dates</ElementProperty>
+		<ElementProperty NameOfElement="SelectedDateItem" Type="cssSelector">div.bv-selected-date-item</ElementProperty>
+		<ElementProperty NameOfElement="RemoveDateIcon" Type="className">svg-common-schedules-circlex-blue</ElementProperty>
+		<ElementProperty NameOfElement="ByDatesTypeOption" Type="id">bydate</ElementProperty>
+		<ElementProperty NameOfElement="TotalExceptions" Type="id">total-exceptions</ElementProperty>
+		<ElementProperty NameOfElement="RemoveAllLink" Type="id">remove-year-dates</ElementProperty>
+		<ElementProperty NameOfElement="NoDatesSelectedText" Type="xpath">//div[contains(text(),'No dates selected')]</ElementProperty>
+		<ElementProperty NameOfElement="CrossIcon" Type="className">svg-common-schedules-circlex-blue</ElementProperty>
+		<ElementProperty NameOfElement="CurrentMonthNameLink" Type="xpath">//div[@id='bydate-calendar']//li[@class='itemslide-active']//div[@class='datepicker-days']//*[@class='datepicker-switch']</ElementProperty>
+		<ElementProperty NameOfElement="PopUpForwardArrowForMonths" Type="xpath">//div[@id='info-dailog-container']//li[@class='itemslide-active']//div[@class='datepicker-months']//div[contains(@class,'svg-common-universal-btn-rightarrow-active')]</ElementProperty>
+		<ElementProperty NameOfElement="CurrentMonthForFutureYear" Type="xpath">//div[@id='info-dailog-container']//li[@class='itemslide-active']//span[@class='month focused']</ElementProperty>
+		<ElementProperty NameOfElement="ExceptionListGrid" Type="id">exception-list</ElementProperty>
+		<ElementProperty NameOfElement="SelectedDateList" Type="className">bv-selected-date-list</ElementProperty>
+		<ElementProperty NameOfElement="MonthYear" Type="xpath">//div[@id='info-dailog-container']//li[@class='itemslide-active']//div[@class='datepicker-days']//th[@class='datepicker-switch']</ElementProperty>
+		<ElementProperty NameOfElement="DiscardChangesPopup" Type="className">modal-dialog</ElementProperty>
+		<ElementProperty NameOfElement="SwitchWeeklyByDatePopup" Type="id">info-dailog-container</ElementProperty>
+		<ElementProperty NameOfElement="EditDateOccurrenceMessage" Type="id">occurrence-msg</ElementProperty>
+		<ElementProperty NameOfElement="DaysSelectionGrid" Type="xpath">//div[@id='days-selection-container']//div[@class='sub-section']</ElementProperty>
+		<ElementProperty NameOfElement="DaysOptions" Type="className">fn-select-day</ElementProperty>
+		<ElementProperty NameOfElement="RadioButton" Type="className">svg-common-universal-icon-checkmark-blue</ElementProperty>
+		<ElementProperty NameOfElement="DaysName" Type="className">radio-value</ElementProperty>
+		<ElementProperty NameOfElement="PopUpForwardArrowForMonths" Type="xpath">//div[@id='info-dailog-container']//li[@class='itemslide-active']//div[@class='datepicker-months']//div[contains(@class,'svg-common-universal-btn-rightarrow-active')]</ElementProperty>
+		<ElementProperty NameOfElement="SelectedMonthOnPopup" Type="xpath">//div[@id='info-dailog-container']//li[@class='itemslide-active']//div[@class='datepicker-months']//span[contains(@class,'month focused')]</ElementProperty>
+		<ElementProperty NameOfElement="MonthYearLink" Type="xpath">//div[@id='bydate-calendar']//li[@class='itemslide-active']//div[@class='datepicker-days']//th[@class='datepicker-switch']</ElementProperty>
+	</Days>
+	
+	<Time>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">//div[contains(@id,'layover-container')]//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="NextButton" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="NextLinkAttribute" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link']</ElementProperty>
+		<ElementProperty NameOfElement="FixedTime" Type="xpath">//div[contains(@class,'time-selection-type')]//div[contains(@class,'svg-common-timeclock-fixed-active')]</ElementProperty>
+		<ElementProperty NameOfElement="Astronomical" Type="xpath">//div[contains(@class,'time-selection-type')]//div[contains(@class,'svg-common-timeclock-sun-inactive')]</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrow" Type="xpath">//div[contains(@id,'layover-container')]//span[@id='left-link-icon']</ElementProperty>
+		<ElementProperty NameOfElement="HourSpinner" Type="xpath">//div[contains(@class,'fn-fixed-wheel-scheduler')]//div[@class='dwv']</ElementProperty>
+		<ElementProperty NameOfElement="CancelButton" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='left-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="Hour" Type="xpath">//div[contains(@class,'fn-fixed-wheel-scheduler')]//div[contains(@class,'dwwc')]/div[1]/div[contains(@class,'dwwol')]</ElementProperty>
+		<ElementProperty NameOfElement="Minutes" Type="xpath">//div[contains(@class,'fn-fixed-wheel-scheduler')]//div[contains(@class,'dwwc')]/div[3]/div[contains(@class,'dwwol')]</ElementProperty>
+		<ElementProperty NameOfElement="AmPm" Type="xpath">//div[contains(@class,'fn-fixed-wheel-scheduler')]//div[contains(@class,'dwwc')]/div[4]/div[contains(@class,'dwwol')]</ElementProperty>
+		<ElementProperty NameOfElement="InputFixedTimeTarget" Type="id">fn-inputFixedTimeTarget</ElementProperty>
+		<ElementProperty NameOfElement="AstronomicTimeGrid" Type="cssSelector">div.fn-astronomic-wheel-scheduler</ElementProperty>
+		<ElementProperty NameOfElement="AstronomicTime" Type="cssSelector">.wheel-values</ElementProperty>
+	</Time>
+	
+	<TimeclockEditEvent>
+		<ElementProperty NameOfElement="DeleteEventLink" Type="xpath">//div[contains(@class, 'link-delete-event')]</ElementProperty>
+		<ElementProperty NameOfElement="DeleteEventPopup" Type="className">modal-dialog</ElementProperty>
+		<ElementProperty NameOfElement="DeleteEventPopupMessage" Type="id">popup-confirmation-text</ElementProperty>
+		<ElementProperty NameOfElement="PopupButton" Type="className">modal-footer</ElementProperty>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">//div[@class='page-title']/div</ElementProperty>
+		<ElementProperty NameOfElement="ProgressBar" Type="className">progress</ElementProperty>
+		<ElementProperty NameOfElement="ProgressBarText" Type="className">text-semi-bold</ElementProperty>
+		<ElementProperty NameOfElement="EditLink" Type="xpath">//div[contains(text(),'Edit')]</ElementProperty>
+		<ElementProperty NameOfElement="EventTimeLink" Type="xpath">//div[contains(@class,'fn-display-time')]</ElementProperty>
+		<ElementProperty NameOfElement="RoomActionsLink" Type="xpath">//div[contains(@class,'fn-areas-count')]</ElementProperty>
+		<ElementProperty NameOfElement="EventStatusButton" Type="id">schedule-status</ElementProperty>
+		<ElementProperty NameOfElement="EventStatusText" Type="id">schedule-status-text</ElementProperty>
+		<ElementProperty NameOfElement="DateLink" Type="id">edit-dates</ElementProperty>
+		<ElementProperty NameOfElement="TestEventOccupancyNote" Type="xpath">//div[contains(@class,'test-event-container')]//div[@class='sub-text']</ElementProperty>
+		<ElementProperty NameOfElement="PopupDeleteButton" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="EventName" Type="xpath">//div[contains(@class, 'fn-event-name')]</ElementProperty>
+		<ElementProperty NameOfElement="RenameEventLink" Type="id">rename</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrow" Type="xpath">//*[@id="left-link-icon"]</ElementProperty>
+		<ElementProperty NameOfElement="PopupCancelDeleteButton" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrowOnEdit" Type="xpath">//div[@class='header-container']//span[@id='left-link-icon']</ElementProperty>
+		<ElementProperty NameOfElement="MonthYearLink" Type="xpath">//div[@id='bydate-calendar']//li[@class='itemslide-active']//div[@class='datepicker-days']//th[@class='datepicker-switch']</ElementProperty>
+		<ElementProperty NameOfElement="AreaCount" Type="cssSelector">.fn-areas-count</ElementProperty>
+	</TimeclockEditEvent>
+	
+	<TimeclockEditDate>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">//div[contains(@id,'layover-container')]//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="DatesAccordian" Type="xpath">//div[@id="datepicker-slider"]/ul</ElementProperty>
+		<ElementProperty NameOfElement="CancelButton" Type="xpath">(//div[@id='left-link-content']/span)[2]</ElementProperty>
+		<ElementProperty NameOfElement="SaveLink" Type="xpath">(//div[@id='right-link-content']/span)[2]</ElementProperty>
+	</TimeclockEditDate>
+	
+	<TimeclockEditName>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">//div[contains(@id,'layover-container')]//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="EventNameTextField" Type="xpath">//*[contains(@class, 'input-text-box')]</ElementProperty>
+		<ElementProperty NameOfElement="SaveButton" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link-content']</ElementProperty>
+	</TimeclockEditName>
+	
+	<SelectRooms>
+		<ElementProperty NameOfElement="NextButton" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="NextButtonOnEdit" Type="xpath">//div[@id='right-link-content']/span</ElementProperty>
+		<ElementProperty NameOfElement="AreaGrid" Type="xpath">//div[@class="bv-timeclock-area-list"]//div[contains(@class,'fn-area-list')]</ElementProperty>
+		<ElementProperty NameOfElement="AreaRow" Type="id">select-area</ElementProperty>
+		<ElementProperty NameOfElement="AreaCheckbox" Type="id">chkbox-select-area</ElementProperty>
+		<ElementProperty NameOfElement="AreaName" Type="className">name-container</ElementProperty>	
+		<ElementProperty NameOfElement="WarningMessage" Type="id">area-alert-message</ElementProperty>	
+		<ElementProperty NameOfElement="WarningIcon" Type="id">area-alert-icon</ElementProperty>	
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">//div[contains(@id,'layover-container')]//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="PageTitleOnEdit" Type="xpath">//div[@class='header-container']//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrow" Type="xpath">//div[contains(@id,'layover-container')]//span[@id='left-link-icon']</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrowOnEdit" Type="xpath">//div[@class='header-container']//span[@id='left-link-icon']</ElementProperty>
+		<ElementProperty NameOfElement="RightLink" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link']</ElementProperty>
+		<ElementProperty NameOfElement="RightLinkOnEdit" Type="xpath">//div[@class='header-container']//div[@id='right-link']</ElementProperty>
+		<ElementProperty NameOfElement="IncludeAllLink" Type="id">select-all-area</ElementProperty>
+		<ElementProperty NameOfElement="ExcludeAllLink" Type="id">deselect-all-area</ElementProperty>
+	</SelectRooms>
+	
+	<SelectActions>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">//div[contains(text(),'Select Actions') and contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="NextButton" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="NextButtonOnEdit" Type="xpath">//div[@id='right-link-content']/span</ElementProperty>
+		<ElementProperty NameOfElement="NextLinkAttribute" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link']</ElementProperty>
+		<ElementProperty NameOfElement="ActionsGrid" Type="xpath">//div[@class="bv-timeclock-action-selection"]//div[contains(@class,'sub-section')]</ElementProperty>
+		<ElementProperty NameOfElement="ActionRow" Type="id">event-action-item</ElementProperty>
+		<ElementProperty NameOfElement="ActionCheckbox" Type="id">chkbox-event-action</ElementProperty>
+		<ElementProperty NameOfElement="ActionName" Type="className">menu-item</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrow" Type="xpath">//div[contains(@id,'layover-container')]//span[@id='left-link-icon']</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrowOnEdit" Type="xpath">//div[@class='header-container']//span[@id='left-link-icon']</ElementProperty>
+		<ElementProperty NameOfElement="SetActionsText" Type="xpath">//div[contains(text(),'Select the actions this event should include')]</ElementProperty>
+		<ElementProperty NameOfElement="ControlLightsTitle" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[3]/div[1])[1]</ElementProperty>
+		<ElementProperty NameOfElement="ControlLightsCheckBox" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[1]/div)[1]</ElementProperty>
+		<ElementProperty NameOfElement="ControlReceptaclesTitle" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[3]/div[1])[2]</ElementProperty>
+		<ElementProperty NameOfElement="ControlReceptaclesCheckBox" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[1]/div)[2]</ElementProperty>
+		<ElementProperty NameOfElement="ControlCcoTitle" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[3]/div[1])[3]</ElementProperty>
+		<ElementProperty NameOfElement="ControlCcoCheckBox" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[1]/div)[3]</ElementProperty>
+		<ElementProperty NameOfElement="ModifyOccSettingsTitle" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[3]/div[1])[4]</ElementProperty>
+		<ElementProperty NameOfElement="ModifyOccSettingsCheckBox" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[1]/div)[4]</ElementProperty>
+	</SelectActions>
+	
+	<SetLightActions>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">//div[contains(text(),'Set Actions') and contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="NextButton" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="NextButtonOnEdit" Type="xpath">//div[@id='right-link-content']/span</ElementProperty>
+		<ElementProperty NameOfElement="SetLightLevelText" Type="xpath">//div[@class='bv-timeclock-event-action']//div[contains(@class,'fn-control-specific-info')]</ElementProperty>
+		<ElementProperty NameOfElement="DimmableLightOptionsGrid" Type="xpath">//div[@class='pico-programming-list-container ']//div[@class='row-content']</ElementProperty>
+		<ElementProperty NameOfElement="DimmableSwitchedLightOptions" Type="tagName">span</ElementProperty>
+		<ElementProperty NameOfElement="DimmableLightTextbox" Type="className">fn-dimmed-light-level</ElementProperty>
+		<ElementProperty NameOfElement="DimmableLightUnaffectedRadioButton" Type="xpath">//div[@class='preset-assignment-action-item']//div[contains(@class,'fn-unaffected-button')]</ElementProperty>
+		<ElementProperty NameOfElement="SwitchedLightOptionsGrid" Type="xpath">//div[@class='preset-assignment-action-item']//div[contains(@class,'fn-second-lights-container')]</ElementProperty>
+		<ElementProperty NameOfElement="BackArrow" Type="xpath">(//span[@id='left-link-icon'])[2]</ElementProperty>
+		<ElementProperty NameOfElement="SetPerRoomAreaLink" Type="id">set-per-area</ElementProperty>
+		<ElementProperty NameOfElement="SetSameSettingsLink" Type="id">set-same-settings</ElementProperty>
+		<ElementProperty NameOfElement="LightActionAreaGrid" Type="xpath">//div[@class='bv-timeclock-event-action']//div[contains(@class,'fn-control-container')]</ElementProperty>
+		<ElementProperty NameOfElement="AreaRows" Type="className">bv-timeclock-event-action-item</ElementProperty>
+		<ElementProperty NameOfElement="AreaName" Type="className">name-container</ElementProperty>
+		<ElementProperty NameOfElement="ExpandIcon" Type="className">fn-btn-downarrow</ElementProperty>
+		<ElementProperty NameOfElement="CollapseIcon" Type="className">fn-btn-uparrow</ElementProperty>
+		<ElementProperty NameOfElement="ActionName" Type="className">level-title</ElementProperty>
+		<ElementProperty NameOfElement="WarningMessage" Type="id">area-alert-message</ElementProperty>
+		<ElementProperty NameOfElement="WarningIcon" Type="id">area-alert-icon</ElementProperty>
+		<ElementProperty NameOfElement="SwitchedLightsOnRadioButton" Type="id">switch-on-btn</ElementProperty>
+		<ElementProperty NameOfElement="SwitchedLightsOffRadioButton" Type="id">switch-off-btn</ElementProperty>
+		<ElementProperty NameOfElement="SwitchedLightsUnaffectedRadioButton" Type="id">switch-unaffected-btn</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrow" Type="xpath">//div[contains(@id,'layover-container')]//span[@id='left-link-icon']</ElementProperty>
+		<ElementProperty NameOfElement="SaveButton" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="SaveButtonOnEdit" Type="xpath">//div[@id='right-link-content']/span</ElementProperty>
+		<ElementProperty NameOfElement="LightsGrid" Type="className">bv-timeclock-light-level-action-item</ElementProperty>
+		<ElementProperty NameOfElement="LightsName" Type="className">dimmed-level-title</ElementProperty>
+		<ElementProperty NameOfElement="FadeTextbox" Type="className">fn-fade-level</ElementProperty>
+		<ElementProperty NameOfElement="PopupDoneButton" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="PopupCancelButton" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="PopupHeading" Type="cssSelector">#modal-dialog .dialog-title</ElementProperty>
+		<ElementProperty NameOfElement="NormalSwitchImage" Type="id">img-normal-switch</ElementProperty>
+		<ElementProperty NameOfElement="AdvancedSwitchImage" Type="id">img-advanced-switch</ElementProperty>
+		<ElementProperty NameOfElement="FadeOptionsGrid" Type="cssSelector">#info-dailog-container .option-list</ElementProperty>
+		<ElementProperty NameOfElement="FadeOptions" Type="className">option-item</ElementProperty>
+		<ElementProperty NameOfElement="FadeSelectedWheelValue" Type="cssSelector">div.dw</ElementProperty>
+		<ElementProperty NameOfElement="FadeValues" Type="className">wheel-values</ElementProperty>
+	</SetLightActions>
+	
+	<SetReceptacleActions>
+		<ElementProperty NameOfElement="NextButton" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="NextButtonOnEdit" Type="xpath">//div[@id='right-link-content']/span</ElementProperty>
+		<ElementProperty NameOfElement="SetReceptacleLevelText" Type="xpath">//div[@class='bv-timeclock-event-action']//div[contains(@class,'fn-control-specific-info')]</ElementProperty>
+		<ElementProperty NameOfElement="ReceptaclesOptionsGrid" Type="xpath">//div[@class='preset-assignment-action-item']//div[contains(@class,'on-off-options')]</ElementProperty>
+		<ElementProperty NameOfElement="ReceptaclesOptions" Type="tagName">span</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrow" Type="xpath">(//span[@id='left-link-icon'])[2]</ElementProperty>
+		<ElementProperty NameOfElement="SetPerRoomAreaLink" Type="id">set-per-area</ElementProperty>
+		<ElementProperty NameOfElement="SetSameSettingsLink" Type="id">set-same-settings</ElementProperty>
+		<ElementProperty NameOfElement="LightActionAreaGrid" Type="xpath">//div[@class='bv-timeclock-event-action']//div[contains(@class,'fn-control-container')]</ElementProperty>
+		<ElementProperty NameOfElement="AreaRows" Type="className">bv-timeclock-event-action-item</ElementProperty>
+		<ElementProperty NameOfElement="AreaName" Type="className">name-container</ElementProperty>
+		<ElementProperty NameOfElement="ExpandIcon" Type="className">fn-btn-downarrow</ElementProperty>
+		<ElementProperty NameOfElement="CollapseIcon" Type="className">fn-btn-uparrow</ElementProperty>
+		<ElementProperty NameOfElement="ActionName" Type="className">level-title</ElementProperty>
+		<ElementProperty NameOfElement="WarningMessage" Type="id">area-alert-message</ElementProperty>
+		<!-- <ElementProperty NameOfElement="BackArrow" Type="id">left-link-icon</ElementProperty> -->
+		<ElementProperty NameOfElement="ReceptaclesOnRadioButton" Type="id">receptacle-open-btn</ElementProperty>
+		<ElementProperty NameOfElement="ReceptaclesOffRadioButton" Type="id">receptacle-closed-btn</ElementProperty>
+		<ElementProperty NameOfElement="ReceptaclesUnaffectedRadioButton" Type="id">receptacle-unaffected-btn</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrow" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrow" Type="xpath">//div[contains(@id,'layover-container')]//span[@id='left-link-icon']</ElementProperty>
+	</SetReceptacleActions>
+	
+	<SetCcoActions>
+		<ElementProperty NameOfElement="NextButton" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="NextButtonOnEdit" Type="xpath">//div[@id='right-link-content']/span</ElementProperty>
+		<ElementProperty NameOfElement="SetCcoLevelText" Type="xpath">//div[@class='bv-timeclock-event-action']//div[contains(@class,'fn-control-specific-info')]</ElementProperty>
+		<ElementProperty NameOfElement="CcoOptionsGrid" Type="xpath">//div[@class='preset-assignment-action-item']//div[contains(@class,'on-off-options')]</ElementProperty>
+		<ElementProperty NameOfElement="CcoOptions" Type="tagName">span</ElementProperty>
+		<ElementProperty NameOfElement="BackArrow" Type="xpath">(//span[@id='left-link-icon'])[2]</ElementProperty>
+		<ElementProperty NameOfElement="SetPerRoomAreaLink" Type="id">set-per-area</ElementProperty>
+		<ElementProperty NameOfElement="SetSameSettingsLink" Type="id">set-same-settings</ElementProperty>
+		<ElementProperty NameOfElement="LightActionAreaGrid" Type="xpath">//div[@class='bv-timeclock-event-action']//div[contains(@class,'fn-control-container')]</ElementProperty>
+		<ElementProperty NameOfElement="AreaRows" Type="className">bv-timeclock-event-action-item</ElementProperty>
+		<ElementProperty NameOfElement="AreaName" Type="className">name-container</ElementProperty>
+		<ElementProperty NameOfElement="ExpandIcon" Type="className">fn-btn-downarrow</ElementProperty>
+		<ElementProperty NameOfElement="CollapseIcon" Type="className">fn-btn-uparrow</ElementProperty>
+		<ElementProperty NameOfElement="ActionName" Type="className">level-title</ElementProperty>
+		<ElementProperty NameOfElement="WarningMessage" Type="id">area-alert-message</ElementProperty>
+		<ElementProperty NameOfElement="BackArrow" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="CcoClosedRadioButton" Type="id">cco-closed-btn</ElementProperty>
+		<ElementProperty NameOfElement="CcoOpenRadioButton" Type="id">cco-open-btn</ElementProperty>
+		<ElementProperty NameOfElement="CcoUnaffectedRadioButton" Type="id">cco-unaffected-btn</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrow" Type="xpath">//div[contains(@id,'layover-container')]//span[@id='left-link-icon']</ElementProperty>
+	</SetCcoActions>
+	
+	<SetOccupancyActions>
+		<ElementProperty NameOfElement="SaveButton" Type="xpath">//div[contains(@id,'layover-container')]//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="SaveButtonOnEdit" Type="xpath">//div[@id='right-link-content']/span</ElementProperty>
+		<ElementProperty NameOfElement="SetOccupancyLevelText" Type="xpath">//div[@class='bv-timeclock-event-action']//div[contains(@class,'fn-control-specific-info')]</ElementProperty>
+		<ElementProperty NameOfElement="SetPerRoomAreaLink" Type="id">set-per-area</ElementProperty>
+		<ElementProperty NameOfElement="SetSameSettingsLink" Type="id">set-same-settings</ElementProperty>
+		<ElementProperty NameOfElement="LightActionAreaGrid" Type="xpath">//div[@class='bv-timeclock-event-action']//div[contains(@class,'fn-control-container')]</ElementProperty>
+		<ElementProperty NameOfElement="AreaRows" Type="className">bv-timeclock-event-action-item</ElementProperty>
+		<ElementProperty NameOfElement="AreaName" Type="className">name-container</ElementProperty>
+		<ElementProperty NameOfElement="ExpandIcon" Type="className">fn-btn-downarrow</ElementProperty>
+		<ElementProperty NameOfElement="CollapseIcon" Type="className">fn-btn-uparrow</ElementProperty>
+		<ElementProperty NameOfElement="WarningMessage" Type="id">area-alert-message</ElementProperty>
+		<ElementProperty NameOfElement="WarningIcon" Type="id">area-alert-icon</ElementProperty>
+		<ElementProperty NameOfElement="StatusSettingButton" Type="id">occupancy-settings-status</ElementProperty>
+		<ElementProperty NameOfElement="OccupancySettingSection" Type="className">fn-all-occ-settings-section</ElementProperty>
+		<ElementProperty NameOfElement="OccupancySettingOptionsRows" Type="xpath">//div[@class='fn-all-occ-settings-section']/div</ElementProperty>
+		<ElementProperty NameOfElement="OccupancySettingOptionsName" Type="className">menu-item</ElementProperty>
+		<ElementProperty NameOfElement="BehaviorGrid" Type="className">sensitivity-options</ElementProperty>
+		<ElementProperty NameOfElement="RadioButtonValue" Type="className">r-value</ElementProperty>
+		<ElementProperty NameOfElement="OccupancyRadioButton" Type="xpath">//div[@id='select-occupancy-behavior']/child::span</ElementProperty>
+		<ElementProperty NameOfElement="VacancyRadioButton" Type="xpath">//div[@id='select-vacancy-behavior']/child::span</ElementProperty>
+		<ElementProperty NameOfElement="WhenOccupiedSection" Type="xpath">//div[contains(@class,'when-occupied-section')]</ElementProperty>
+		<ElementProperty NameOfElement="WhenUnoccupiedSection" Type="xpath">//div[contains(@class,'when-unoccupied-section')]</ElementProperty>
+		<ElementProperty NameOfElement="TimeoutSection" Type="xpath">//div[contains(@class,'fn-occ-timeout-settings')]</ElementProperty>
+		<ElementProperty NameOfElement="TimeoutRadioButton" Type="className">fn-radio</ElementProperty>
+		<ElementProperty NameOfElement="TimeoutOptions" Type="xpath">//div[contains(@class,'fn-occ-timeout-settings')]//div[contains(@id, 'timeout-')]</ElementProperty>
+		<ElementProperty NameOfElement="OccupancySectionExpandIcons" Type="className">svg-common-universal-btn-downarrow</ElementProperty>
+		<ElementProperty NameOfElement="OccupancySectionCollapseIcons" Type="className">svg-common-universal-btn-uparrow</ElementProperty>
+		<ElementProperty NameOfElement="WhenOccupiedDimmableLightTextBox" Type="xpath">//div[contains(@class,'when-occupied-section')]//span[@id='dimmed-light-level']</ElementProperty>
+		<ElementProperty NameOfElement="WhenUnoccupiedDimmableLightTextBox" Type="xpath">//div[contains(@class,'when-unoccupied-section')]//span[@id='dimmed-light-level']</ElementProperty>
+		<ElementProperty NameOfElement="WhenOccupiedSwitchedLightTextBox" Type="xpath">//div[contains(@class,'when-occupied-section')]//div[@class='fn-switched-lights']//span[@class='readonly-text']</ElementProperty>
+		<ElementProperty NameOfElement="WhenUnoccupiedSwitchedLightTextBox" Type="xpath">//div[contains(@class,'when-unoccupied-section')]//div[@class='fn-switched-lights']//span[@class='readonly-text']</ElementProperty>
+		<ElementProperty NameOfElement="WhenOccupiedCcoModulesTextBox" Type="xpath">//div[contains(@class,'when-occupied-section')]//div[@class='fn-cco-lights']//span[@class='readonly-text']</ElementProperty>
+		<ElementProperty NameOfElement="WhenUnoccupiedCcoModulesTextBox" Type="xpath">//div[contains(@class,'when-unoccupied-section')]//div[@class='fn-cco-lights']//span[@class='readonly-text']</ElementProperty>
+		<ElementProperty NameOfElement="TimeoutSetFromSensor" Type="xpath">//span[contains(text(),'Set from sensor')]</ElementProperty>
+		<ElementProperty NameOfElement="TimeoutInfoIcon" Type="id">timeout-info-btn</ElementProperty>
+		<ElementProperty NameOfElement="ToggleButtonStatusText" Type="id">toggle-btn-status</ElementProperty>
+		<ElementProperty NameOfElement="DisabledOccupancySettingsMessage" Type="xpath">//*[contains(@class,'fn-status-info-message-section')]</ElementProperty>
+		<ElementProperty NameOfElement="ProgressBarText" Type="className">text-semi-bold</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrow" Type="xpath">//div[contains(@id,'layover-container')]//span[@id='left-link-icon']</ElementProperty>
+	</SetOccupancyActions>
+	
+	<TimeclockSummary>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">//*[contains(@class,'page-title ')]</ElementProperty>
+		<ElementProperty NameOfElement="DoneButton" Type="xpath">//div[@id='right-link-content']/span</ElementProperty>
+		<ElementProperty NameOfElement="SummaryText" Type="xpath">//div[@class='page-title']/div</ElementProperty>
+		<ElementProperty NameOfElement="SavedEventText" Type="className">fn-retransfer-success-text</ElementProperty>
+		<ElementProperty NameOfElement="TestEventLink" Type="xpath">//*[contains(@class,'link-test-event')]</ElementProperty>
+		<ElementProperty NameOfElement="TestEventTickIcon" Type="xpath">//div[contains(@class,'test-event-icon')]</ElementProperty>
+	</TimeclockSummary>
+	
+	<ScheduleNamePage>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">.//*[@id='layover-container']/div/div/div[1]/div/div/div[1]/div/header/nav/div[1]/div/div/div</ElementProperty>
+		<ElementProperty NameOfElement="CancelEventButton" Type="xpath">(//div[@id='left-link-content']/span)[2]</ElementProperty>
+		<ElementProperty NameOfElement="NextandSaveButton" Type="xpath">(//div[@id='right-link-content']/span)[2]</ElementProperty>
+		<ElementProperty NameOfElement="ClickText" Type="xpath">.//*[@id='layover-container']/div/div/div[1]/div/div/div[2]/div/div/div[6]</ElementProperty>
+		<!-- <ElementProperty NameOfElement="EventNameTextField" Type="id">generic-textbox-1</ElementProperty> -->
+		<ElementProperty NameOfElement="NameValidation" Type="id">error-name-required</ElementProperty>
+	</ScheduleNamePage>
+	
+	<ScheduleDaysWeeklyPage>
+		<ElementProperty NameOfElement="Weekly" Type="id">weekly</ElementProperty>
+		<ElementProperty NameOfElement="Bydate" Type="id">bydate</ElementProperty>
+		<ElementProperty NameOfElement="Sunday" Type="id">sunday</ElementProperty>
+		<ElementProperty NameOfElement="Monday" Type="id">monday</ElementProperty>
+		<ElementProperty NameOfElement="Tuesday" Type="id">tuesday</ElementProperty>
+		<ElementProperty NameOfElement="Wednesday" Type="id">wednesday</ElementProperty>
+		<ElementProperty NameOfElement="Thursday" Type="id">thursday</ElementProperty>
+		<ElementProperty NameOfElement="Friday" Type="id">friday</ElementProperty>
+		<ElementProperty NameOfElement="Saturday" Type="id">saturday</ElementProperty>
+		<ElementProperty NameOfElement="EventStartDate" Type="id">start-date</ElementProperty>
+		<ElementProperty NameOfElement="EventEndDate" Type="id">end-date</ElementProperty>
+		<ElementProperty NameOfElement="HolidayExceptions" Type="id">select-dates</ElementProperty>
+		<ElementProperty NameOfElement="Next" Type="xpath">(//div[@id='right-link-content']/span)[2]</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="xpath">(//span[@id='left-link-icon'])[2]</ElementProperty>		
+		<ElementProperty NameOfElement="NoDaysSelectedValidation" Type="id">event-day-error</ElementProperty>
+	</ScheduleDaysWeeklyPage>
+	
+	<ScheduleTimePage>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">.//*[@id='layover-container']/div/div/div[1]/div/div/div[1]/div/header/nav/div[1]/div/div[2]/div</ElementProperty>
+		<ElementProperty NameOfElement="Hours" Type="xpath">.//*[@id='layover-container']/div/div/div[1]/div/div/div[2]/div/div[2]/div[3]/div/div[1]/div/div/div[2]/div/div[1]/div[3]</ElementProperty>
+		<ElementProperty NameOfElement="Minutes" Type="xpath">.//*[@id='layover-container']/div/div/div[1]/div/div/div[2]/div/div[2]/div[3]/div/div[1]/div/div/div[2]/div/div[3]/div[3]</ElementProperty>
+		<ElementProperty NameOfElement="AmPm" Type="xpath">.//*[@id='layover-container']/div/div/div[1]/div/div/div[2]/div/div[2]/div[3]/div/div[1]/div/div/div[2]/div/div[4]/div[3]</ElementProperty>
+		
+	</ScheduleTimePage>
+	
+	<ScheduleEditPage>
+		<ElementProperty NameOfElement="EventToBeEdited" Type="xpath">//div[@id='event-detail']/div/div[4]/div</ElementProperty>
+		<ElementProperty NameOfElement="ThisOccurrenceOption" Type="id">option-one</ElementProperty>
+		<ElementProperty NameOfElement="EntireSeriesOption" Type="id">option-two</ElementProperty>
+		<ElementProperty NameOfElement="EditSeriesEventTitle" Type="xpath">//div[contains(text(),'Series')]</ElementProperty>
+		<ElementProperty NameOfElement="EditOccurrenceEventTitle" Type="xpath">(//div[contains(text(),'Occurrence')])[1]</ElementProperty>
+		<ElementProperty NameOfElement="ScheduleStatusToggleBtn" Type="id">schedule-status</ElementProperty>
+		<ElementProperty NameOfElement="ScheduleStatusToggleBtnStatus" Type="id">schedule-status-text</ElementProperty>
+		<ElementProperty NameOfElement="Rename" Type="id">rename</ElementProperty>
+		<ElementProperty NameOfElement="EventName" Type="xpath">//div[@id='event-name-row']/div[1]</ElementProperty>
+		<ElementProperty NameOfElement="EditDays" Type="id">edit-dates</ElementProperty>
+		<ElementProperty NameOfElement="EditTime" Type="xpath">//div[contains(text(),'Time')]</ElementProperty>
+		<ElementProperty NameOfElement="DeleteEvent" Type="id">link-delete-event</ElementProperty>
+		<ElementProperty NameOfElement="DeleteOccurrence" Type="xpath">(//div[contains(text(),'Occurrence')])[2]</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="ConfirmDeleteEvent" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="CancelDeleteEvent" Type="id">default-btn</ElementProperty>
+	</ScheduleEditPage>
+	
+	<ScheduleSelectRoomsPage>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">.//*[@id='layover-container']/div/div/div[1]/div/div/div[1]/div/header/nav/div[1]/div/div[2]/div</ElementProperty>
+		<ElementProperty NameOfElement="SelectAreaWithAllLights" Type="xpath">(//div[@id='select-area']/div/div/div/div[1]/div)[1]</ElementProperty>
+		<ElementProperty NameOfElement="IncludeAllAreas" Type="id">select-all-area</ElementProperty>
+		<ElementProperty NameOfElement="ExcludeAllAreas" Type="id">deselect-all-area</ElementProperty>
+		<ElementProperty NameOfElement="Next" Type="xpath">(//div[@id='right-link-content']/span)[2]</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+	</ScheduleSelectRoomsPage>
+	
+	<ScheduleSelectActionsPage>
+		<ElementProperty NameOfElement="ControlLightsTitle" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[3]/div[1])[1]</ElementProperty>
+		<ElementProperty NameOfElement="ControlLightsCheckBox" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[1]/div)[1]</ElementProperty>
+		<ElementProperty NameOfElement="ControlReceptaclesTile" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[3]/div[1])[2]</ElementProperty>
+		<ElementProperty NameOfElement="ControlReceptaclesCheckBox" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[1]/div)[2]</ElementProperty>
+		<ElementProperty NameOfElement="ControlCcoTile" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[3]/div[1])[3]</ElementProperty>
+		<ElementProperty NameOfElement="ControlCcoCheckBox" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[1]/div)[3]</ElementProperty>
+		<ElementProperty NameOfElement="ModifyOccSettingsTile" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[3]/div[1])[4]</ElementProperty>
+		<ElementProperty NameOfElement="ModifyOccSettingsCheckBox" Type="xpath">(//div[@id='event-action-item']/div/div/div/div[1]/div)[4]</ElementProperty>
+	</ScheduleSelectActionsPage>
+	
+	<ScheduleSetLightActionsPage>
+		<ElementProperty NameOfElement="DimmedLightLevel" Type="xpath">//div[@id='wheel-selector-container']/span/span[1]</ElementProperty>
+		<ElementProperty NameOfElement="DimmedLightLevelUnaffectedCheckbox" Type="xpath">//div[@id='wheel-selector-container']/span/span[1]</ElementProperty>
+		<ElementProperty NameOfElement="SwitchLightOn" Type="id">switch-on-btn</ElementProperty>
+		<ElementProperty NameOfElement="SwitchLightOff" Type="id">switch-off-btn</ElementProperty>
+		<ElementProperty NameOfElement="SwitchLightUnaffected" Type="id">switch-unaffected-btn</ElementProperty>
+		<ElementProperty NameOfElement="ReceptacleActionsScreen" Type="xpath">.//*[@id='layover-container']/div/div/div[1]/div/div/div[2]/div/div[1]/div[7]/div/div/div[3]/div/div/div[1]/div[1]/div/div[1]/div/div[2]/div/div</ElementProperty>
+	</ScheduleSetLightActionsPage>
+	
+	<ScheduleSetReceptacleActionsPage>
+		<ElementProperty NameOfElement="ReceptacleOn" Type="id">receptacle-open-btn</ElementProperty>
+		<ElementProperty NameOfElement="ReceptacleOff" Type="id">receptacle-closed-btn</ElementProperty>
+		<ElementProperty NameOfElement="ReceptacleUnaffected" Type="id">receptacle-unaffected-btn</ElementProperty>
+		<ElementProperty NameOfElement="ReceptacleRadioBtnOn" Type="xpath">//div[@id='receptacle-open-btn']/div[1]/span</ElementProperty>
+		<ElementProperty NameOfElement="ReceptacleRadioBtnOff" Type="xpath">//div[@id='receptacle-closed-btn']/div[1]/span</ElementProperty>
+		<ElementProperty NameOfElement="ReceptacleRadioBtnUnaffected" Type="xpath">//div[@id='receptacle-unaffected-btn']/div[1]/span</ElementProperty>
+	</ScheduleSetReceptacleActionsPage>
+	
+	<ScheduleSetCcoActionsPage>
+		<ElementProperty NameOfElement="CcoActionsScreen" Type="xpath">.//*[@id='layover-container']/div/div/div[1]/div/div/div[2]/div/div[1]/div[7]/div/div/div[3]/div/div/div[1]/div[1]/div/div[1]/div/div[2]/div/div</ElementProperty>
+		<ElementProperty NameOfElement="CcoClosed" Type="id">cco-closed-btn</ElementProperty>
+		<ElementProperty NameOfElement="CcoOpen" Type="id">cco-open-btn</ElementProperty>
+		<ElementProperty NameOfElement="CcoUnaffected" Type="id">cco-unaffected-btn</ElementProperty>
+		<ElementProperty NameOfElement="CcoRadioBtnClosed" Type="xpath">//div[@id='cco-closed-btn']/div[1]/span</ElementProperty>
+		<ElementProperty NameOfElement="CcoRadioBtnOpen" Type="xpath">//div[@id='cco-open-btn']/div[1]/span</ElementProperty>
+		<ElementProperty NameOfElement="CcoRadioBtnUnaffected" Type="xpath">//div[@id='cco-unaffected-btn']/div[1]/span</ElementProperty>
+		<ElementProperty NameOfElement="OccActionsScreen" Type="xpath">.//*[@id='layover-container']/div/div/div[1]/div/div/div[2]/div/div[1]/div[7]/div/div/div[3]/div/div/div[1]/div[1]/div/div[1]/div/div[2]/div/div</ElementProperty>
+	</ScheduleSetCcoActionsPage>
+	
+	<ScheduleModifyOccSettingsPage>
+		<ElementProperty NameOfElement="ModifyOccScreen" Type="xpath">.//*[@id='layover-container']/div/div/div[1]/div/div/div[2]/div/div[1]/div[4]</ElementProperty>
+		<ElementProperty NameOfElement="ExpandArea" Type="xpath">//div[@id='area-item-toggle']/div/div</ElementProperty>
+		<ElementProperty NameOfElement="OccupancySettingsToggleBtn" Type="id">occupancy-settings-status</ElementProperty>
+		<ElementProperty NameOfElement="OccupancySettingsToggleStatus" Type="id">toggle-btn-status</ElementProperty>
+		<ElementProperty NameOfElement="BehaviorOccVacRadioBtn" Type="id">select-occupancy-behavior</ElementProperty>
+		<ElementProperty NameOfElement="BehaviorOccVacRadioBtnStatus" Type="xpath">//div[@id='select-occupancy-behavior']/span</ElementProperty>
+		<ElementProperty NameOfElement="BehaviorVacRadioBtn" Type="id">select-vacancy-behavior</ElementProperty>
+		<ElementProperty NameOfElement="BehaviorVacRadioBtnStatus" Type="xpath">//div[@id='select-vacancy-behavior']/span</ElementProperty>
+		<ElementProperty NameOfElement="WhenOccupiedTile" Type="xpath">(//div[@id='lights-settings-toggle']/div[2]/div/div)[1]</ElementProperty>
+		<ElementProperty NameOfElement="OccupiedDimmedLightLevel" Type="xpath">(//span[@id='dimmed-light-level'])[1]</ElementProperty>
+		<ElementProperty NameOfElement="UnoccupiedDimmedLightLevel" Type="xpath">(//span[@id='dimmed-light-level'])[2]</ElementProperty>
+		<ElementProperty NameOfElement="WhenUnOccupiedTile" Type="xpath">(//div[@id='lights-settings-toggle']/div[2]/div/div)[2]</ElementProperty>
+		<ElementProperty NameOfElement="OccTimeoutTile" Type="id">timeout-toggle-btn</ElementProperty>
+		<ElementProperty NameOfElement="OneMinTimeout" Type="xpath">//span[@data-value='1:00']</ElementProperty>
+		<ElementProperty NameOfElement="FiveMinTimeout" Type="xpath">//span[@data-value='5:00']</ElementProperty>
+		<ElementProperty NameOfElement="FifteenMinTimeout" Type="xpath">//span[@data-value='15:00']</ElementProperty>
+		<ElementProperty NameOfElement="ThirtyMinTimeout" Type="xpath">//span[@data-value='30:00']</ElementProperty>
+		<ElementProperty NameOfElement="OccScreenSetSameSettings" Type="id">set-same-settings</ElementProperty>
+		<ElementProperty NameOfElement="OccScreenSetPerSettings" Type="id">set-per-area</ElementProperty>
+		<ElementProperty NameOfElement="Save" Type="xpath">(//div[@id='right-link-content']/span)[2]</ElementProperty>
+	</ScheduleModifyOccSettingsPage>
+	
+	<ScheduleSummaryPage>
+		<ElementProperty NameOfElement="ScreenTitle" Type="xpath">.//*[@id='main']/div/div[1]/div/div/div/div/div[1]/div/div/div/div/div[1]/div/div/div[1]/div/header/nav/div[1]/div/div/div</ElementProperty>
+		<ElementProperty NameOfElement="NumberofDaySelected" Type="xpath">//div[@id='days-container']/div/div/div/div[1]/span[2]</ElementProperty>
+		<ElementProperty NameOfElement="StartingDate" Type="xpath">//div[@id='days-container']/div/div/div/div[3]/span[2]</ElementProperty>
+		<ElementProperty NameOfElement="UntilDate" Type="xpath">//div[@id='days-container']/div/div/div/div[5]/span[2]</ElementProperty>
+		<ElementProperty NameOfElement="HolidaysExceptionSelected" Type="xpath">//div[@id='days-container']/div/div/div/div[7]/span[2]</ElementProperty>
+		<ElementProperty NameOfElement="TimeSelected" Type="xpath"></ElementProperty>
+		<ElementProperty NameOfElement="TestEventBtn" Type="xpath">//a[contains(text(),'Test event')]</ElementProperty>
+		<ElementProperty NameOfElement="TestEventBtnTick" Type="xpath">.//*[@id='main']/div/div[1]/div/div/div/div/div[1]/div/div/div/div/div[1]/div/div/div[2]/div/div[1]/div[8]/div[2]/div[2]/div</ElementProperty>
+		<ElementProperty NameOfElement="Done" Type="id">right-link-content</ElementProperty>
+	</ScheduleSummaryPage>
+	
+	<GDPR>
+		<ElementProperty NameOfElement="Cookiebanner" Type="id">banner-container</ElementProperty>
+		<ElementProperty NameOfElement="OK" Type="id">ok-btn</ElementProperty>
+		<ElementProperty NameOfElement="date" Type="xpath">//td[@class='today active day']/div</ElementProperty>
+	</GDPR>
+	
+	<AreaList>
+		<ElementProperty NameOfElement="AreaNameField" Type="xpath">//div[@id='textbox-container']/input</ElementProperty>
+		<ElementProperty NameOfElement="AddRoomArea" Type="xpath">//div[@id='add-area-btn']/div[2]/div[2]</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="Next" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="AreaNameHeader" Type="xpath">//div[@class="fn-super-header area-name show-ellipsis"]</ElementProperty>
+		<ElementProperty NameOfElement="EditArea" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="EditAreaName" Type="id">generic-textbox-2</ElementProperty>
+		<ElementProperty NameOfElement="AreaList" Type="xpath">//div[contains(@class,'fn-area-list')]</ElementProperty>
+		<ElementProperty NameOfElement="AreaNameInList" Type="xpath">//span[contains(@class,'name-container')]</ElementProperty>
+		<ElementProperty NameOfElement="DoneEditArea" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="DeleteAreaIcon" Type="cssselector">.delete-name-container #generic-textbox-left-icon</ElementProperty>
+		<ElementProperty NameOfElement="DeleteAreaPopUp" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="CancelAreaPopUp" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="AreaNameNavigator" Type="xpath">//*[@id="area-detail"]/div[1]/div[1]/div</ElementProperty>
+		<ElementProperty NameOfElement="AreaRow" Type="xpath">//div[contains(@class,'fn-area-item')]</ElementProperty>
+		<ElementProperty NameOfElement="AreaNameToEditInList" Type="className">input-text-box</ElementProperty>
+		<ElementProperty NameOfElement="AreaDeleteLink" Type="id">left-icon-container</ElementProperty>
+		<ElementProperty NameOfElement="EditLink" Type="id">right-link</ElementProperty>
+	</AreaList>
+	
+	<RoomType>
+		<ElementProperty NameOfElement="Pagetitle" Type="xpath">.//*[@id='main']/div/div[1]/div/div/div/div/div[1]/div/div/div[1]/div/header/nav/div[1]/div/div/div</ElementProperty>
+		<ElementProperty NameOfElement="Kitchen" Type="xpath">//div[contains(@type,'Kitchen')]</ElementProperty>
+		<ElementProperty NameOfElement="Gym" Type="xpath">//div[contains(@type,'Gym')]</ElementProperty>
+		<ElementProperty NameOfElement="Exterior" Type="xpath">//div[contains(@type,'Exterior')]</ElementProperty>
+		<ElementProperty NameOfElement="Next" Type="xpath">//div[@id='right-link-content']/span</ElementProperty>
+	</RoomType>
+	
+	<AreaName>
+		<ElementProperty NameOfElement="AreaNameField" Type="xpath">//div[@id='textbox-container']/input</ElementProperty>
+		<ElementProperty NameOfElement="Next" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="Back" Type="id">right-link-content</ElementProperty>
+	</AreaName>
+	
+	<RoomsListPage>
+		<ElementProperty NameOfElement="Area_Add_Link" Type="xpath">//div[@id='add-area-btn']/div[2]/div[2]</ElementProperty>
+		<ElementProperty NameOfElement="Rooms_Name" Type="id">generic-textbox</ElementProperty>
+		<ElementProperty NameOfElement="Next_link" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="Back_Button" Type="id">left-link-content</ElementProperty>
+		<ElementProperty NameOfElement="Room 1" Type="xpath">(//div[@id='area-detail']/div/div[1]/div/div[1]/span)[1]</ElementProperty>
+		<ElementProperty NameOfElement="Edit_link" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="Done_link" Type="id">right-link-content</ElementProperty>
+	</RoomsListPage>
+	
+	<DeviceDiscoveryScreen>
+		<ElementProperty NameOfElement="FirstTimeModal" Type="id">modal-dialog</ElementProperty>
+		<ElementProperty NameOfElement="ModalButtonContinue" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="ProgressBar" Type="class">progress-bar</ElementProperty>
+	</DeviceDiscoveryScreen>
+	
+	<DeviceRSSI>
+		<ElementProperty NameOfElement="FirstTimeModal" Type="id">modal-dialog</ElementProperty>
+		<ElementProperty NameOfElement="ModalButtonContinue" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="ProgressBar" Type="class">progress-bar</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="FindingLightsDevicesPopUp" Type="id">modal-dialog</ElementProperty>
+		<ElementProperty NameOfElement="Continue" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="ErrorMessage" Type="xpath">//div[contains(@class,'fn-device-error-background')]</ElementProperty>
+		<ElementProperty NameOfElement="PageHeader" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="DeviceInstruction" Type="id">device-instruction</ElementProperty>
+	</DeviceRSSI>
+	
+	<PicoDetailScreen>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="DeviceImage" Type="id">device-image</ElementProperty>
+		<ElementProperty NameOfElement="DeviceModel" Type="id">device-model</ElementProperty>
+		<ElementProperty NameOfElement="DeviceSerialNumber" Type="xpath">//*[contains(text(),'Serial Number')]</ElementProperty>
+		<ElementProperty NameOfElement="PicoName" Type="id">generic-textbox-1</ElementProperty>
+		<ElementProperty NameOfElement="PicoControlsTile" Type="xpath">//span[contains(text(),'Controls')]</ElementProperty>
+		<ElementProperty NameOfElement="AddLightsTile" Type="xpath">//span[text()='Add Lights']</ElementProperty>
+		<ElementProperty NameOfElement="ExtendRangeTile" Type="xpath">//*[contains(text(),'Extend Range')]</ElementProperty>
+		<ElementProperty NameOfElement="ExtendRangeToggleButton" Type="id">toggle</ElementProperty>
+		<ElementProperty NameOfElement="ManageRangeExtensionLink" Type="xpath">//*[contains(text(),'Manage range extension')]</ElementProperty>
+		<ElementProperty NameOfElement="Remove" Type="id">remove-device-lnk</ElementProperty>		
+		<ElementProperty NameOfElement="EditTile" Type="xpath">//span[text()='Edit lights/devices']</ElementProperty>
+		<ElementProperty NameOfElement="PopUpRemovelights" Type="id">popup-confirmation-text</ElementProperty>
+		<ElementProperty NameOfElement="RemoveText" Type="id">text</ElementProperty>
+		<ElementProperty NameOfElement="Done" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="FavoriteButton" Type="xpath">//a[contains(@class,'fn-button-name')]</ElementProperty>
+		<ElementProperty NameOfElement="PageHeader" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="Done" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="RemoveLinkOnPopUp" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="CancelLinkOnPopUp" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="AddAndEditLightsTile" Type="id">add-edit-fixture</ElementProperty>	
+		<ElementProperty NameOfElement="Popup" Type="className">modal-dialog</ElementProperty>
+		<ElementProperty NameOfElement="PopupBodyMessage" Type="id">popup-helper-text</ElementProperty>
+		<ElementProperty NameOfElement="PopupConfirmationMessage" Type="id">popup-confirmation-text</ElementProperty>
+		<ElementProperty NameOfElement="FadeText" Type="id">fade-link</ElementProperty>
+	</PicoDetailScreen>
+	
+	<Fade>
+		<ElementProperty NameOfElement="CancelButton" Type="cssSelector">#layover-container-1 #left-link-content</ElementProperty>
+		<ElementProperty NameOfElement="SaveButton" Type="cssSelector">#layover-container-1 #right-link</ElementProperty>
+		<ElementProperty NameOfElement="SetPerButton" Type="id">set-per-button-link</ElementProperty>
+		<ElementProperty NameOfElement="SetSameLink" Type="id">set-same-link</ElementProperty>
+		<ElementProperty NameOfElement="PicoFadeImage" Type="cssSelector">.fn-fade-settings-container div[class*='image-pico']</ElementProperty>
+		<ElementProperty NameOfElement="SetFadeDurationText" Type="cssSelector">.fn-fade-settings-container .flex-row .menu-item</ElementProperty>
+		<ElementProperty NameOfElement="DimmableLights" Type="cssSelector">#dimmed-lights-container .level-title</ElementProperty>
+		<ElementProperty NameOfElement="FadeTextbox" Type="className">fn-fade-level</ElementProperty>
+		<ElementProperty NameOfElement="NormalSwitchImage" Type="id">img-normal-switch</ElementProperty>
+		<ElementProperty NameOfElement="AdvancedSwitchImage" Type="id">img-advanced-switch</ElementProperty>
+		<ElementProperty NameOfElement="FadeOptionsWheelerGrid" Type="cssSelector">#modal-dialog .fn-wheel-container</ElementProperty>
+		<ElementProperty NameOfElement="FadeOptionsGrid" Type="cssSelector">#info-dailog-container .option-list</ElementProperty>
+		<ElementProperty NameOfElement="FadeOptions" Type="className">option-item</ElementProperty>
+		<ElementProperty NameOfElement="FadeSelectedWheelValue" Type="cssSelector">div.dw</ElementProperty>
+		<ElementProperty NameOfElement="FadeValues" Type="className">wheel-values</ElementProperty>
+	</Fade>
+
+	<FavoriteButtonProgramming>
+		<ElementProperty NameOfElement="AllDimmedTextBox" Type="className">fn-dimmed-light-level</ElementProperty>
+		<ElementProperty NameOfElement="AllDimmedLightsList" Type="xpath">//div[contains(@class,'fn-button-dimmedlevel-assignments')]</ElementProperty>
+		<ElementProperty NameOfElement="FlashNameInDimmedList" Type="id">identify-btn</ElementProperty>
+		<ElementProperty NameOfElement="StopNameInDimmedList" Type="id">stop-identify-btn</ElementProperty>
+		<ElementProperty NameOfElement="SetPerFixture" Type="id">lnk-set-perfixture</ElementProperty>
+		<ElementProperty NameOfElement="SetSameForAll" Type="id">lnk-set-samelevel-allfixtures</ElementProperty>
+		<ElementProperty NameOfElement="Cancel" Type="xpath">//span[text()="Cancel"]</ElementProperty>
+		<ElementProperty NameOfElement="OptionForNoInPrompt" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="OptionForContinueInPrompt" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="Save" Type="xpath">//span[text()="Save"]</ElementProperty>
+	</FavoriteButtonProgramming>
+	
+	<EditPicoLights>
+		<ElementProperty NameOfElement="CrossAreaRow" Type="xpath">//a[contains(text(),"other rooms/areas")]</ElementProperty>
+		<ElementProperty NameOfElement="CrossAreaContainer" Type="xpath">//div[@class="fixture-list-container"]</ElementProperty>
+		<ElementProperty NameOfElement="CrossAreaNameInList" Type="cssSelector">.other-area-devices .fn-title</ElementProperty>
+		<ElementProperty NameOfElement="CrossAreaFixture1AssignLink" Type="xpath">(//div[@id="assign-fixture-btn"])[2]</ElementProperty>
+		<ElementProperty NameOfElement="CrossAreaFixture1UnAssignLink" Type="xpath">(//div[@id="unassign-fixture-btn"])[2]</ElementProperty>
+	</EditPicoLights>
+  	
+  	<OccupancyDetailScreen>
+		<ElementProperty NameOfElement="DeviceImage" Type="id">device-image</ElementProperty>
+		<ElementProperty NameOfElement="DeviceModel" Type="id">device-model</ElementProperty>
+		<ElementProperty NameOfElement="OccName" Type="id">generic-textbox</ElementProperty>
+		<ElementProperty NameOfElement="OccControlsTile" Type="xpath">//span[contains(text(),'Controls')]</ElementProperty>
+		<ElementProperty NameOfElement="EditLigtsDevices" Type="xpath">//span[text()='Edit lights/devices']</ElementProperty>
+		<ElementProperty NameOfElement="PopupRemoveButton" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="PopupCancelButton" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="Remove" Type="id">remove-device-lnk</ElementProperty>
+		<ElementProperty NameOfElement="Popup" Type="className">modal-dialog</ElementProperty>
+		<ElementProperty NameOfElement="PopupBodyMessage" Type="id">popup-helper-text</ElementProperty>
+		<ElementProperty NameOfElement="PopupConfirmationMessage" Type="id">popup-confirmation-text</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+	</OccupancyDetailScreen>
+  	
+  	<DaylightDetailScreen>
+		<ElementProperty NameOfElement="DeviceImage" Type="id">device-image</ElementProperty>
+		<ElementProperty NameOfElement="DeviceModel" Type="id">device-model</ElementProperty>
+		<ElementProperty NameOfElement="DaylightName" Type="id">generic-textbox</ElementProperty>
+		<ElementProperty NameOfElement="DaylightControlsTile" Type="xpath">//span[contains(text(),'Controls')]</ElementProperty>
+		<ElementProperty NameOfElement="EditTile" Type="xpath">//span[text()='Edit lights/devices']</ElementProperty>
+		<ElementProperty NameOfElement="Remove" Type="xpath">//span[text()='Remove']</ElementProperty>
+		<ElementProperty NameOfElement="PopUpRemovelights" Type="id">popup-confirmation-text</ElementProperty>
+		<ElementProperty NameOfElement="RemoveText" Type="id">text</ElementProperty>
+	</DaylightDetailScreen>
+  	
+  	<ReceptacleDetailScreen>
+		<ElementProperty NameOfElement="Remove" Type="xpath">//span[text()='Remove']</ElementProperty>
+		<ElementProperty NameOfElement="RemoveText" Type="id">text</ElementProperty>
+	</ReceptacleDetailScreen>
+	
+	<CCODetailScreen>
+		<ElementProperty NameOfElement="Remove" Type="xpath">//span[text()='Remove']</ElementProperty>
+		<ElementProperty NameOfElement="RemoveText" Type="id">text</ElementProperty>
+	</CCODetailScreen>
+	
+	<PowPakDetailScreen>
+		<ElementProperty NameOfElement="Remove" Type="xpath">//span[text()='Remove']</ElementProperty>
+		<ElementProperty NameOfElement="RemoveText" Type="id">text</ElementProperty>
+		<ElementProperty NameOfElement="OccupancyDisableMessage" Type="xpath">//div[contains(@class,'small-sub-text')]</ElementProperty>
+	</PowPakDetailScreen>
+	
+	<LightsDetailScreen>
+		<ElementProperty NameOfElement="FirstFixture" Type="xpath">//div[contains(@class,'fixture-item-container')]</ElementProperty>
+		<ElementProperty NameOfElement="Remove" Type="xpath">//span[text()='Remove']</ElementProperty>
+		<ElementProperty NameOfElement="RemoveText" Type="id">text</ElementProperty>
+	</LightsDetailScreen>
+  	
+	<ProjectListingPage>
+		<ElementProperty NameOfElement="HomePageUserName" Type="cssSelector">#userInfo > span > a</ElementProperty>
+		<ElementProperty NameOfElement="AddProjectButton" Type="id">createProjectButton</ElementProperty>
+		<ElementProperty NameOfElement="ProjectListGrid" Type="xpath">//*[@id='project-grid-container']/div[5]/div/div[1]/div</ElementProperty>
+		<ElementProperty NameOfElement="SearchTextBox" Type="xpath">//*[@id='content']/header/div/div[1]/span/input</ElementProperty>
+		<ElementProperty NameOfElement="SearchIcon" Type="xpath">//*[@id='content']/header/div/div[1]/button</ElementProperty>
+		<ElementProperty NameOfElement="ProjectListCheckBox" Type="xpath">//tag[label]</ElementProperty>
+	</ProjectListingPage>
+
+	
+	<GoToRoom>
+		<ElementProperty NameOfElement="GotoRoom" Type="id">goto-rooms-button</ElementProperty>
+		<ElementProperty NameOfElement="GotoRoomText" Type="xpath">//div[contains(@class,'goto-rooms-text')]</ElementProperty>
+		<ElementProperty NameOfElement="CoachMarkGotoRoom" Type="xpath">//div[contains(@class,'bottom-block-coach-message')]/span</ElementProperty>
+	</GoToRoom>
+	
+	<DeviceAndSettings>
+	    <ElementProperty NameOfElement="DevicesListGrid" Type="xpath">//div[contains(@class,'fn-device-list-container')]</ElementProperty>
+	    <ElementProperty NameOfElement="DevicesNameList" Type="xpath">//span[contains(@class,'name-container')]</ElementProperty>
+		<ElementProperty NameOfElement="AddDevice" Type="id">lnk-add-device</ElementProperty>
+		<ElementProperty NameOfElement="Occupancy" Type="id">occupancy-link</ElementProperty>
+		<ElementProperty NameOfElement="Tuning" Type="id">tuning-link</ElementProperty>
+		<ElementProperty NameOfElement="Daylighting" Type="id">daylighting-link</ElementProperty>
+		<ElementProperty NameOfElement="PicoTile" Type="xpath">//div[contains(@class,'pico-device-image')]</ElementProperty>
+		<ElementProperty NameOfElement="OccTile" Type="xpath">//div[contains(@class,'icon-occupancy-sensor')]</ElementProperty>
+		<ElementProperty NameOfElement="DaylightTile" Type="xpath">//div[contains(@class,'icon-daylight-sensor')]</ElementProperty>
+		<ElementProperty NameOfElement="LightsTile" Type="id">accordion-link</ElementProperty>
+		<ElementProperty NameOfElement="Receptacle" Type="xpath">//div[contains(@class,'icon-powpak-with-receptacle')]</ElementProperty>
+		<ElementProperty NameOfElement="CCO" Type="xpath">//div[contains(@class,'icon-powpak-with-cco')]</ElementProperty>
+		<ElementProperty NameOfElement="GotoRoom" Type="id">goto-rooms-button</ElementProperty>
+		<ElementProperty NameOfElement="CoachMarkGotoRoom" Type="xpath">//div[contains(@class,'fn-disabled-layover-container')]/div[contains(@class,'bottom-block-coach-message')]/span</ElementProperty>
+		<ElementProperty NameOfElement="PicoDetailsNavigator" Type="xpath">//*[@id="accordion-link"]//*[contains(text(),"Pico")]</ElementProperty>
+		<ElementProperty NameOfElement="DeviceAndSettings" Type="xpath">//div[@id='devices']/div/div/div/div[1]/div/div[1]/div/div[2]/div[1]/span[1]</ElementProperty>
+		<ElementProperty NameOfElement="DeviceAndSettingsHeader" Type="xpath">//div[@class='fn-page-title show-ellipsis ']</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="FixturesListGrid" Type="id">light-accordion-container</ElementProperty>
+	    <ElementProperty NameOfElement="FixturesNameList" Type="className">name-container</ElementProperty>
+		<ElementProperty NameOfElement="LightsExpandIcon" Type="xpath">//div[@id='light-accordion-container']//span[contains(@class,'svg-common-universal-btn-downarrow')]</ElementProperty>
+	</DeviceAndSettings>
+	
+	<AddDevice>
+		<ElementProperty NameOfElement="AddPico" Type="id">pico</ElementProperty>
+		<ElementProperty NameOfElement="AddOccupancy" Type="id">occupancy-sensor</ElementProperty>
+		<ElementProperty NameOfElement="AddDaylight" Type="id">daylight-sensor</ElementProperty>
+		<ElementProperty NameOfElement="OtherDevice" Type="id">add-fixture</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="AreaName" Type="xpath">//div[contains(@class,'area-name')]</ElementProperty>
+	</AddDevice>
+	
+	<Others>
+		<ElementProperty NameOfElement="AddPowPak" Type="id">powpak</ElementProperty>
+		<ElementProperty NameOfElement="Maestros" Type="id">maestros</ElementProperty>
+		<ElementProperty NameOfElement="Receptacle" Type="id">hubbell-receptacle</ElementProperty>
+		<ElementProperty NameOfElement="Kiwi" Type="id">kiwi</ElementProperty>
+		<ElementProperty NameOfElement="DeviceModel" Type="id">device-model</ElementProperty>
+	</Others>
+	
+	<RoomControl>
+		<ElementProperty NameOfElement="PageHeaderLayover" Type="xpath">//div[@id='layover-container-1']//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="BackButtonLayover" Type="xpath">//div[@id='layover-container-1']//span[@id='left-link-icon']</ElementProperty>
+		<ElementProperty NameOfElement="SaveOrNextLinkLayover" Type="xpath">//div[@id='layover-container-1']//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="CancelLinkLayover" Type="xpath">//div[@id='layover-container-1']//div[@id='left-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="PageHeader" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="SaveOrNextLink" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="CancelLink" Type="id">left-link-content</ElementProperty>
+		<ElementProperty NameOfElement="MasterGroup" Type="id">master-grouping</ElementProperty>
+		<ElementProperty NameOfElement="SeperateGroup" Type="id">separate-grouping</ElementProperty> 
+		<ElementProperty NameOfElement="Popup" Type="className">modal-dialog</ElementProperty>
+		<ElementProperty NameOfElement="PopupHeaderMessage" Type="id">popup-header-text</ElementProperty>
+		<ElementProperty NameOfElement="PopupBodyMessage" Type="id">popup-helper-text</ElementProperty>
+		<ElementProperty NameOfElement="PopupConfirmationMessage" Type="id">popup-confirmation-text</ElementProperty>
+		<ElementProperty NameOfElement="YesContinue" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="Cancel" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="ProgressBarMessage" Type="id">text</ElementProperty>
+	</RoomControl>
+	
+	<EditLights>
+		<ElementProperty NameOfElement="PageHeader" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="AddOtherDevicesLink" Type="xpath">//div[@id='find-more-fixture']//span[contains(@class,'sub-title')]</ElementProperty>
+		<ElementProperty NameOfElement="FixturesGrid" Type="xpath">//div[@id='fixture-list-container']</ElementProperty>
+		<ElementProperty NameOfElement="FixtureRow" Type="id">fixture-list-item-row</ElementProperty>
+		<ElementProperty NameOfElement="FixtureName" Type="className">name-container</ElementProperty>
+		<ElementProperty NameOfElement="FixtureAssignIcon" Type="id">assign-fixture-btn</ElementProperty>
+		<ElementProperty NameOfElement="FixtureUnassignIcon" Type="id">unassign-fixture-btn</ElementProperty>
+		<ElementProperty NameOfElement="ControlledByLink" Type="className">fn-device-list</ElementProperty>
+		<ElementProperty NameOfElement="ControlledByPopupText" Type="xpath">//div[contains(@class,'controlling-device-name')]</ElementProperty>
+		<ElementProperty NameOfElement="ControlledByGrid" Type="className">controlling-device-list-box</ElementProperty>
+		<ElementProperty NameOfElement="ControlledByOptions" Type="className">sub-text</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="AlreadyInRoomCount" Type="className">fn-view-count</ElementProperty>
+		<ElementProperty NameOfElement="PopupRemoveButton" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="PopupCancelButton" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="Remove" Type="id">remove-device-lnk</ElementProperty>
+		<ElementProperty NameOfElement="Popup" Type="className">modal-dialog</ElementProperty>
+		<ElementProperty NameOfElement="PopupBodyMessage" Type="id">popup-helper-text</ElementProperty>
+		<ElementProperty NameOfElement="PopupConfirmationMessage" Type="id">popup-confirmation-text</ElementProperty>
+		<ElementProperty NameOfElement="AssignLink" Type="xpath">//div[@id='fixture-list-item-row']//div[@id='unassign-fixture-btn']</ElementProperty>
+		<ElementProperty NameOfElement="AddAllButton" Type="xpath">//div[contains(@class,'fn-add-all-btn')]</ElementProperty>
+	</EditLights>
+	
+	<ReconfigureSensors>
+		<ElementProperty NameOfElement="PageHeader" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="DontKnowWhichSensorText" Type="id">un-configured-sensors-discovery</ElementProperty>
+		<ElementProperty NameOfElement="ReconfigureSensorLaterText" Type="id">configure-sensors-later</ElementProperty>
+		<ElementProperty NameOfElement="AllSensorsReconfiguredText" Type="xpath">//div[@id='reconfigure-message']//div[contains(@class,'menu-item')]</ElementProperty>
+		<ElementProperty NameOfElement="DisabledDone" Type="id">right-link</ElementProperty>
+		<ElementProperty NameOfElement="DoneButton" Type="xpath">//div[@id='right-link-content']/span</ElementProperty>
+		<ElementProperty NameOfElement="GreenTickIcon" Type="xpath">//div[@id='reconfigure-message']//div[contains(@class,'svg-common-universal-btn-unassignfixture-v1')]</ElementProperty>
+		<ElementProperty NameOfElement="DeviceGrid" Type="id">reconfigure-sensors-container</ElementProperty>
+		<ElementProperty NameOfElement="DeviceName" Type="className">name-container</ElementProperty>
+		<ElementProperty NameOfElement="PopupYesButton" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="PopupCancelButton" Type="id">default-btn</ElementProperty>
+	</ReconfigureSensors>
+	
+	<WirelessRange>
+		<ElementProperty NameOfElement="PageHeader" Type="xpath">//div[@id='layover-container-1']//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="xpath">//div[@id='layover-container-1']//span[@id='left-link-icon']</ElementProperty>
+		<ElementProperty NameOfElement="SaveLink" Type="xpath">//div[@id='layover-container-1']//div[@id='right-link-content']/span</ElementProperty>
+		<ElementProperty NameOfElement="ExtendRange" Type="xpath">//div[@id='add-range-ext']//span[contains(@class,'setting-name-container')]</ElementProperty>
+		<ElementProperty NameOfElement="RemoveRangeExtension" Type="xpath">//div[@id='remove-range-ext']//span[contains(@class,'setting-name-container')]</ElementProperty>
+		<ElementProperty NameOfElement="InfoIcon" Type="id">wireless-range-type-info-btn</ElementProperty>
+		<ElementProperty NameOfElement="WantToExtendRangeText" Type="xpath">//div[@class='bv-occupancy-wireless-range-extension']//span[@class='menu-item']</ElementProperty>
+		<ElementProperty NameOfElement="ExtendRangeSubText" Type="xpath">//div[@class='bv-occupancy-wireless-range-extension']//span[@class='sub-text']</ElementProperty>
+		<ElementProperty NameOfElement="YesOption" Type="id">add-range-ext</ElementProperty>
+		<ElementProperty NameOfElement="NoOption" Type="id">remove-range-ext</ElementProperty>
+		<ElementProperty NameOfElement="WirelessRangeMustExtendMessage" Type="xpath">//div[@id='normal-grouping-not-allowed-msg-container']//div[contains(@class,'sub-text')]</ElementProperty>
+		<ElementProperty NameOfElement="PowerOnHubMessage" Type="xpath">//div[@class='bv-occupancy-wireless-range-extension']//span[contains(@class,'sub-text')]</ElementProperty>
+	</WirelessRange>
+	
+	<PowPakDeviceSummary>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="PageHeader" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="Done" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="RemoveLight" Type="id">remove-fixture-lnk</ElementProperty>
+		<ElementProperty NameOfElement="RemoveLinkOnPopUp" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="CancelLinkOnPopUp" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="RemoveDevice" Type="id">remove-device-lnk</ElementProperty>
+		<ElementProperty NameOfElement="OccupancyDisableMessage" Type="xpath">//div[@id='associated-sensor-warning']//div[contains(@class,'sub-text')]</ElementProperty>
+		<ElementProperty NameOfElement="ControlledByGrid" Type="xpath">//div[@class='fn-assigned-to-section']//div[@class='sub-section']</ElementProperty>
+		<ElementProperty NameOfElement="ControlledByOptions" Type="className">sub-text</ElementProperty>
+		<ElementProperty NameOfElement="Popup" Type="className">modal-dialog</ElementProperty>
+		<ElementProperty NameOfElement="PopupBodyMessage" Type="id">popup-helper-text</ElementProperty>
+		<ElementProperty NameOfElement="PopupConfirmationMessage" Type="id">popup-confirmation-text</ElementProperty>
+		<ElementProperty NameOfElement="AssignedToSubText" Type="cssSelector">.fn-assigned-occgroup-container .sub-text</ElementProperty>
+	</PowPakDeviceSummary>
+	
+	<WattageCalculator>
+		<ElementProperty NameOfElement="WattageCalculatorHeader" Type="xpath">//div[@id='layover-container-1']//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="NumberOfLights" Type="id">generic-textbox-2</ElementProperty>
+		<ElementProperty NameOfElement="NumberOfLampsPerLight" Type="id">generic-textbox-3</ElementProperty>
+		<ElementProperty NameOfElement="WattagePerLamp" Type="id">generic-textbox-4</ElementProperty>
+		<ElementProperty NameOfElement="ValidationError" Type="id">error-container</ElementProperty>
+		<ElementProperty NameOfElement="ApplyThisValue" Type="id">apply-btn</ElementProperty>
+		<ElementProperty NameOfElement="FLASH" Type="xpath">//div[@id='layover-container-1']//div[@id='identify-btn']</ElementProperty>
+		<ElementProperty NameOfElement="Cancel" Type="xpath">//div[@id='layover-container-1']//div[@id='left-link-content']</ElementProperty>
+	</WattageCalculator>
+	
+	<SelectLight>
+		<ElementProperty NameOfElement="SelectLightHeader" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="AddFixture1" Type="xpath">(.//*[@id='assign-fixture-btn']/div)[1]</ElementProperty>
+		<ElementProperty NameOfElement="AddFixture2" Type="xpath">(.//*[@id='assign-fixture-btn']/div)[2]</ElementProperty>
+		<ElementProperty NameOfElement="AddFixture3" Type="xpath">(.//*[@id='assign-fixture-btn']/div)[3]</ElementProperty>
+		<ElementProperty NameOfElement="AddFixture4" Type="xpath">(.//*[@id='assign-fixture-btn']/div)[4]</ElementProperty>
+		<ElementProperty NameOfElement="AddFixture5" Type="xpath">(.//*[@id='assign-fixture-btn']/div)[5]</ElementProperty>
+		<ElementProperty NameOfElement="Next/Done" Type="id">right-link</ElementProperty>
+		<ElementProperty NameOfElement="FlashFixture1" Type="xpath">(.//div[@id="identify-btn"])[2]</ElementProperty>
+		<ElementProperty NameOfElement="FlashFixture2" Type="xpath">(.//div[@id="identify-btn"])[3]</ElementProperty>
+		<ElementProperty NameOfElement="FlashFixture5" Type="xpath">(.//div[@id="identify-btn"])[6]</ElementProperty>
+		<ElementProperty NameOfElement="FlashStopFixture1" Type="xpath">(.//div[@id="stop-identify-btn"])[2]</ElementProperty>
+		<ElementProperty NameOfElement="FlashStopFixture2" Type="xpath">(.//div[@id="stop-identify-btn"])[3]</ElementProperty>
+		<ElementProperty NameOfElement="ContinueSearching" Type="id">process-rssi-band</ElementProperty>
+		<ElementProperty NameOfElement="progressBarText" Type="xpath">//div[contains((text() = 'Searching for lights in wireless range')]</ElementProperty>	
+		<ElementProperty NameOfElement="Stop button" Type="id">progress-overlay-primary-button</ElementProperty>
+		<ElementProperty NameOfElement="NofixtureFound" Type="id">fixture-not-found</ElementProperty>
+		<ElementProperty NameOfElement="UnassignFixture1" Type="xpath">(.//*[@id='unassign-fixture-btn']/div)[1]</ElementProperty>
+		<ElementProperty NameOfElement="NextButton" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="StartNewSearch" Type="id">find-more-fixture</ElementProperty>
+		<ElementProperty NameOfElement="AllFixtureList" Type="xpath">//div[@class='bv-assign-fixture-list']/div</ElementProperty>
+		<ElementProperty NameOfElement="SingleFixtureid" Type="xpath">//div[@id='fixture-list-item-row']/div</ElementProperty>
+		<ElementProperty NameOfElement="FixtureNameInList" Type="xpath">//span[contains(@class,'name-container')]</ElementProperty>
+		<ElementProperty NameOfElement="AssignLinkInList" Type="id">assign-fixture-btn</ElementProperty>
+		<ElementProperty NameOfElement="UnassignPopUpText" Type="id">popup-helper-text</ElementProperty>
+		<ElementProperty NameOfElement="OccupancySensingDisabledMessage" Type="xpath">//div[@class='fn-associated-sensor-warning']//div[contains(@class,'small-sub-text')]</ElementProperty>
+		<ElementProperty NameOfElement="ContinueSearching" Type="id">process-rssi-band-text</ElementProperty>
+		<ElementProperty NameOfElement="NumberOfDevicesAdded" Type="id">lights-added-count</ElementProperty>
+		<ElementProperty NameOfElement="AlreadyInRoomGrid" Type="xpath">//div[@class='bv-assign-fixture-list-item']//div[contains(@class,'fn-item-container')]</ElementProperty>
+		<ElementProperty NameOfElement="FixturesGrid" Type="xpath">//div[@class='bv-assign-fixture-list']//div[contains(@class,'fn-discovered-devices-container')]</ElementProperty>
+		<ElementProperty NameOfElement="FixtureRow" Type="id">fixture-list-item-row</ElementProperty>
+		<ElementProperty NameOfElement="FixtureName" Type="className">name-container</ElementProperty>
+		<ElementProperty NameOfElement="FixtureAssignIcon" Type="id">assign-fixture-btn</ElementProperty>
+		<ElementProperty NameOfElement="FixtureUnassignIcon" Type="id">unassign-fixture-btn</ElementProperty>
+		<ElementProperty NameOfElement="ControlledByLink" Type="className">fn-device-list</ElementProperty>
+		<ElementProperty NameOfElement="ControlledByGrid" Type="xpath">//div[@id='fixture-list-container']//div[@class='controlling-device-list-box']</ElementProperty>
+		<ElementProperty NameOfElement="ControlledByOptions" Type="className">sub-text</ElementProperty>
+		<ElementProperty NameOfElement="NewCount" Type="className">fn-discovered-devices-count</ElementProperty>
+		<ElementProperty NameOfElement="ControlledByPopupText" Type="xpath">//div[contains(@class,'controlling-device-name')]//div[contains(@class,'sub-text')]</ElementProperty>
+		<ElementProperty NameOfElement="CommonFlash" Type="xpath">//div[@id='fixtures-count-container']//div[@id='identify-btn']</ElementProperty>
+		<ElementProperty NameOfElement="ExpandIcon" Type="xpath">//span[contains(@class,'svg-common-universal-btn-downarrow')]</ElementProperty>
+		<ElementProperty NameOfElement="AddAllButton" Type="xpath">//div[contains(@class,'fn-add-all-btn')]</ElementProperty>
+		<ElementProperty NameOfElement="ExpandIcon" Type="xpath">//span[contains(@class,'svg-common-universal-btn-uparrow')]</ElementProperty>
+		<ElementProperty NameOfElement="AlreadyInRoomTile" Type="xpath">//div[@id='accordion-link']//div[@class='fn-title']</ElementProperty>
+		<ElementProperty NameOfElement="AlreadyInRoomSubText" Type="xpath">//div[@class='bv-add-all-fixtures']//div[contains(@class,'fn-info-message')]</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="OkOnPopup" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="CancelOnPopup" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="Popup" Type="className">modal-dialog</ElementProperty>
+		<ElementProperty NameOfElement="AlreadyInRoomCount" Type="className">fn-view-count</ElementProperty>
+		<ElementProperty NameOfElement="AssignLink" Type="xpath">//div[@id='fixture-list-item-row']//div[@id='unassign-fixture-btn']</ElementProperty>
+		<ElementProperty NameOfElement="AssignLinkInAlreadyInRoom" Type="xpath">//div[contains(@class,'fn-accordion-content-container')]//div[@id='unassign-fixture-btn']</ElementProperty>
+	</SelectLight>
+	
+	<SelectDeviceConfirmation>
+		<ElementProperty NameOfElement="NextButton" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="AddMoreDevicesText" Type="cssSelector">#add-more-devices span</ElementProperty>
+		<ElementProperty NameOfElement="DeviceDescription" Type="xpath">//div[@id='fixture-list-item-row']//div[@id='fixture-description-container']</ElementProperty>
+		<ElementProperty NameOfElement="InWallDeviceAddedText" Type="id">new-device-added</ElementProperty>
+		<ElementProperty NameOfElement="CassowaryDimmerIcon" Type="xpath">//span[contains(@class,'image-small-product-dimmer-sensor-icon')]</ElementProperty>
+		<ElementProperty NameOfElement="CassowarySwitchIcon" Type="xpath">//span[contains(@class,'image-small-product-switch-sensor-icon')]</ElementProperty>
+		<ElementProperty NameOfElement="SwitchSensorIcon" Type="xpath">//div[@id='add-more-devices']//div[contains(@class,'image-small-switch-sensor-focused-icon')]</ElementProperty>
+		<ElementProperty NameOfElement="DimmerSensorIcon" Type="xpath">//div[@id='add-more-devices']//div[contains(@class,'image-small-dimmer-sensor-focused-icon')]</ElementProperty>
+		<ElementProperty NameOfElement="SensorControlsDeviceText" Type="xpath">//div[@class='bv-add-device-confirmation']//span[@class='sub-text']</ElementProperty>
+	</SelectDeviceConfirmation>
+	
+	<OccupancyDeviceSummary>
+		<ElementProperty NameOfElement="DeviceSummaryPageHeading" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="FLASH" Type="id">identify-btn</ElementProperty>
+		<ElementProperty NameOfElement="STOP" Type="xpath">//div[@id='stop-identify-btn']/a/span</ElementProperty>
+		<ElementProperty NameOfElement="Done" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="RemoveLinkOnPopUp" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="CancelLinkOnPopUp" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="Remove" Type="id">remove-device-lnk</ElementProperty>
+		<ElementProperty NameOfElement="Popup" Type="className">modal-dialog</ElementProperty>
+		<ElementProperty NameOfElement="PopupBodyMessage" Type="id">popup-helper-text</ElementProperty>
+		<ElementProperty NameOfElement="PopupConfirmationMessage" Type="id">popup-confirmation-text</ElementProperty>
+		<ElementProperty NameOfElement="BackArrowBtn" Type="id">left-link-icon</ElementProperty>
+	</OccupancyDeviceSummary>
+	
+	<PicoDetailAfterAddingPico>
+		<ElementProperty NameOfElement="PageHeader" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+	</PicoDetailAfterAddingPico>
+
+	<StartNewSearch>
+		<ElementProperty NameOfElement="HelperText" Type="id">fixture-help-text</ElementProperty>
+		<ElementProperty NameOfElement="HelperLink" Type="id">show-discovery-help</ElementProperty>
+	</StartNewSearch>
+	
+	<LightWattage>
+		<ElementProperty NameOfElement="LightWattageHeader" Type="xpath">//div[@class="fn-page-title show-ellipsis "]</ElementProperty>
+		<ElementProperty NameOfElement="HelpMeCalculateFixture1" Type="xpath">(//a[@id="wattage-calculator"])[1]</ElementProperty>
+		<ElementProperty NameOfElement="HelpMeCalculateFixture2" Type="xpath">(//a[@id="wattage-calculator"])[2]</ElementProperty>
+		<ElementProperty NameOfElement="FlashFixture1" Type="xpath">(.//div[@id="identify-btn"])[1]</ElementProperty>
+		<ElementProperty NameOfElement="FlashFixture2" Type="xpath">(.//div[@id="identify-btn"])[2]</ElementProperty>
+		<ElementProperty NameOfElement="FlashStopFixture1" Type="xpath">(.//div[@id="stop-identify-btn"])[1]</ElementProperty>
+		<ElementProperty NameOfElement="FlashStopFixture2" Type="xpath">(.//div[@id="stop-identify-btn"])[2]</ElementProperty>
+		<ElementProperty NameOfElement="FlashFixture1Text" Type="xpath">(.//a[@class="link-active fn-flash-btn"])[1]</ElementProperty>
+		<ElementProperty NameOfElement="StopFixture1Text" Type="xpath">(//span[@class="stop-btn-text"])[1]</ElementProperty>
+		<ElementProperty NameOfElement="FlashFixture2Text" Type="xpath">(.//a[@class="link-active fn-flash-btn"])[2]</ElementProperty>
+		<ElementProperty NameOfElement="StopFixture2Text" Type="xpath">(//span[@class="stop-btn-text"])[2]</ElementProperty>
+		<ElementProperty NameOfElement="Fixture1TextBox" Type="xpath">(//input[@id='generic-textbox-1'])</ElementProperty>
+		<ElementProperty NameOfElement="Fixture2TextBox" Type="xpath">(//input[@id='generic-textbox-2'])</ElementProperty>
+		<ElementProperty NameOfElement="HelpMeCalculate" Type="id">wattage-calculator</ElementProperty>
+		<ElementProperty NameOfElement="Next" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="Back" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="WattageValidationError" Type="id">wattage-error</ElementProperty>
+		<ElementProperty NameOfElement="WattageBox" Type="id">generic-textbox-1</ElementProperty>
+	</LightWattage>
+	
+	<Settings>
+		<ElementProperty NameOfElement="HubSettingTitle" Type="xpath">//div[@class='page-title']/div</ElementProperty>
+		<ElementProperty NameOfElement="EmergencyLink" Type="id">emergency-settings-link</ElementProperty>
+		<ElementProperty NameOfElement="SetSignInPassword" Type="xpath">//a[text()='Set Hub Sign In Password']</ElementProperty>
+		<ElementProperty NameOfElement="SetPassword" Type="id">generic-textbox-1</ElementProperty>
+		<ElementProperty NameOfElement="ReEnterPassword" Type="id">generic-textbox-2</ElementProperty>
+		<ElementProperty NameOfElement="ChangeSignInPassword" Type="id">change-password-link</ElementProperty>
+		<ElementProperty NameOfElement="CurrentPassword" Type="id">generic-textbox-1</ElementProperty>
+		<ElementProperty NameOfElement="NewPassword" Type="id">generic-textbox-2</ElementProperty>
+		<ElementProperty NameOfElement="ConfirmNewPassword" Type="id">generic-textbox-3</ElementProperty>
+		<ElementProperty NameOfElement="Cancel" Type="xpath">(//div[@id='left-link-content'])[2]</ElementProperty>
+		<ElementProperty NameOfElement="HandlingValidation" Type="class">bv-password-rules</ElementProperty>
+		<ElementProperty NameOfElement="Language" Type="id">language-setting-section</ElementProperty>
+		<ElementProperty NameOfElement="English" Type="xpath">//div[@class='fn-language-list list-item sub-section menu-item']/div[1]/div[1]/div[1]/div/span</ElementProperty>
+		<ElementProperty NameOfElement="Spanish" Type="xpath">//div[@class='fn-language-list list-item sub-section menu-item']/div[2]/div[1]/div[1]/div/span/span[2]</ElementProperty>
+		<ElementProperty NameOfElement="French" Type="xpath">//div[@class='fn-language-list list-item sub-section menu-item']/div[3]/div[1]/div[1]/div/span/span[2]</ElementProperty>
+		<ElementProperty NameOfElement="Done" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="HubDetails" Type="id">about-hub-link</ElementProperty>
+		<ElementProperty NameOfElement="AdvancedTile" Type="id">advanced-settings-link</ElementProperty>
+		<ElementProperty NameOfElement="Save" Type="xpath">//div[@id='layover-container-1']//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="ChangePasswordPageTitle" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="GenerateSupportFile" Type="id">download-support-file-link</ElementProperty>
+		<ElementProperty NameOfElement="SignOut" Type="id">sign-out-link</ElementProperty>
+	</Settings>
+	
+	<SettingsAdvanced>
+		<ElementProperty NameOfElement="TimeLocation" Type="id">system-configuration-section</ElementProperty>
+	</SettingsAdvanced>
+	
+	<HubDetails>
+		<ElementProperty NameOfElement="UpdateFirmware" Type="id">firmware-link</ElementProperty>
+		<ElementProperty NameOfElement="EthernetTile" Type="id">fn-ethernet-setting-section</ElementProperty>
+		<ElementProperty NameOfElement="EthernetStatusInTile" Type="cssSelector">.fn-ethernet-status</ElementProperty>
+		<ElementProperty NameOfElement="EthernetStatus" Type="cssSelector">#layover-container-1 .fn-ethernet-status</ElementProperty>
+		<ElementProperty NameOfElement="EthernetAccessBlockMessage" Type="xpath">//div[@id='layover-container-1']/div[2]/div/div[1]/div[5]/span</ElementProperty>
+		<ElementProperty NameOfElement="BACnetProgramming" Type="id">bacnet-programming-link</ElementProperty>
+		<ElementProperty NameOfElement="HubNameTextBox" Type="id">generic-textbox-1</ElementProperty>
+		<ElementProperty NameOfElement="DeviceDescription" Type="id">device-description</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+	</HubDetails>
+	
+	<BacnetDetails>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">.//*[@id='main']/div/div[1]/div/div/div/div/div[1]/div/div/div[1]/div/header/nav/div[1]/div/div/div</ElementProperty>
+		<ElementProperty NameOfElement="BacnetReport" Type="xpath">//div[contains(text(),'BACnet ID Report')]</ElementProperty>
+		
+	</BacnetDetails>
+	
+	<EthernetScreen>
+		<ElementProperty NameOfElement="DHCPToggleStatus" Type="id">dhcp-status-text</ElementProperty>
+		<ElementProperty NameOfElement="DHCPTogglebtn" Type="className">toggle</ElementProperty>
+		<ElementProperty NameOfElement="IPAddressLabel" Type="xpath">//span[contains(text(),'IP Address')]</ElementProperty>
+		<ElementProperty NameOfElement="IPAddressField" Type="id">ip-address</ElementProperty>
+		<ElementProperty NameOfElement="IPAddressValidationMessage" Type="xpath">(//div[@class='ethernet-address-settings-section']/div/div[3]/span)[1]</ElementProperty>
+		
+		<ElementProperty NameOfElement="SubnetMaskLabel" Type="xpath">//span[contains(text(),'Subnet Mask')]</ElementProperty>
+		<ElementProperty NameOfElement="SubnetMaskField" Type="id">subnet-address</ElementProperty>
+		<ElementProperty NameOfElement="SubnetMaskValidationMessage" Type="xpath">(//div[@class='ethernet-address-settings-section']/div/div[3]/span)[2]</ElementProperty>
+		
+		<ElementProperty NameOfElement="GatewayLabel" Type="xpath">//span[contains(text(),'Gateway')]</ElementProperty>
+		<ElementProperty NameOfElement="GatewayField" Type="id">gateway-address</ElementProperty>
+		<ElementProperty NameOfElement="GatewayValidationMessage" Type="xpath">(//div[@class='ethernet-address-settings-section']/div/div[3]/span)[3]</ElementProperty>
+		
+		<ElementProperty NameOfElement="DNSServer1Label" Type="xpath">//span[contains(text(),'DNS Server 1')]</ElementProperty>
+		<ElementProperty NameOfElement="DNSServer1Field" Type="id">dns1-address</ElementProperty>
+		<ElementProperty NameOfElement="DNS1ValidationMessage" Type="xpath">(//div[@class='ethernet-address-settings-section']/div/div[3]/span)[4]</ElementProperty>
+		
+		<ElementProperty NameOfElement="DNSServer2Label" Type="xpath">//span[contains(text(),'DNS Server 2')]</ElementProperty>
+		<ElementProperty NameOfElement="DNSServer2Field" Type="id">dns2-address</ElementProperty>
+		<ElementProperty NameOfElement="DNS2ValidationMessage" Type="xpath">(//div[@class='ethernet-address-settings-section']/div/div[3]/span)[5]</ElementProperty>
+		
+		<ElementProperty NameOfElement="DNSServer3Label" Type="xpath">//span[contains(text(),'DNS Server 3')]</ElementProperty>
+		<ElementProperty NameOfElement="DNSServer3Field" Type="id">dns3-address</ElementProperty>
+		<ElementProperty NameOfElement="DNS3ValidationMessage" Type="xpath">(//div[@class='ethernet-address-settings-section']/div/div[3]/span)[6]</ElementProperty>
+		
+		<ElementProperty NameOfElement="ValidationMessage" Type="xpath">//div[@class='ethernet-address-settings-section']/div/div[3]/span</ElementProperty>
+		
+		<ElementProperty NameOfElement="Save" Type="xpath">//div[@id='layover-container-1']//div[@id='right-link-content']</ElementProperty>
+	</EthernetScreen>
+	
+	<FirmwarePage>
+		<ElementProperty NameOfElement="SearchLink" Type="xpath">//label[@class="btn firmware-upload"]</ElementProperty>
+		<ElementProperty NameOfElement="FirmwareInput" Type="id">fileName</ElementProperty>
+		<ElementProperty NameOfElement="AreadyUpgraded" Type="xpath">//div[contains(text(),' hub is already running at this version')]</ElementProperty>
+		<ElementProperty NameOfElement="ErrorMessage" Type="id">statusMsg</ElementProperty>
+	</FirmwarePage>
+	
+	
+	<TimeLocationPage>
+		<ElementProperty NameOfElement="Location" Type="xpath">//span[contains(text(),'Location')]</ElementProperty>
+		<ElementProperty NameOfElement="Latitude" Type="id">generic-textbox-1</ElementProperty>
+		<ElementProperty NameOfElement="Longitude" Type="id">generic-textbox-2</ElementProperty>
+		<ElementProperty NameOfElement="North" Type="id">north-direction</ElementProperty>
+		<ElementProperty NameOfElement="South" Type="id">south-direction</ElementProperty>
+		<ElementProperty NameOfElement="East" Type="id">east-direction</ElementProperty>
+		<ElementProperty NameOfElement="West" Type="id">west-direction</ElementProperty>
+		<ElementProperty NameOfElement="UseTimeAndDate" Type="id">date-time-settings-link-container</ElementProperty>
+		<ElementProperty NameOfElement="Save" Type="xpath">//div[@id='layover-container-1']//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="Cancel" Type="xpath">//div[@id='layover-container-1']//div[@id='left-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="EnterLocation" Type="id">enter-location</ElementProperty>
+	</TimeLocationPage>
+	
+	<LocationPage>
+		<ElementProperty NameOfElement="Country" Type="xpath">(//div[@id='place-name'])[1]</ElementProperty>
+		<ElementProperty NameOfElement="Canada" Type="xpath">//div[@id='place-wheeler']/div/div/div[2]/ul/li[1]</ElementProperty>
+		<ElementProperty NameOfElement="Mexico" Type="xpath">//div[@id='place-wheeler']/div/div/div[2]/ul/li[2]</ElementProperty>
+		<ElementProperty NameOfElement="UK" Type="xpath">//div[@id='place-wheeler']/div/div/div[2]/ul/li[3]</ElementProperty>
+		<ElementProperty NameOfElement="US" Type="xpath">//div[@id='place-wheeler']/div/div/div[2]/ul/li[4]</ElementProperty>
+		<ElementProperty NameOfElement="Save" Type="xpath">//a[@id='done-link']</ElementProperty>
+		<ElementProperty NameOfElement="Cancel" Type="xpath">//a[@id='cancel-link']</ElementProperty>
+		<ElementProperty NameOfElement="State" Type="xpath">(//div[@id='place-name'])[2]</ElementProperty>
+	</LocationPage>
+	
+	<EmergencySettings>
+		<ElementProperty NameOfElement="EmergencySettingsHeader" Type="xpath">//div[contains(text(),"Emergency Settings")]</ElementProperty>
+		<ElementProperty NameOfElement="CancelButton" Type="id">left-link-content</ElementProperty>
+		<ElementProperty NameOfElement="SaveButton" Type="xpath">//div[@id='layover-container-1']//div[@id="right-link"]</ElementProperty>
+		<ElementProperty NameOfElement="SwitchOnButton" Type="id">switch-on-btn</ElementProperty>
+		<ElementProperty NameOfElement="SwitchOffButton" Type="id">switch-off-btn</ElementProperty>
+		<ElementProperty NameOfElement="SwitchOffRadio" Type="xpath">//div[@id='switch-off-btn']//span[@data-value='Off']</ElementProperty>
+	</EmergencySettings>
+	
+	<Occupancy>
+		<ElementProperty NameOfElement="Status" Type="xpath">//span[contains(text(),'Status')]</ElementProperty>
+		<ElementProperty NameOfElement="ToggleButtonStatus" Type="id">toggle-btn-status</ElementProperty>
+		<ElementProperty NameOfElement="ToggleButton" Type="id">toggle-btn-controller</ElementProperty>
+		<ElementProperty NameOfElement="Lights" Type="id">lights-settings</ElementProperty>
+		<ElementProperty NameOfElement="Sensitivity" Type="id">sensitivity-settings</ElementProperty>
+		<ElementProperty NameOfElement="Timeout" Type="id">timeout-settings</ElementProperty>
+		<ElementProperty NameOfElement="OccupancyGroup" Type="id">occupancy-groups</ElementProperty>
+		<ElementProperty NameOfElement="TogglePopupOk" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="TogglePopupCancel" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="Cancel" Type="id">secondary-btn</ElementProperty>
+		<ElementProperty NameOfElement="ConfirmationDialogPopUp" Type="id">confirmation-dialog-container</ElementProperty>
+		<ElementProperty NameOfElement="ConfirmationDeleteButton" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="RoomControl" Type="id">room-control</ElementProperty>
+		<ElementProperty NameOfElement="AllSensorWorkTogether" Type="xpath">//div[@id='room-control']//div[contains(@class,'link-active')]</ElementProperty>
+		<ElementProperty NameOfElement="PageTitle" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="WirelessRange" Type="xpath">//div[@id='wireless-range']//div[contains(@class,'link-active')]</ElementProperty>
+		<ElementProperty NameOfElement="WirelessRangeValue" Type="xpath">//div[@id='wireless-range']//div[contains(@class,'sub-text')]</ElementProperty>
+		<ElementProperty NameOfElement="AllSensorWorkTogetherValue" Type="xpath">//div[@id='room-control']//div[contains(@class,'float-right')]</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrow" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="AllSensorWorkTogetherSubText" Type="xpath">//div[contains(@class,'small-sub-text')]</ElementProperty>	
+		<ElementProperty NameOfElement="OccupancyGroupSubText" Type="xpath">//div[@id='occupancy-groups']//div[contains(@class,'small-sub-text')]</ElementProperty>
+	</Occupancy>
+	
+	<SensitivityPage>
+		<ElementProperty NameOfElement="HighButton" Type="id">high-btn</ElementProperty>
+		<ElementProperty NameOfElement="HighButtonLabel" Type="xpath">//span[contains(text(),'High')]</ElementProperty>
+		<ElementProperty NameOfElement="LowButton" Type="id">low-btn</ElementProperty>
+		<ElementProperty NameOfElement="LowButtonLabel" Type="xpath">//span[contains(text(),'Low')]</ElementProperty>
+		<ElementProperty NameOfElement="MediumButton" Type="id">medium-btn</ElementProperty>
+		<ElementProperty NameOfElement="MediumButtonLabel" Type="xpath">//span[contains(text(),'Medium (Default)')]</ElementProperty>
+		<ElementProperty NameOfElement="UltraLowButton" Type="id">ultra-low-btn</ElementProperty>
+		<ElementProperty NameOfElement="UltraLowButtonLabel" Type="xpath">//span[contains(text(),'Ultra Low')]</ElementProperty>
+		<ElementProperty NameOfElement="Save" Type="xpath">//div[@id='layover-container-1']//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="Cancel" Type="xpath">//div[@id='layover-container-1']//div[@id='left-link-content']/span</ElementProperty>
+		<ElementProperty NameOfElement="FocusOut" Type="class">space-container</ElementProperty>
+		<ElementProperty NameOfElement="RadioButtonValue" Type="className">r-value</ElementProperty>
+		<ElementProperty NameOfElement="InWallSensorSection" Type="xpath">//div[@class='fn-all-occ-sensor-sensitivity']//div[contains(@class,'sub-section')]</ElementProperty>
+		<ElementProperty NameOfElement="InWallSensorText" Type="xpath">//div[@class='bv-area-all-occ-sensors-sensitivity']//div[contains(@class,'section-header')]</ElementProperty>
+		<ElementProperty NameOfElement="SelectedHighSensitivity" Type="xpath">//div[@id='high-btn']/span</ElementProperty>
+	</SensitivityPage>
+	
+	<TimeoutPage>
+		<ElementProperty NameOfElement="OneMinButton" Type="id">timeout-one</ElementProperty>
+		<ElementProperty NameOfElement="OneMinButtonLabel" Type="xpath">//span[contains(text(),'1 min')]</ElementProperty>
+		<ElementProperty NameOfElement="FiveMinButton" Type="id">timeout-five</ElementProperty>
+		<ElementProperty NameOfElement="FiveMinButtonLabel" Type="xpath">//span[contains(text(),'5 min')]</ElementProperty>
+		<ElementProperty NameOfElement="FifteenMinButton" Type="id">timeout-fifteen</ElementProperty>
+		<ElementProperty NameOfElement="FifteenMinButtonLabel" Type="xpath">//span[contains(text(),'15 min')]</ElementProperty>
+		<ElementProperty NameOfElement="ThirtyMinButton" Type="id">timeout-thirty</ElementProperty>
+		<ElementProperty NameOfElement="ThirtyMinButtonLabel" Type="xpath">//span[contains(text(),'30 min')]</ElementProperty>
+		<ElementProperty NameOfElement="Save" Type="xpath">//div[@id='layover-container-1']//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="Cancel" Type="xpath">//div[@id='layover-container-1']//div[@id='left-link-content']/span</ElementProperty>
+		<ElementProperty NameOfElement="FocusOut" Type="class">component-space-container</ElementProperty>
+		<ElementProperty NameOfElement="RadioButtonValue" Type="className">r-value</ElementProperty>
+		<ElementProperty NameOfElement="InWallSensorSection" Type="xpath">//div[@class='bv-occupancy-settings-timeout']//div[contains(@class,'sub-section')]</ElementProperty>
+		<ElementProperty NameOfElement="InWallSensorText" Type="xpath">//div[@class='bv-occupancy-settings-timeout']//div[contains(@class,'section-header')][1]</ElementProperty>
+		<ElementProperty NameOfElement="SelectedThirtyMinTimeout" Type="xpath">//div[@id='timeout-thirty']/span</ElementProperty>
+	</TimeoutPage>
+	
+	<OccupancyGroupPage>
+		<ElementProperty NameOfElement="AddGroup" Type="id">add-occupancygroup</ElementProperty>
+		<ElementProperty NameOfElement="Fixture1" Type="xpath">(//div[contains(@class,'fn-assign-fixture')])[1]</ElementProperty>
+		<ElementProperty NameOfElement="Fixture2" Type="xpath">(//div[contains(@class,'fn-assign-fixture')])[2]</ElementProperty>
+		<ElementProperty NameOfElement="Fixture3" Type="xpath">(//div[contains(@class,'fn-assign-fixture')])[3]</ElementProperty>
+		<ElementProperty NameOfElement="Fixture4" Type="xpath">(//div[contains(@class,'fn-assign-fixture')])[4]</ElementProperty>
+		<ElementProperty NameOfElement="Group1" Type="xpath">(//a[@id='occupancygroup-detail']/div/div[1]/div/span)[1]</ElementProperty>
+		<ElementProperty NameOfElement="Save" Type="xpath">(//div[@id='right-link-content'])[2]</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="RemoveGroup" Type="id">remove-group-lnk</ElementProperty>
+		<ElementProperty NameOfElement="FocusOut" Type="class">space-container</ElementProperty>
+		<ElementProperty NameOfElement="AllFlash" Type="xpath">(.//div[@id="identify-btn"])[1]</ElementProperty>
+		<ElementProperty NameOfElement="AllStop" Type="xpath">(.//div[@id="stop-identify-btn"])[1]</ElementProperty>
+		<ElementProperty NameOfElement="FlashFixture1" Type="xpath">(.//div[@id="identify-btn"])[2]</ElementProperty>
+		<ElementProperty NameOfElement="FlashFixture2" Type="xpath">(.//div[@id="identify-btn"])[3]</ElementProperty>
+		<ElementProperty NameOfElement="FlashStopFixture1" Type="xpath">(.//div[@id="stop-identify-btn"])[2]</ElementProperty>
+		<ElementProperty NameOfElement="FlashStopFixture2" Type="xpath">(.//div[@id="stop-identify-btn"])[3]</ElementProperty>
+		<ElementProperty NameOfElement="OccupancyGroupContainer" Type="xpath">//div[contains(@class,'fn-occupancygroup-list')]</ElementProperty>
+		<ElementProperty NameOfElement="OccupancyGroupNameInList" Type="xpath">//span[contains(@class,'fn-lbl-occupancygroup-name')]</ElementProperty>
+		<ElementProperty NameOfElement="InfoIcon" Type="id">info-icon</ElementProperty>
+		<ElementProperty NameOfElement="AddGroupLink" Type="id">add-occupancygroup</ElementProperty>
+		<ElementProperty NameOfElement="OccupancyGroupInfoText" Type="className">occupancy-grouping-info</ElementProperty>
+		<ElementProperty NameOfElement="SelectAdditionalDevicesText" Type="cssSelector">.bv-master-occupancy-group-fixture-view div.menu-item</ElementProperty>
+		<ElementProperty NameOfElement="OtherDevicesText" Type="cssSelector">.bv-master-occupancy-group-fixture-view span.section-header</ElementProperty>
+		<ElementProperty NameOfElement="ShowFixtureSensorLink" Type="id">fixtures-with-sensors-section</ElementProperty>
+		<ElementProperty NameOfElement="OccupancySensorsAlreadyGroupedText" Type="cssSelector">.bv-master-occ-group-help span.menu-item</ElementProperty>
+		<ElementProperty NameOfElement="ToAddMoreLightsText" Type="cssSelector">.bv-master-occ-group-help li:nth-child(1)</ElementProperty>
+		<ElementProperty NameOfElement="ToCreateMultipleGroupsText" Type="cssSelector">.bv-master-occ-group-help li:nth-child(3)</ElementProperty>
+		<ElementProperty NameOfElement="FixturesGrid" Type="id">fixtures-without-sensor-container</ElementProperty>
+		<ElementProperty NameOfElement="FixtureRow" Type="id">fixture-list-item-row</ElementProperty>
+		<ElementProperty NameOfElement="FixtureName" Type="className">name-container</ElementProperty>
+		<ElementProperty NameOfElement="FixtureAssignIcon" Type="id">assign-fixture-btn</ElementProperty>
+		<ElementProperty NameOfElement="FixtureUnassignIcon" Type="id">unassign-fixture-btn</ElementProperty>
+	</OccupancyGroupPage>
+	
+	<AddOccupancyGroup>
+		<ElementProperty NameOfElement="AddFixture1" Type="xpath">(//div[contains(@class,'fn-assign-fixture')])[1]</ElementProperty>
+		<ElementProperty NameOfElement="AddFixture2" Type="xpath">(//div[contains(@class,'fn-assign-fixture')])[2]</ElementProperty>
+		<ElementProperty NameOfElement="AddFixture3" Type="xpath">(//div[contains(@class,'fn-assign-fixture')])[3]</ElementProperty>
+		<ElementProperty NameOfElement="AddFixture4" Type="xpath">(//div[contains(@class,'fn-assign-fixture')])[4]</ElementProperty>
+		<ElementProperty NameOfElement="Save" Type="xpath">(//div[@id='right-link-content'])[2]</ElementProperty>
+		<ElementProperty NameOfElement="Cancel" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="FixturesGrid" Type="cssSelector">.fn-occupancy-fixture-container</ElementProperty>
+		<ElementProperty NameOfElement="FixtureRow" Type="cssSelector">div.bv-occupancy-group-assign-fixture-list-item</ElementProperty>
+		<ElementProperty NameOfElement="FixtureName" Type="cssSelector">.fn-fixture-name</ElementProperty>
+		<ElementProperty NameOfElement="FixtureAssignIcon" Type="cssSelector">.fn-assign-fixture</ElementProperty>
+	</AddOccupancyGroup>
+	
+	<OccupancyGroupDetail>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="DeleteGroup" Type="id">remove-group-lnk</ElementProperty>
+		<ElementProperty NameOfElement="FocusOut" Type="class">space-container</ElementProperty>
+		<ElementProperty NameOfElement="AllFlash" Type="xpath">//div[contains(@class,'all-fixture-row')]//div[@id='identify-btn']</ElementProperty>
+		<ElementProperty NameOfElement="AllStop" Type="xpath">//div[contains(@class,'all-fixture-row')]//div[@id='stop-identify-btn']</ElementProperty>
+		<ElementProperty NameOfElement="FlashFixture1" Type="xpath">(.//div[@id="identify-btn"])[2]</ElementProperty>
+		<ElementProperty NameOfElement="FlashFixture2" Type="xpath">(.//div[@id="identify-btn"])[3]</ElementProperty>
+		<ElementProperty NameOfElement="FlashStopFixture1" Type="xpath">(.//div[@id="stop-identify-btn"])[2]</ElementProperty>
+		<ElementProperty NameOfElement="FlashStopFixture2" Type="xpath">(.//div[@id="stop-identify-btn"])[3]</ElementProperty>
+		<ElementProperty NameOfElement="DeleteConfirmationInPopUp" Type="id">primary-btn</ElementProperty>primary-btn
+	</OccupancyGroupDetail>
+	
+	<Tuning>
+		<ElementProperty NameOfElement="Title" Type="xpath">//div[contains(text(),"Tuning")]</ElementProperty>
+		<ElementProperty NameOfElement="SetPerFixture" Type="id">setPerFixtures-btn</ElementProperty>
+		<ElementProperty NameOfElement="SetSameSettings" Type="id">setSameSetting-btn</ElementProperty>
+		<ElementProperty NameOfElement="AllDimmedLightsLevel" Type="xpath">(//span[@class='fn-light-level'])[1]</ElementProperty>
+		<ElementProperty NameOfElement="AllDimmedWheeler" Type="xpath">//div[@class="dwwol"]</ElementProperty>
+		<ElementProperty NameOfElement="WheelerCancel" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="WheelerDone" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="ProgressBar" Type="xpath">//div[@class='progress']</ElementProperty>
+		<ElementProperty NameOfElement="AllFlash" Type="xpath">(.//div[@id="identify-btn"])[1]</ElementProperty>
+		<ElementProperty NameOfElement="AllStop" Type="xpath">(.//div[@id="stop-identify-btn"])[1]</ElementProperty>
+		<ElementProperty NameOfElement="FlashFixture1" Type="xpath">(.//div[@id="identify-btn"])[1]</ElementProperty>
+		<ElementProperty NameOfElement="FlashFixture2" Type="xpath">(.//div[@id="identify-btn"])[2]</ElementProperty>
+		<ElementProperty NameOfElement="FlashStopFixture1" Type="xpath">(.//div[@id="stop-identify-btn"])[1]</ElementProperty>
+		<ElementProperty NameOfElement="FlashStopFixture2" Type="xpath">(.//div[@id="stop-identify-btn"])[2]</ElementProperty>
+		<ElementProperty NameOfElement="LowEndtrimTile" Type="xpath">//span[contains(text(),'Low-End Trim')]</ElementProperty>
+		<ElementProperty NameOfElement="DimmedLightsWheeler" Type="xpath">//span[@class='fn-light-level']</ElementProperty>
+		<ElementProperty NameOfElement="Wheeler" Type="xpath">//div[@id='info-dailog-container']/div/div[2]/div/div[2]/div/div[1]/div[3]</ElementProperty>
+		<ElementProperty NameOfElement="WheelerLayover" Type="xpath">.//*[@id='modal-dialog']/div/div[2]/div</ElementProperty>
+		<ElementProperty NameOfElement="WheelerDoneBtn" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="WheelerCancelBtn" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="SetSameSettingsScreen" Type="xpath">//div[@class="fn-set-per-fixture"]</ElementProperty>
+		<ElementProperty NameOfElement="SetPerFixtureScreen" Type="xpath">//div[@class="fn-set-same-settings"]</ElementProperty>
+	</Tuning>
+	
+	<LowEndTrim>
+		<ElementProperty NameOfElement="HeaderText" Type="xpath">//div[@class="fn-page-title show-ellipsis "]</ElementProperty>
+		<ElementProperty NameOfElement="AllLightsTextBox" Type="xpath">//span[@class="fn-light-level"]</ElementProperty>
+		<ElementProperty NameOfElement="SetPerLight" Type="xpath">//a[@id="setPerFixtures-btn"]</ElementProperty>
+		<ElementProperty NameOfElement="SetSameSetting" Type="xpath">//a[@id="setSameSetting-btn"]</ElementProperty>
+		<ElementProperty NameOfElement="WheelerDoneBtn" Type="xpath">//a[contains(text(),'Done')]</ElementProperty>
+		<ElementProperty NameOfElement="WheelerCancelBtn" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="SetSameSettingsScreen" Type="xpath">//div[@class="fn-set-per-fixture"]</ElementProperty>
+		<ElementProperty NameOfElement="SetPerFixtureScreen" Type="xpath">//div[@class="fn-set-same-settings"]</ElementProperty>
+		<ElementProperty NameOfElement="ZeroTenVoltLightsText" Type="xpath">//div[@class='bv-tuning-settings-list']//div[contains(@class,'section-header')]</ElementProperty>
+		<ElementProperty NameOfElement="LowEndTrimValue" Type="xpath">//div[@class='bv-tuning-settings-list']//span[@class='fn-light-level']</ElementProperty>
+		<ElementProperty NameOfElement="DimmableLightValue" Type="xpath">//div[contains(@class,'fn-wheel-content-container')]//div[@class='dwwol']</ElementProperty>
+	</LowEndTrim>
+	
+	<Daylighting>
+		<ElementProperty NameOfElement="DaylightToggleBtn" Type="id">toggle-daylighting-status</ElementProperty>
+		<ElementProperty NameOfElement="DaylightToggleBtn" Type="id">toggle-btn-status</ElementProperty>
+		<ElementProperty NameOfElement="AllowDimStatus" Type="xpath">//div[contains(@class,'minimum-daylight-level')]</ElementProperty>
+		<ElementProperty NameOfElement="CalibrateDaylightSensor" Type="id">sensor-name-container</ElementProperty>
+		<ElementProperty NameOfElement="FlashSensor1" Type="xpath">sensor-name-container</ElementProperty>
+		<ElementProperty NameOfElement="PageHeader" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="NextOrDone" Type="xpath">//div[@id='layover-container-1']//div[@id='right-link-content']</ElementProperty>
+		<ElementProperty NameOfElement="CalibrationStepsHeading" Type="xpath">//div[contains(@class,'heading')]/span</ElementProperty>
+	</Daylighting>
+	
+	<AreaDetailsPage>
+		<ElementProperty NameOfElement="DeviceAndSettings" Type="xpath">//div[@id='devices']/div/div/div/div[1]/div/div[1]/div/div[2]/div[1]/span[1]</ElementProperty>
+		<ElementProperty NameOfElement="RoomName" Type="xpath">//span[contains(Text(),'Room A')]</ElementProperty>
+		<ElementProperty NameOfElement="OccupancyStatus" Type="xpath">//div[@class='occupancy-status row-content-container']/span[2]</ElementProperty>
+		<ElementProperty NameOfElement="RoomEnergy" Type="xpath">//span[contains(text(),'Energy')]</ElementProperty>
+		<ElementProperty NameOfElement="RoomControlLights" Type="xpath">//span[contains(text(),'Control Lights')]</ElementProperty>
+		<ElementProperty NameOfElement="DeviceSettings" Type="xpath">//div[@id='devices']/div/div/div/div[1]/div/div[1]/div/div[2]/div[1]/span[1]</ElementProperty>
+		<ElementProperty NameOfElement="Energy" Type="id">energy</ElementProperty>
+		<ElementProperty NameOfElement="EnergyValue" Type="xpath">//span[contains(@class,'high-chart-title')]</ElementProperty>
+		<ElementProperty NameOfElement="ControlLights" Type="xpath">//div[@id='lights']//div[@class='fn-lights-tile']</ElementProperty>
+		<ElementProperty NameOfElement="ControlLightsStatus" Type="xpath">//span[@class='sub-title']//div[contains(@class,'fn-lights-status')]</ElementProperty>
+		<ElementProperty NameOfElement="BackwardArrow" Type="id">left-link-icon</ElementProperty>
+	</AreaDetailsPage>
+	
+	<AreaEnergy>
+		<ElementProperty NameOfElement="PageHeader" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="EnergyValue" Type="xpath">//span[contains(@class,'high-chart-title')]</ElementProperty>
+		<ElementProperty NameOfElement="Back" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="LightWattageTile" Type="xpath">//span[@class='menu-item']</ElementProperty>
+	</AreaEnergy>
+	
+	<ControlLights>
+		<ElementProperty NameOfElement="AllLightsOff" Type="id">all-device-off</ElementProperty>
+		<ElementProperty NameOfElement="AllLightsOn" Type="id">all-device-on</ElementProperty>
+		<ElementProperty NameOfElement="DevicesGrid" Type="xpath">//div[contains(@class,'device-container')]</ElementProperty>
+		<ElementProperty NameOfElement="DevicesList" Type="xpath">//div[contains(@class,'pico-name')]</ElementProperty>
+		<ElementProperty NameOfElement="Pico3ButtonRaiseLowerAllOn" Type="id">pico3ButtonRaiseLower-0</ElementProperty>
+		<ElementProperty NameOfElement="Pico3ButtonRaiseLowerRaise" Type="id">pico3ButtonRaiseLower-3</ElementProperty>
+		<ElementProperty NameOfElement="Pico3ButtonRaiseLowerFavourite" Type="id">pico3ButtonRaiseLower-1</ElementProperty>
+		<ElementProperty NameOfElement="Pico3ButtonRaiseLowerLower" Type="id">pico3ButtonRaiseLower-4</ElementProperty>
+		<ElementProperty NameOfElement="Pico3ButtonRaiseLowerAllOff" Type="id">pico3ButtonRaiseLower-2</ElementProperty>
+		<ElementProperty NameOfElement="Back" Type="id">left-link-icon</ElementProperty>
+	</ControlLights>
+	
+	<DaylightDeviceSummary>
+		<ElementProperty NameOfElement="Done" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="PageHeader" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="DeviceModelNumber" Type="id">device-model</ElementProperty>
+		<ElementProperty NameOfElement="RemoveLinkOnPopUp" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="CancelLinkOnPopUp" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="Remove" Type="id">remove-device-lnk</ElementProperty>
+	</DaylightDeviceSummary>
+	
+	<InWallDeviceDetails>
+		<ElementProperty NameOfElement="PageHeader" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="id">left-link-icon</ElementProperty>
+		<ElementProperty NameOfElement="PopupRemoveButton" Type="id">primary-btn</ElementProperty>
+		<ElementProperty NameOfElement="PopupCancelButton" Type="id">default-btn</ElementProperty>
+		<ElementProperty NameOfElement="RemoveDevice" Type="id">remove-device-lnk</ElementProperty>
+		<ElementProperty NameOfElement="Popup" Type="className">modal-dialog</ElementProperty>
+		<ElementProperty NameOfElement="PopupBodyMessage" Type="id">popup-helper-text</ElementProperty>
+		<ElementProperty NameOfElement="PopupConfirmationMessage" Type="id">popup-confirmation-text</ElementProperty>
+		<ElementProperty NameOfElement="AddMoreDevices" Type="id">add-more-lights</ElementProperty>
+		<ElementProperty NameOfElement="ControlledByGrid" Type="xpath">//div[@class='bv-device-detail']//div[@class='sub-section'][2]</ElementProperty>
+		<ElementProperty NameOfElement="ControlledByOptions" Type="className">sub-text</ElementProperty>
+		<ElementProperty NameOfElement="ModelNumber" Type="id">device-model</ElementProperty>
+		<ElementProperty NameOfElement="Done" Type="id">right-link-content</ElementProperty>
+		<ElementProperty NameOfElement="Wattage" Type="id">generic-textbox-2</ElementProperty>
+		<ElementProperty NameOfElement="WattageErrorMessage" Type="id">wattage-error</ElementProperty>
+		<ElementProperty NameOfElement="RemoveFixture" Type="id">remove-fixture-lnk</ElementProperty>
+		<ElementProperty NameOfElement="RemoveLinkOnPopUp" Type="id">primary-btn</ElementProperty>
+	</InWallDeviceDetails>
+	
+	<Lights>
+		<ElementProperty NameOfElement="PageHeader" Type="xpath">//div[contains(@class,'fn-page-title')]</ElementProperty>
+		<ElementProperty NameOfElement="FixturesList" Type="xpath">//div[contains(@class,'fn-fixture-list-container')]</ElementProperty>
+		<ElementProperty NameOfElement="FixturesRow" Type="xpath">//span[contains(@class,'name-container')]</ElementProperty>
+		<ElementProperty NameOfElement="Fixture1" Type="xpath">//span[contains(@class,'name-container')]</ElementProperty>
+	</Lights>
+	
+	<Language>
+		<ElementProperty NameOfElement="LanguageListGrid" Type="xpath">//div[contains(@class,'fn-language-list')]</ElementProperty>
+		<ElementProperty NameOfElement="LanguageRow" Type="xpath">//span[contains(@class,'setting-name-container')]/span</ElementProperty>
+		<ElementProperty NameOfElement="Save" Type="xpath">//div[@id='layover-container-1']//div[@id='right-link-content']</ElementProperty>
+	</Language>
+
+<!-- End of Web App Elements -->
+
+<!-- Start of Native App Elements -->
+	<NativeGeneral>
+		<ElementProperty NameOfElement="progress" Type="class">android.widget.ProgressBar</ElementProperty>
+	</NativeGeneral>
+	<FirstTimeInstall>
+	  <ElementProperty NameOfElement="Accept" Type="id">com.lutron.vive:id/acceptButton</ElementProperty>
+	  <!-- ElementProperty NameOfElement="Accept" Type="xpath">//android.widget.Button[@text='Accept')]</ElementProperty-->
+	  <ElementProperty NameOfElement="Privacy" Type="xpath">//android.widget.CheckBox[@resource-id='com.lutron.vive:id/privacyCheckBox']</ElementProperty>
+	  <ElementProperty NameOfElement="Licence" Type="id">com.lutron.vive:id/licenseCheckBox</ElementProperty>
+	  <ElementProperty NameOfElement="Disclamer" Type="id">com.lutron.vive:id/disclaimerCheckBox</ElementProperty>
+	</FirstTimeInstall>   
+	
+	<StartUpPage>
+		<ElementProperty NameOfElement="CreateAccountButton" Type="id">com.lutron.vive:id/createAccountButton</ElementProperty>
+		<ElementProperty NameOfElement="SignInButton" Type="id">com.lutron.vive:id/signInButton</ElementProperty>
+		<ElementProperty NameOfElement="AlreadyAccountText" Type="id">com.lutron.vive:id/account_already_exists</ElementProperty>
+		<ElementProperty NameOfElement="NeedHelpButton" Type="id">com.lutron.vive:id/needHelpTextView</ElementProperty>
+	</StartUpPage>
+	
+	<AppLoginPage>
+		<ElementProperty NameOfElement="ViveLogo" Type="id">com.lutron.vive:id/imageView</ElementProperty>
+		<ElementProperty NameOfElement="InstructiontoSignIn" Type="id">com.lutron.vive:id/instructionMsgToSignIn</ElementProperty>
+	    <ElementProperty NameOfElement="UserName" Type="id">com.lutron.vive:id/emailEditText</ElementProperty>
+	    <ElementProperty NameOfElement="Password" Type="id">com.lutron.vive:id/passwordEditText</ElementProperty>
+	    <ElementProperty NameOfElement="Show" Type="id">com.lutron.vive:id/hideShowTextView</ElementProperty>
+	    <ElementProperty NameOfElement="SignIn" Type="id">com.lutron.vive:id/signInButton</ElementProperty>
+	    <ElementProperty NameOfElement="ForgotPassword" Type="id">com.lutron.vive:id/forgotPasswordTextView</ElementProperty>
+	    <ElementProperty NameOfElement="CreateAccount" Type="id">com.lutron.vive:id/createAccountButton</ElementProperty>
+	    <ElementProperty NameOfElement="InstructionNoAccount" Type="id">com.lutron.vive:id/noAccount</ElementProperty>
+	    <ElementProperty NameOfElement="HelpTextButton" Type="id">com.lutron.vive:id/needHelpTextView</ElementProperty>
+	    <ElementProperty NameOfElement="AccountCredentialsValidationText" Type="id">com.lutron.vive:id/errorMsgTextView</ElementProperty>
+	</AppLoginPage>
+	
+	<CommonObject>
+		<ElementProperty NameOfElement="Next" Type="id">com.lutron.vive:id/action_next</ElementProperty>
+		<ElementProperty NameOfElement="Select" Type="xpath">//android.widget.TextView[@text='Select']</ElementProperty>
+		<ElementProperty NameOfElement="BackButton" Type="class">android.widget.ImageButton</ElementProperty>	
+	</CommonObject>
+	
+	<ForgotPassword>
+		<ElementProperty NameOfElement="EmailAddress" Type="id">com.lutron.vive:id/emailAddressEditText</ElementProperty>
+	</ForgotPassword>
+	
+	<HomePage>
+	  <ElementProperty NameOfElement="AddProject" Type="id">com.lutron.vive:id/plusIconImageView</ElementProperty>
+	  <ElementProperty NameOfElement="AddHub" Type="id">com.lutron.vive:id/addHubTv</ElementProperty>
+	  <ElementProperty NameOfElement="Setting" Type="id">com.lutron.vive:id/settingIconImageView</ElementProperty>
+	  <ElementProperty NameOfElement="ProjectList" Type="id">com.lutron.vive:id/projectNameTextView</ElementProperty>
+	</HomePage>
+	
+	<CreateNewAccount>
+	     <ElementProperty NameOfElement="emailAddress" Type="id">com.lutron.vive:id/emailAddressEditText</ElementProperty>
+	     <ElementProperty NameOfElement="Cancel" Type="id">com.lutron.vive:id/action_cancel</ElementProperty>
+	     <ElementProperty NameOfElement="FirstName" Type="id">com.lutron.vive:id/firstNameEditText</ElementProperty>
+	     <ElementProperty NameOfElement="LastName" Type="id">com.lutron.vive:id/lastNameEditText</ElementProperty>
+	     <ElementProperty NameOfElement="Title" Type="id"></ElementProperty>
+	     <ElementProperty NameOfElement="Phone" Type="id">com.lutron.vive:id/phoneEditText</ElementProperty>
+	     <ElementProperty NameOfElement="OrganisationAddress" Type="id">com.lutron.vive:id/organizationEditText</ElementProperty>
+	     <ElementProperty NameOfElement="StreetAddress" Type="id">com.lutron.vive:id/addressEditText</ElementProperty>
+	     <ElementProperty NameOfElement="Country" Type="xpath">//android.widget.CheckedTextView[@text='$VALUE$']</ElementProperty>
+	     <ElementProperty NameOfElement="receiveUpdate" Type="id">com.lutron.vive:id/emailSendCheckBox</ElementProperty>
+	     <ElementProperty NameOfElement="State" Type="xpath">//android.widget.CheckedTextView[@text='$VALUE$']</ElementProperty>
+	     <ElementProperty NameOfElement="City" Type="id">com.lutron.vive:id/cityEditText</ElementProperty>
+	     <ElementProperty NameOfElement="Password" Type="id">com.lutron.vive:id/passwordEditText</ElementProperty>
+	     <ElementProperty NameOfElement="ConfirmPassword" Type="id">com.lutron.vive:id/confirmPasswordEditText</ElementProperty>
+	     <ElementProperty NameOfElement="Done" Type="id">com.lutron.vive:id/action_done</ElementProperty>
+	     <ElementProperty NameOfElement="ResendEmail" Type="id">com.lutron.vive:id/resendEmailTextView</ElementProperty>
+	     <ElementProperty NameOfElement="MessageSentToEmail" Type="id">com.lutron.vive:id/sentToEmailTextView</ElementProperty>
+	</CreateNewAccount>
+	
+	<CreateProject>
+	     <ElementProperty NameOfElement="ProjectName" Type="id">com.lutron.vive:id/projectNameLayout</ElementProperty>
+	     <ElementProperty NameOfElement="Organization" Type="id">com.lutron.vive:id/organizationTextView</ElementProperty>
+	     <ElementProperty NameOfElement="StreetAddress" Type="id">com.lutron.vive:id/address</ElementProperty>
+	     <ElementProperty NameOfElement="City" Type="id">com.lutron.vive:id/cityEditText</ElementProperty>
+	     <ElementProperty NameOfElement="buildingTypeList" Type="xpath">//android.widget.CheckedTextView[@text='$VALUE$']</ElementProperty>
+	     <ElementProperty NameOfElement="City" Type="id">com.lutron.vive:id/cityEditText</ElementProperty>
+	     <ElementProperty NameOfElement="CustomerFirstName" Type="id">com.lutron.vive:id/firstNameEdtTxt</ElementProperty>
+	     <ElementProperty NameOfElement="CustomerLastName" Type="id">com.lutron.vive:id/lastNameEdtTxt</ElementProperty>
+	     <ElementProperty NameOfElement="CustomerCity" Type="id">com.lutron.vive:id/cityEditText</ElementProperty>
+	     <ElementProperty NameOfElement="CustomerEmail" Type="id">com.lutron.vive:id/emailEdtTxt</ElementProperty>
+	     <ElementProperty NameOfElement="AddCustomer" Type="id">com.lutron.vive:id/add_customer</ElementProperty>
+	     <ElementProperty NameOfElement="Skip" Type="id">com.lutron.vive:id/skipStepTextView</ElementProperty>
+	     <ElementProperty NameOfElement="Title" Type="xpath">//android.widget.CheckedTextView[@text='$VALUE$']</ElementProperty>
+	</CreateProject>
+	
+	<ProjectDetails>
+	    <ElementProperty NameOfElement="ProjectNameText" Type="id">com.lutron.vive:id/projectValTextView</ElementProperty>
+	    <ElementProperty NameOfElement="ProjectId" Type="id">com.lutron.vive:id/projectId</ElementProperty>
+	    <ElementProperty NameOfElement="CreatedDate" Type="id">com.lutron.vive:id/createdValTextView</ElementProperty>
+	    <ElementProperty NameOfElement="OrganizationName" Type="id">com.lutron.vive:id/orgValTextView</ElementProperty>
+	    <ElementProperty NameOfElement="Location" Type="id">com.lutron.vive:id/locationTextView</ElementProperty>
+	    <ElementProperty NameOfElement="InviteAnotherProgrammer" Type="id">com.lutron.vive:id/inviteTextView</ElementProperty>
+	    <ElementProperty NameOfElement="Customer" Type="id">com.lutron.vive:id/custValTextView</ElementProperty>
+	    <ElementProperty NameOfElement="DataPrivacySetting" Type="id">com.lutron.vive:id/nextIconSettings</ElementProperty>	    
+	    <ElementProperty NameOfElement="RemoveProject" Type="xpath">//android.widget.TextView[@text='Remove Project']</ElementProperty>
+	</ProjectDetails>
+	
+	<NativeSettings>
+		<ElementProperty NameOfElement="Done" Type="xpath">//android.widget.TextView[@text='My Profile']</ElementProperty>
+		<ElementProperty NameOfElement="MyProfile" Type="id">com.lutron.vive:id/actionDone</ElementProperty>
+		<ElementProperty NameOfElement="ChangePassword" Type="id">com.lutron.vive:id/changePasswordTextViewe</ElementProperty>
+		<ElementProperty NameOfElement="Logout" Type="id">com.lutron.vive:id/logOutTextView</ElementProperty>
+	</NativeSettings>
+	
+<!--End of Native App Elements -->
+
+</Modules>	
