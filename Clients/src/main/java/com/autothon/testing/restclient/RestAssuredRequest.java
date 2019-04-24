@@ -5,8 +5,6 @@ import io.restassured.response.Response;
 
 public class RestAssuredRequest {
 	
-	
-
 	   public static Response get(RequestPayload payload) {
 		   	payload.httpRequest.queryParams(payload.qParams);
 		   	payload.httpRequest.headers(payload.headers);
