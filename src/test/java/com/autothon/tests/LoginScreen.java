@@ -6,6 +6,8 @@ import com.autothon.core.TestBase;
 import com.autothon.dataobjects.DataProviders;
 import com.autothon.listeners.Priority;
 import com.autothon.pageobjects.LoginPage;
+import com.autothon.pageobjects.StepInForum;
+import com.autothon.pageobjects.WhoToFollow;
 
 
 /**
@@ -15,16 +17,18 @@ public class LoginScreen extends TestBase
 {
 	
 	/**
-	 * This test enter the username and password and clicks on login button
+	 * This test get the list of three users from who to follow section
 	 * @param username 			username
 	 * @param password 			password
 	 */
-	@Priority(3)
-	@Test(dataProvider = "TestData", dataProviderClass = DataProviders.class, groups = "Smoke")
-	public void tc001_LoginToApplication(String username, String password) 
+	@Priority(1)
+	@Test(dataProvider = "TestData", dataProviderClass = DataProviders.class)
+	public void tc002_GetWhoToFollowList(String username, String password) 
 	{
 		LoginPage.setUsername(username);
 		LoginPage.setPassword(password);
 		LoginPage.clickLogin();
+		StepInForum.clickViewAllInWhoToFollowSection();
+		softAssert.assertNotNull(WhoToFollow.getUsersList(), "List should not be null.");
 	}
 }
