@@ -1,242 +1,247 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.autothon</groupId>
-  <packaging>jar</packaging>
-  <name>Test</name>
-  <artifactId>Test</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <repositories>
-    <repository>
-      <id>atlassian-public</id>
-      <url>https://maven.atlassian.com/content/repositories/atlassian-public/</url>
-      <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>never</updatePolicy>
-        <checksumPolicy>warn</checksumPolicy>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-        <checksumPolicy>warn</checksumPolicy>
-      </releases>
-    </repository>
-  </repositories>
-  <dependencies>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>3.8.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-server</artifactId>
-      <version>3.8.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-firefox-driver</artifactId>
-      <version>3.8.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-remote-driver</artifactId>
-      <version>3.8.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-api</artifactId>
-      <version>3.8.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-support</artifactId>
-      <version>3.8.1</version>
-    </dependency>
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>1.2.17</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aventstack</groupId>
-      <artifactId>extentreports</artifactId>
-      <version>3.0.6</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.poi</groupId>
-      <artifactId>poi</artifactId>
-      <version>3.16</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.poi</groupId>
-      <artifactId>poi-ooxml</artifactId>
-      <version>3.15</version>
-    </dependency>
-    <dependency>
-      <groupId>javax.mail</groupId>
-      <artifactId>mail</artifactId>
-      <version>1.4.7</version>
-    </dependency>
-    <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
-      <version>6.11</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.group.project</groupId>
-	  <artifactId>test-recorder</artifactId>
-	  <version>1.0.0</version>
-	  <scope>system</scope>
-	  <systemPath>${basedir}/lib/ATUTestRecorder_2.1.jar</systemPath>
-    </dependency>
-    <dependency>
-      <groupId>org.group.project</groupId>
-		<artifactId>jacob</artifactId>
-		<version>1.0.0</version>
-		<scope>system</scope>
-		<systemPath>${basedir}/lib/jacob.jar</systemPath>
-    </dependency>
-    <dependency>
-      <groupId>org.group.project</groupId>
-	  <artifactId>autoitx</artifactId>
-	  <version>1.0.0</version>
-	  <scope>system</scope>
-	  <systemPath>${basedir}/lib/AutoItX4Java.jar</systemPath>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/commons-net/commons-net -->
-    <dependency>
-      <groupId>commons-net</groupId>
-      <artifactId>commons-net</artifactId>
-      <version>3.3</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/commons-validator/commons-validator -->
-    <dependency>
-      <groupId>commons-validator</groupId>
-      <artifactId>commons-validator</artifactId>
-      <version>1.4.0</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
-    <dependency>
-      <groupId>io.appium</groupId>
-      <artifactId>java-client</artifactId>
-      <version>7.0.0</version>
-      
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.sikuli/sikuli-api -->
-    <dependency>
-      <groupId>org.sikuli</groupId>
-      <artifactId>sikuli-api</artifactId>
-      <version>1.2.0</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/com.galenframework/galen-java-support -->
-    <dependency>
-      <groupId>com.galenframework</groupId>
-      <artifactId>galen-java-support</artifactId>
-      <version>2.3.6</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/codoid.com/fillo/ -->
-    <dependency>
-      <groupId>com.codoid.products</groupId>
-      <artifactId>fillo</artifactId>
-      <version>1.15</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.sikuli/sikuli-api -->
-    <dependency>
-      <groupId>org.sikuli</groupId>
-      <artifactId>sikuli-api</artifactId>
-      <version>1.2.0</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/com.sikulix/sikulixapi -->
-    <dependency>
-      <groupId>com.sikulix</groupId>
-      <artifactId>sikulixapi</artifactId>
-      <version>1.1.1</version>
-      <exclusions>
-  		<exclusion>
-   			<groupId>com.github.vidstige</groupId>
-   			<artifactId>jadb</artifactId>
-  		</exclusion>
- 	</exclusions>  
-    </dependency>
-    
-    <!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
-    <dependency>
-      <groupId>org.apache.pdfbox</groupId>
-      <artifactId>pdfbox</artifactId>
-      <version>1.7.1</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/Rest/rest-assured -->
-    <dependency>
-      <groupId>com.jayway.restassured</groupId>
-      <artifactId>rest-assured</artifactId>
-      <version>2.9.0</version>
-    </dependency>
-    <dependency>
-      <groupId>net.sourceforge.jexcelapi</groupId>
-      <artifactId>jxl</artifactId>
-      <version>2.6.12</version>
-    </dependency>
-    <dependency>
-      <groupId>net.rcarz</groupId>
-      <artifactId>jira-client</artifactId>
-      <version>0.5</version>
-      <scope>compile</scope>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/io.github.misterfifi1/jira-client -->
-  <!--   <dependency>
-      <groupId>io.github.misterfifi1</groupId>
-      <artifactId>jira-client</artifactId>
-      <version>0.6.2-perf</version>
-    </dependency>
-    <dependency>
-      <groupId>com.atlassian.jira</groupId>
-      <artifactId>jira-rest-java-client-api</artifactId>
-      <version>2.0.0-m25</version>
-    </dependency>
-    <dependency>
-      <groupId>com.atlassian.jira</groupId>
-      <artifactId>jira-rest-java-client-core</artifactId>
-      <version>2.0.0-m25</version>
-    </dependency> -->
-    <!-- https://mvnrepository.com/artifact/org.languagetool/languagetool -->
-    <dependency>
-      <groupId>org.languagetool</groupId>
-      <artifactId>languagetool</artifactId>
-      <version>2.0.1</version>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/au.com.bytecode/opencsv -->
-	<dependency>
-    	<groupId>au.com.bytecode</groupId>
-    	<artifactId>opencsv</artifactId>
-    	<version>2.4</version>
-	</dependency>
-    <!-- https://mvnrepository.com/artifact/com.github.2gis.winium/winium-webdriver -->
-	<dependency>
-    	<groupId>com.github.2gis.winium</groupId>
-    	<artifactId>winium-webdriver</artifactId>
-    	<version>0.1.0-1</version>
-	</dependency>
-    <!-- https://mvnrepository.com/artifact/com.github.2gis.winium/winium-elements-desktop -->
-	<dependency>
-    	<groupId>com.github.2gis.winium</groupId>
-    	<artifactId>winium-elements-desktop</artifactId>
-    	<version>0.2.0-1</version>
-	</dependency>
-	<dependency>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.autothon</groupId>
+	<packaging>jar</packaging>
+	<name>Test</name>
+	<artifactId>Test</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<repositories>
+		<repository>
+			<id>atlassian-public</id>
+			<url>https://maven.atlassian.com/content/repositories/atlassian-public/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+				<checksumPolicy>warn</checksumPolicy>
+			</releases>
+		</repository>
+	</repositories>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/com.github.scribejava/scribejava-apis -->
+		<dependency>
+			<groupId>com.github.scribejava</groupId>
+			<artifactId>scribejava-apis</artifactId>
+			<version>2.5.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.scribejava/scribejava-core -->
+		<dependency>
+			<groupId>com.github.scribejava</groupId>
+			<artifactId>scribejava-core</artifactId>
+			<version>2.5.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-firefox-driver</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-remote-driver</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-api</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-support</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>3.0.6</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.16</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.15</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.11</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.group.project</groupId>
+			<artifactId>test-recorder</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/ATUTestRecorder_2.1.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.group.project</groupId>
+			<artifactId>jacob</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/jacob.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.group.project</groupId>
+			<artifactId>autoitx</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/AutoItX4Java.jar</systemPath>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-net/commons-net -->
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>3.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-validator/commons-validator -->
+		<dependency>
+			<groupId>commons-validator</groupId>
+			<artifactId>commons-validator</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>7.0.0</version>
+
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.sikuli/sikuli-api -->
+		<dependency>
+			<groupId>org.sikuli</groupId>
+			<artifactId>sikuli-api</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.galenframework/galen-java-support -->
+		<dependency>
+			<groupId>com.galenframework</groupId>
+			<artifactId>galen-java-support</artifactId>
+			<version>2.3.6</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/codoid.com/fillo/ -->
+		<dependency>
+			<groupId>com.codoid.products</groupId>
+			<artifactId>fillo</artifactId>
+			<version>1.15</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.sikuli/sikuli-api -->
+		<dependency>
+			<groupId>org.sikuli</groupId>
+			<artifactId>sikuli-api</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.sikulix/sikulixapi -->
+		<dependency>
+			<groupId>com.sikulix</groupId>
+			<artifactId>sikulixapi</artifactId>
+			<version>1.1.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.github.vidstige</groupId>
+					<artifactId>jadb</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>1.7.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/Rest/rest-assured -->
+		<dependency>
+			<groupId>com.jayway.restassured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>2.9.0</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+			<version>2.6.12</version>
+		</dependency>
+		<dependency>
+			<groupId>net.rcarz</groupId>
+			<artifactId>jira-client</artifactId>
+			<version>0.5</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.github.misterfifi1/jira-client -->
+		<!-- <dependency> <groupId>io.github.misterfifi1</groupId> <artifactId>jira-client</artifactId> 
+			<version>0.6.2-perf</version> </dependency> <dependency> <groupId>com.atlassian.jira</groupId> 
+			<artifactId>jira-rest-java-client-api</artifactId> <version>2.0.0-m25</version> 
+			</dependency> <dependency> <groupId>com.atlassian.jira</groupId> <artifactId>jira-rest-java-client-core</artifactId> 
+			<version>2.0.0-m25</version> </dependency> -->
+		<!-- https://mvnrepository.com/artifact/org.languagetool/languagetool -->
+		<dependency>
+			<groupId>org.languagetool</groupId>
+			<artifactId>languagetool</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/au.com.bytecode/opencsv -->
+		<dependency>
+			<groupId>au.com.bytecode</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.2gis.winium/winium-webdriver -->
+		<dependency>
+			<groupId>com.github.2gis.winium</groupId>
+			<artifactId>winium-webdriver</artifactId>
+			<version>0.1.0-1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.2gis.winium/winium-elements-desktop -->
+		<dependency>
+			<groupId>com.github.2gis.winium</groupId>
+			<artifactId>winium-elements-desktop</artifactId>
+			<version>0.2.0-1</version>
+		</dependency>
+		<dependency>
 			<groupId>org.aeonbits.owner</groupId>
 			<artifactId>owner</artifactId>
 			<version>1.0.9</version>
 		</dependency>
-		
-				<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
-		
+
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
 			<version>3.0.2</version>
 		</dependency>
-	
+
 		<!-- https://mvnrepository.com/artifact/io.rest-assured/json-path -->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
@@ -249,72 +254,72 @@
 			<artifactId>json-schema-validator</artifactId>
 			<version>3.0.2</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/io.rest-assured/xml-path -->
 		<dependency>
-    		<groupId>io.rest-assured</groupId>
-    		<artifactId>xml-path</artifactId>
-    		<version>3.0.0</version>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>xml-path</artifactId>
+			<version>3.0.0</version>
 		</dependency>
-		
-	
+
+
 		<!-- https://mvnrepository.com/artifact/org.json/json -->
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>20180813</version>
 		</dependency>
-		
-</dependencies>
-  <build>
-    <resources>
-      <resource>
-        <directory>AutomationXML/</directory>
-      </resource>
-      <resource>
-        <directory>Config</directory>
-      </resource>
-      <resource>
-        <directory>lib</directory>
-      </resource>
-    </resources>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.20.1</version>
-        <executions>
-          <execution>
-            <id>default-test</id>
-            
-            <!-- here we configure the default execution -->
-            <configuration>
-              <forkCount>0</forkCount>
-             <!--  this is the default, can be omitted -->
-            </configuration>
-          </execution>
-        </executions>
-        <configuration>
-          <suiteXmlFiles>
-            <!-- TestNG suite XML files -->
-            <suiteXmlFile xmlns="">TestNG.xml</suiteXmlFile>
-          </suiteXmlFiles>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.5.1</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.eclipse.jetty</groupId>
-        <artifactId>jetty-maven-plugin</artifactId>
-        <version>9.4.8-SNAPSHOT</version>
-      </plugin>
-    </plugins>
-  </build>
+
+	</dependencies>
+	<build>
+		<resources>
+			<resource>
+				<directory>AutomationXML/</directory>
+			</resource>
+			<resource>
+				<directory>Config</directory>
+			</resource>
+			<resource>
+				<directory>lib</directory>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.20.1</version>
+				<executions>
+					<execution>
+						<id>default-test</id>
+
+						<!-- here we configure the default execution -->
+						<configuration>
+							<forkCount>0</forkCount>
+							<!-- this is the default, can be omitted -->
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<suiteXmlFiles>
+						<!-- TestNG suite XML files -->
+						<suiteXmlFile xmlns="">TestNG.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.4.8-SNAPSHOT</version>
+			</plugin>
+		</plugins>
+	</build>
 </project>
