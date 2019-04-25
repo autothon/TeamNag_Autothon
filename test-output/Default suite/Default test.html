@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 25 12:59:05 IST 2019</td>
+<td>Started on:</td><td>Thu Apr 25 16:39:15 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>4 seconds (4427 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7157 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,9 +75,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.autothon.tests.Twitter.getRetweetCount()'><b>getRetweetCount</b><br>Test class: com.autothon.tests.Twitter</td>
-<td><div><pre>java.lang.ClassCastException: java.util.HashMap cannot be cast to com.google.gson.JsonObject
-	at com.autothon.tests.Twitter.getRetweetCount(Twitter.java:50)
+<td title='com.autothon.tests.Twitter.postJSON()'><b>postJSON</b><br>Test class: com.autothon.tests.Twitter</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.autothon.tests.Twitter.getJSONSample(Twitter.java:60)
+	at com.autothon.tests.Twitter.postJSON(Twitter.java:132)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -103,9 +104,10 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2083969860", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2083969860'><pre>java.lang.ClassCastException: java.util.HashMap cannot be cast to com.google.gson.JsonObject
-	at com.autothon.tests.Twitter.getRetweetCount(Twitter.java:50)
+</pre></div><a href='#' onClick='toggleBox("stack-trace515520300", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace515520300'><pre>java.lang.NullPointerException
+	at com.autothon.tests.Twitter.getJSONSample(Twitter.java:60)
+	at com.autothon.tests.Twitter.postJSON(Twitter.java:132)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -132,8 +134,26 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>4</td>
-<td>com.autothon.tests.Twitter@639c2c1d</td></tr>
+<td>0</td>
+<td>com.autothon.tests.Twitter@76f2b07d</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.autothon.tests.Twitter.getLikeCount()'><b>getLikeCount</b><br>Test class: com.autothon.tests.Twitter</td>
+<td></td>
+<td>3</td>
+<td>com.autothon.tests.Twitter@76f2b07d</td></tr>
+<tr>
+<td title='com.autothon.tests.Twitter.getRetweetCount()'><b>getRetweetCount</b><br>Test class: com.autothon.tests.Twitter</td>
+<td></td>
+<td>3</td>
+<td>com.autothon.tests.Twitter@76f2b07d</td></tr>
 </table><p>
 </body>
 </html>

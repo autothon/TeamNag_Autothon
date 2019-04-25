@@ -5,7 +5,7 @@
     <classes>
       <class name="com.autothon.tests.Twitter">
         <methods>
-          <include name="getRetweetCount"/>
+          <include name="postJSON"/>
         </methods>
       </class> <!-- com.autothon.tests.Twitter -->
     </classes>

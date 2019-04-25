@@ -86,8 +86,15 @@ public class Config {
 	public static String Username;
 	public static String Password;
 	public static String UMUri; 
-	public static String APIHost;
+	public static String APIHost="https://api.twitter.com/1.1/statuses";
 
+	public static String ConsumerKey="HXBDwvuE0IWoBJrWhEP3awKeG";
+	public static String ConsumerSecret="M5wLtxJqoA29XGPgdMg8ZD0KusF29JxNNepEyMKydVbMiWFrLB";
+	public static String Token="477845563-xB1ZS6KtME9ghTFLJAAC5vq5XKt24aC6vYKKUdQz";
+	public static String TokenSecret="MrDvlv98On06r6oVdLmgHvJyzVwPUeqmwKBGGOsdsd4P1";
+	
+	
+	
 	// Desktop application path
 	public static String DesktopApp;
 	/**
@@ -110,85 +117,11 @@ public class Config {
 		try {
 			ofileInputStream = new FileInputStream(path);
 			if (ofileInputStream != null) {
-				prop.load(ofileInputStream);
-				ApplicationURL = prop.getProperty("ApplicationURL");
 				APIHost = prop.getProperty("APIHost");
-				dataInputFile = System.getProperty("user.dir") + prop.getProperty("CSVFile");
-				locatorsFile = System.getProperty("user.dir") + prop.getProperty("ORXmlFile");
-				Browser = prop.getProperty("browser");
-				Headless = prop.getProperty("Headless");
-				ExtentReportsPath = System.getProperty("user.dir") + prop.getProperty("ExtentReportsPath");
-				ReportTitle = prop.getProperty("ReportTitle");
-				ReportName = prop.getProperty("ReportName");
-				MaxRetryCountOnTestFailure = prop.getProperty("MaxRetryCountOnTestFailure");
-				TestReportFolder = System.getProperty("user.dir") + prop.getProperty("TestReports");
-				ScreenShotsPath = System.getProperty("user.dir") + prop.getProperty("ScreenShotsPath");
-				ChromeDriverPath = System.getProperty("user.dir") + prop.getProperty("ChromeDriverPath");
-				FirefoxDriverPath = System.getProperty("user.dir") + prop.getProperty("FirefoxDriverPath");
-				IEDriverPath = System.getProperty("user.dir") + prop.getProperty("IEDriverPath");
-				Environment = prop.getProperty("Environment");
-				AppConfig = System.getProperty("user.dir") + prop.getProperty("AppConfig");
-				TestVideoPath = System.getProperty("user.dir") + prop.getProperty("TestVideoPath");
-				gspecFilePath = System.getProperty("user.dir") + prop.getProperty("GspecFiles");
-				SetVideoRecording = prop.getProperty("SetVideoRecording");
-				MaxSizeVideoFilesGB = prop.getProperty("MaxSizeVideoFilesGB");
-				ZipPath = System.getProperty("user.dir") + prop.getProperty("ZipPath");
-				mailFrom = prop.getProperty("mailFrom");
-				subject = prop.getProperty("Subject");
-				mailTo = prop.getProperty("mailTo");
-				mailUserName = prop.getProperty("mailUserName");
-				mailPassword = prop.getProperty("mailPassword");
-				mailHost = prop.getProperty("mailHost");
-				setReportEmail = prop.getProperty("SetReportEmail");
-				autoITPath = System.getProperty("user.dir") + prop.getProperty("AutoITScriptPath");
-				testData = System.getProperty("user.dir") + prop.getProperty("TestDataPath");
-				screenshotOnFailure = prop.getProperty("ScreenshotOnFailure");
-				screenshotOnSkip = prop.getProperty("ScreenshotOnSkip");
-				screenshotOnPass = prop.getProperty("ScreenshotOnPass");
-				ExportFilePath = System.getProperty("user.dir") + prop.getProperty("ExportFilePath");
-				log4jPath = prop.getProperty("log4jPath");
-				
-				//Path for sikuli images
-				SikuliImagePath = prop.getProperty("SikuliImages");
-				
-				//For parallel execution using grid
-				SeleniumGrid = prop.getProperty("SeleniumGrid");
-				
-				//for drivers path
-				DriverPath = prop.getProperty("DriverPath");
-				
-				// Mobile related properties
-				APKPath = prop.getProperty("APKPath");
-				APKfreshInstall = prop.getProperty("APKFreshInstall");
-				Appium_Node_Path = prop.getProperty("Appium_Node_Path");
-				Appium_JS_Path = prop.getProperty("Appium_JS_Path");
-				ApplicationType = prop.getProperty("ApplicationType");
-				MobileBrowserType = prop.getProperty("MobileBrowserType");
-				
-				AppiumServer_url = prop.getProperty("AppiumServer_url");
-				androidDeviceName = prop.getProperty("androidDeviceName");
-				appPackage = prop.getProperty("appPackage");
-				appActivity = prop.getProperty("appActivity");
-				androidPlatformVersion = prop.getProperty("androidPlatformVersion");
-				TimeoutValueInSeconds = prop.getProperty("TimeoutValueInSeconds");
-				
-				deviceType = prop.getProperty("deviceType");
-				iOSappType = prop.getProperty("iOS_appType");
-				iOSPlatformVersion = prop.getProperty("iOSPlatformVersion");
-				iOSDeviceName = prop.getProperty("iOS_Device_Name");
-				iOSBrowserName = prop.getProperty("iOS_BrowserName");
-				macIP = prop.getProperty("MACIP");
-				macUserName = prop.getProperty("MACUserName");
-				macPwd = prop.getProperty("MACPwd");
-				
-				//for API Testing
-				inputFileAPITestData = System.getProperty("user.dir") + prop.getProperty("APITestData");
-				ClientId = prop.getProperty("ClientId");
-				ClientSecret = prop.getProperty("ClientSecret");
-				RedirectUri = prop.getProperty("RedirectUri");
-				Username = prop.getProperty("Username");
-				Password = prop.getProperty("Password");
-				UMUri = prop.getProperty("UMUri"); 
+				ConsumerKey = prop.getProperty("ConsumerKey");
+				ConsumerSecret=prop.getProperty("ConsumerSecret");
+				Token=prop.getProperty("Token");
+				TokenSecret=prop.getProperty("TokenSecret");
 			}
 		} 
 		catch (IOException e) {

@@ -22,7 +22,7 @@
 		</groups>
 
 		<classes>
-	      <class name="com.autothon.tests.LoginScreen"/>
+	      <class name="com.autothon.tests.Twitter"/>
 		</classes>
 	</test> 
 </suite>

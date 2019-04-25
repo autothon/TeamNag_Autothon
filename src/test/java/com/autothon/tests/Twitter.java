@@ -4,6 +4,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 
+import com.autothon.core.Config;
 import com.gargoylesoftware.htmlunit.javascript.host.Map;
 import com.gargoylesoftware.htmlunit.javascript.host.dom.Document;
 import com.google.gson.JsonObject;
@@ -21,65 +22,65 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 
-
-//rahulonlinetutor@gmail.com
-//https://mvnrepository.com/artifact/com.github.scribejava/scribejava-core/2.5.3
-
-//https://mvnrepository.com/artifact/com.github.scribejava/scribejava-apis/2.5.3
 
 public class Twitter {
 
-	String ConsumerKey="HXBDwvuE0IWoBJrWhEP3awKeG";
-	String ConsumerSecret="M5wLtxJqoA29XGPgdMg8ZD0KusF29JxNNepEyMKydVbMiWFrLB";
-	String Token="477845563-xB1ZS6KtME9ghTFLJAAC5vq5XKt24aC6vYKKUdQz";
-	String TokenSecret="MrDvlv98On06r6oVdLmgHvJyzVwPUeqmwKBGGOsdsd4P1";
+
 	String id;
+	
+	int likeCount,retweetCount;
+	String hashTags[];
+	
 	@Test
 	public void getRetweetCount()
 	{
 		
-		RestAssured.baseURI="https://api.twitter.com/1.1/statuses";
-		Response res=	given().auth().oauth(ConsumerKey, ConsumerSecret, Token, TokenSecret)
-			.queryParam("count", "50")
-			.when().get("/home_timeline.json?screen_name=stepin_forum").then().extract().response();
-		
-		String response =res.asString();
-		
-		ArrayList<Integer> arr=new ArrayList<Integer>();
+		String response=returnResponse();
+		List<Integer> arr=new ArrayList<Integer>();
 		
 		String arrStr[]=response.split("retweet_count");
 		for(int i=1;i<arrStr.length;i++) {
 			String strB=arrStr[i].replace(":","").replace("\"","").split(",")[0];
-			arr.get(Integer.parseInt(strB));
+			arr.add(Integer.parseInt(strB));
 		}
 		
 		Collections.sort(arr);
-		int a=arr.get(0);
+		retweetCount=arr.get(arr.size()-1);
+		System.out.println(retweetCount);
+		assertTrue(retweetCount!=0);
+	}
+	
+	public JSONObject getJSONSample() {
+		JSONObject mainJSON=new JSONObject();
+		mainJSON.put("top_retweet_count", retweetCount);
+		mainJSON.put("top_like_count", likeCount);
+		JSONArray hashtagArray= new JSONArray();
+		for(String hashTag:hashTags) {
+			hashtagArray.put(hashTag);
+		}
+		mainJSON.put("top_10_hashtags", hashtagArray);
 		
-		assertTrue(a==45);
+		JSONArray bioGraphyArray= new JSONArray();
+		for(String hashTag:hashTags) {
+			bioGraphyArray.put(hashTag);
+		}
+		mainJSON.put("top_10_hashtags", bioGraphyArray);
 		
 		
-
 		
+		return mainJSON;
 		
 	}
 	
+	
+	
+	@Test
 	public void getLikeCount()
 	{
 		
-		RestAssured.baseURI="https://api.twitter.com/1.1/statuses";
-		Response res=	given().auth().oauth(ConsumerKey, ConsumerSecret, Token, TokenSecret)
-			.queryParam("count", "50")
-			.when().get("/home_timeline.json?screen_name=stepin_forum").then().extract().response();
-		
-		String response =res.asString();
-		//String[] respStrings=response.split("retweet_count");
-			/*
-			 * int ret[]=new int[100]; for(int i=1;i<=respStrings.length;i++) { String
-			 * str=respStrings[i].split(":")[1].split(",")[0];
-			 * ret[--i]=(int)Integer.parseInt(str); } System.out.println(response);
-			 */
+		String response=returnResponse();
 		JsonPath js= new JsonPath(response);
 
 		ArrayList<Integer> arr=new ArrayList<Integer>();
@@ -87,33 +88,21 @@ public class Twitter {
 		String arrStr[]=response.split("favorite_count");
 		for(int i=1;i<arrStr.length;i++) {
 			String strB=arrStr[i].replace(":","").replace("\"","").split(",")[0];
-			arr.get(Integer.parseInt(strB));
+			arr.add(Integer.parseInt(strB));
 		}
 		
 		Collections.sort(arr);
-		int a=arr.get(0);
-		
-		assertTrue(a==45);
+		likeCount=arr.get(arr.size()-1);
+		System.out.println(likeCount);
+		assertTrue(likeCount!=0);
 		
 	}
 	
+	//@Test
 	public void getHashtag()
-	{
-		
-		RestAssured.baseURI="https://api.twitter.com/1.1/statuses";
-		Response res=	given().auth().oauth(ConsumerKey, ConsumerSecret, Token, TokenSecret)
-			.queryParam("count", "50")
-			.when().get("/home_timeline.json?screen_name=stepin_forum").then().extract().response();
-		
-		String response =res.asString();
-		//String[] respStrings=response.split("retweet_count");
-			/*
-			 * int ret[]=new int[100]; for(int i=1;i<=respStrings.length;i++) { String
-			 * str=respStrings[i].split(":")[1].split(",")[0];
-			 * ret[--i]=(int)Integer.parseInt(str); } System.out.println(response);
-			 */
+	{	
+		String response=returnResponse();
 		JsonPath js= new JsonPath(response);
-		
 		ArrayList< String> list=new ArrayList<String>();
 		for(int i=0;i<50;i++) {
 			HashMap<String, String> jso=js.get("entities["+i+"]");
@@ -123,6 +112,33 @@ public class Twitter {
 		}
 		
 		System.out.println(list);
+	}
+	
+	
+	String returnResponse() {
+		RestAssured.baseURI=Config.APIHost;
+		Response res=	given().auth().oauth(Config.ConsumerKey, Config.ConsumerSecret, Config.Token, Config.TokenSecret)
+			.queryParam("count", "50")
+			.when().get("/home_timeline.json?screen_name=stepin_forum").then().extract().response();
+		
+		String response =res.asString();
+		return response;
+	}
+	
+	
+	@Test
+	public void postJSON()
+	{
+		JSONObject resp=getJSONSample();
+		RestAssured.baseURI="https://cgi-lib.berkeley.edu/ex/fup.html";
+		Response res=	given().
+				body(resp).
+				when().post().
+				then().extract().response();
+		
+		
+		String response =res.asString();
+		System.out.println(response);
 	}
 	
 	
