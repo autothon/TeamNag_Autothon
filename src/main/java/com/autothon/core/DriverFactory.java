@@ -31,9 +31,12 @@ import org.openqa.selenium.winium.WiniumDriverService;
 
 import com.autothon.common.keywords.MKeywords;
 import com.autothon.listeners.WebDriverEventListners;
+import com.autothon.mobile.ClientsConfig;
+import com.autothon.mobile.MobileService;
 import com.autothon.util.CommonFunctionUtil;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
@@ -326,69 +329,45 @@ public class DriverFactory {
 			{
 			case "AndroidNativeApp":
 			{
-				File appPathValueonLocalsystem=new File(Config.APKPath);
-				cap.setCapability("deviceName", Config.androidDeviceName);
-				if(Config.APKfreshInstall.equalsIgnoreCase("true"))
-					cap.setCapability(MobileCapabilityType.FULL_RESET, true);
-				else
-					cap.setCapability(MobileCapabilityType.FULL_RESET, false);
-				cap.setCapability("platform", "LINUX");
-				cap.setCapability("platformVersion", Config.androidPlatformVersion);
-				cap.setCapability("platformName", "Android"); 
+				new MobileService().startService();
+				log.info(" : createConcrete Method Called");
+				cap = new DesiredCapabilities();
+
+				if (ClientsConfig.getInstance().isAndroidWebApp()) {
+					cap.setCapability("browsername", ClientsConfig.getInstance().isAndroidWebApp());
+				}
+				if (!ClientsConfig.getInstance().getApkPath().isEmpty()) {
+					File appPathValueonLocalsystem = new File(ClientsConfig.getInstance().getApkPath());
+					cap.setCapability("app", appPathValueonLocalsystem.getAbsolutePath());
+				}
+				cap.setCapability("deviceName", ClientsConfig.getInstance().getdeviceName());
+				cap.setCapability("platformName", ClientsConfig.getInstance().getPlatformName());
+				cap.setCapability("platformVersion", ClientsConfig.getInstance().getPlatformVersion());
+				cap.setCapability("appActivity", ClientsConfig.getInstance().getAppActivity());
+				cap.setCapability("appPackage", ClientsConfig.getInstance().getAppPackage());
+				cap.setCapability("noReset ", ClientsConfig.getInstance().isNoResetApp());
 				cap.setCapability("newCommandTimeout", 60 * 5);
+				 adriver = new AndroidDriver<MobileElement>(MobileService.appiumService, cap);
 				
-				//Added by Raghav Bajoria for handling location pop-up after app launch for first time
-				cap.setCapability("autoGrantPermissions", true);
-				
-				//cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-				if(Config.APKfreshInstall.equalsIgnoreCase("false"))
-				{
-					cap.setCapability("app", appPathValueonLocalsystem.getAbsolutePath());		
-					//openAppFlag=true;
-				}
-				else
-				{
-					cap.setCapability("appPackage",Config.appPackage );
-					if(Config.appActivity.trim().length() > 0)
-					{
-						cap.setCapability("appActivity", Config.appActivity);
-					}
-
-				}
-
-
-
-				//cap.setCapability("appium-version", "1.4");
-				adriver=new AndroidDriver<WebElement>(abc, cap);
-
-				/*eDriver = new EventFiringWebDriver(adriver);
-				driver.set(eDriver);
-				//WebDriverEventListners handler = new WebDriverEventListners();
-				eDriver.register(handler);
-				eDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);*/
-				//adriver.manage().timeouts().implicitlyWait(Integer.parseInt(Config.TimeoutValueInSeconds), TimeUnit.SECONDS);
 				
 				break;
+			
 			}
 			case "AndroidWebApp":
 			{
+				new MobileService().startService();
+				log.info(" : createConcrete Method Called");
+				cap = new DesiredCapabilities();
 
-				// Name of mobile web browser to automate. Safari for iOS and Chrome
-				// or Browser for Android
-				cap.setCapability("browsername", "Browser");
-				//cap.setCapability("browsername", Config.MobileBrowserType.toLowerCase());
-
-				// The kind of mobile device or emulator to use - iPad Simulator, iPhone
-				// Retina 4-inch, Android Emulator, Galaxy S4 etc
-				cap.setCapability("deviceName", Config.androidDeviceName);
-
-				// Which mobile OS platform to use - iOS, Android, or FirefoxOS
-				cap.setCapability("platformName", "Android");
-
-				// Java package of the Android app you want to run- Ex:
-				// com.example.android.myApp
-				//cap.setCapability("appPackage", "com.android.chrome");
+					cap.setCapability("browsername", ClientsConfig.getInstance().isAndroidWebApp());
 				
+				if (!ClientsConfig.getInstance().getApkPath().isEmpty()) {
+					File appPathValueonLocalsystem = new File(ClientsConfig.getInstance().getApkPath());
+					cap.setCapability("app", appPathValueonLocalsystem.getAbsolutePath());
+				}
+				cap.setCapability("deviceName", ClientsConfig.getInstance().getdeviceName());
+				cap.setCapability("platformName", ClientsConfig.getInstance().getPlatformName());
+				cap.setCapability("platformVersion", ClientsConfig.getInstance().getPlatformVersion());
 				cap.setCapability("appPackage", "com.android.chrome");
 				//cap.setCapability("skip_first_run_ui", "true");
 
@@ -397,20 +376,16 @@ public class DriverFactory {
 				//cap.setCapability("appActivity", "com.google.android.apps.chrome.Main");
 				cap.setCapability("appActivity", "com.google.android.apps.chrome.Main");
 				
-				adriver=new AndroidDriver<WebElement>(abc, cap);
-
-				eDriver = new EventFiringWebDriver(adriver);
-				driver.set(eDriver);
-				eDriver.register(handler);
-				eDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-				//eDriver.manage().window().maximize();
-				eDriver.get(Config.ApplicationURL);
+				cap.setCapability("noReset ", ClientsConfig.getInstance().isNoResetApp());
+				cap.setCapability("newCommandTimeout", 60 * 5);
+				 adriver = new AndroidDriver<MobileElement>(MobileService.appiumService, cap);
+				 eDriver = new EventFiringWebDriver(adriver);
+					driver.set(eDriver);
+					eDriver.register(handler);
+					eDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				
-
-
-				//adriver.get(Config.ApplicationURL);
-				//adriver.manage().timeouts().implicitlyWait(Integer.parseInt(Config.TimeoutValueInSeconds), TimeUnit.SECONDS);
 				break;
+		
 			}
 			case "iOSWebApp":
 			{
