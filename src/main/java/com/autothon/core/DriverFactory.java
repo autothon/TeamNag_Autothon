@@ -55,7 +55,7 @@ public class DriverFactory {
 	public static String SAFARI = "safari";
 	public static String EDGE = "edge";
 	public static RequestSpecification httpRequest;
-	
+
 	public static String URL;
 	private static Logger log = Logger.getLogger(TestBase.class);
 	ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>(); // thread local driver object for webdriver
@@ -70,8 +70,8 @@ public class DriverFactory {
 	public static  AppiumDriverLocalService appiumService;
 	public static String  platformType;
 	public static String  isHeadless;
-	
-	
+
+
 	private DriverFactory()
 	{
 		//Do-nothing..Do not allow to initialize this class from outside
@@ -96,7 +96,7 @@ public class DriverFactory {
 			System.setProperty("webdriver.gecko.driver", MKeywords.getAbsolutePath(Config.DriverPath) + "/geckodriver.exe");
 			System.setProperty("webdriver.edge.driver", MKeywords.getAbsolutePath(Config.DriverPath) + "/MicrosoftWebDriver.exe");
 		}
-		
+
 		else if(platform.equalsIgnoreCase("linux")||platform.equalsIgnoreCase("unix"))
 		{
 			System.setProperty("webdriver.chrome.driver", MKeywords.getAbsolutePath(Config.DriverPath) + "/chromedriver");
@@ -104,7 +104,7 @@ public class DriverFactory {
 			System.setProperty("webdriver.gecko.driver", MKeywords.getAbsolutePath(Config.DriverPath) + "/geckodriver.exe");
 			System.setProperty("webdriver.edge.driver", MKeywords.getAbsolutePath(Config.DriverPath) + "/MicrosoftWebDriver.exe");
 		}
-		
+
 		if(browser.equalsIgnoreCase(CHROME) && isHeadless.equalsIgnoreCase("true"))
 		{
 			capability = DesiredCapabilities.chrome();
@@ -124,7 +124,7 @@ public class DriverFactory {
 		{
 			driver.set(new SafariDriver());
 		}
-		
+
 		else if(browser.equalsIgnoreCase(FIREFOX))
 		{
 			capability = DesiredCapabilities.firefox();
@@ -171,28 +171,28 @@ public class DriverFactory {
 		System.setProperty("webdriver.gecko.driver", MKeywords.getAbsolutePath(Config.DriverPath) + "/geckodriver.exe");
 		System.setProperty("webdriver.gecko.driver", MKeywords.getAbsolutePath(Config.DriverPath) + "/geckodriver.exe");
 		System.setProperty("webdriver.edge.driver", MKeywords.getAbsolutePath(Config.DriverPath) + "/MicrosoftWebDriver.exe");
-		
+
 		try {
 			org.openqa.selenium.Platform platform;
 			DesiredCapabilities capability = null;
 			platform = DriverFactory.setPlatform(platformType);				
 			capability = DriverFactory.setBrowser(browser);	
-			
+
 			if(browser.equalsIgnoreCase(CHROME)) {
 				DriverFactory.setChromeToDownloadFileAtSpecifiedPath(capability);
 			}else if(browser.equalsIgnoreCase(FIREFOX)){
-                log.info("Setting up firefox browser");
+				log.info("Setting up firefox browser");
 			}else if(browser.equalsIgnoreCase(INTERNET_EXPLORER)){
-                log.info("Setting up IE browser");
+				log.info("Setting up IE browser");
 			}else if(browser.equalsIgnoreCase(SAFARI)){
-                capability.setCapability("version", "10");
-                log.info("Setting up Safari browser");
+				capability.setCapability("version", "10");
+				log.info("Setting up Safari browser");
 			}else if(browser.equalsIgnoreCase(EDGE)){
-				 log.info("Setting up Edge browser");
+				log.info("Setting up Edge browser");
 			}else{
-                throw new FrameworkException("Browser is set wrong from xml file !!!");
+				throw new FrameworkException("Browser is set wrong from xml file !!!");
 			}
-			
+
 			if(null != capability){
 				capability.setPlatform(platform);
 			}else{
@@ -214,23 +214,23 @@ public class DriverFactory {
 			log.error(ex);
 		}
 	}
-	
+
 	/**
 	 * Sets the desired capabilities of chrome to download any file at specified path.
 	 */
 	private static ChromeOptions setChromeToDownloadFileAtSpecifiedPath(DesiredCapabilities cap) {
-		
+
 		HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 		HashMap<String, String> chromeDownloadPrefs = new HashMap<>();
-		
-		
+
+
 		chromePrefs.put("profile.default_content_settings.popups", 0);
 		chromePrefs.put("cmd", "Page.setDownloadBehavior");
 		chromeDownloadPrefs.put("behavior", "allow");
 		chromePrefs.put("download.default_directory", Config.ExportFilePath);
-		
+
 		chromePrefs.put("params", chromeDownloadPrefs);
-		
+
 		ChromeOptions options = new ChromeOptions();
 		HashMap<String, Object> chromeOptionsMap = new HashMap<String, Object>();
 		options.setExperimentalOption("prefs", chromePrefs);
@@ -307,7 +307,7 @@ public class DriverFactory {
 			return adriver;
 		else
 			return driver.get();
-		
+
 	}
 
 	public void removeDriver() // Quits the driver and closes the browser
@@ -316,7 +316,7 @@ public class DriverFactory {
 		driver.remove();
 	}
 
-	public void setDriverForMobile(AppiumDriverLocalService abc, String platform) {
+	public void setDriverForMobile(String platform) {
 		platformType = platform;
 		log.info(" setDriverForMobile:  Method Called");
 		WebDriverEventListners handler = new WebDriverEventListners();
@@ -324,7 +324,6 @@ public class DriverFactory {
 		{	
 			cap = new DesiredCapabilities();
 			URL = Config.ApplicationURL;
-			//URL = "http://www.seleniumeasy.com";
 			switch(Config.ApplicationType)
 			{
 			case "AndroidNativeApp":
@@ -347,11 +346,8 @@ public class DriverFactory {
 				cap.setCapability("appPackage", ClientsConfig.getInstance().getAppPackage());
 				cap.setCapability("noReset ", ClientsConfig.getInstance().isNoResetApp());
 				cap.setCapability("newCommandTimeout", 60 * 5);
-				 adriver = new AndroidDriver<MobileElement>(MobileService.appiumService, cap);
-				
-				
+				adriver = new AndroidDriver<MobileElement>(MobileService.appiumService, cap);
 				break;
-			
 			}
 			case "AndroidWebApp":
 			{
@@ -359,8 +355,8 @@ public class DriverFactory {
 				log.info(" : createConcrete Method Called");
 				cap = new DesiredCapabilities();
 
-					cap.setCapability("browsername", ClientsConfig.getInstance().isAndroidWebApp());
-				
+				cap.setCapability("browsername", ClientsConfig.getInstance().isAndroidWebApp());
+
 				if (!ClientsConfig.getInstance().getApkPath().isEmpty()) {
 					File appPathValueonLocalsystem = new File(ClientsConfig.getInstance().getApkPath());
 					cap.setCapability("app", appPathValueonLocalsystem.getAbsolutePath());
@@ -369,157 +365,33 @@ public class DriverFactory {
 				cap.setCapability("platformName", ClientsConfig.getInstance().getPlatformName());
 				cap.setCapability("platformVersion", ClientsConfig.getInstance().getPlatformVersion());
 				cap.setCapability("appPackage", "com.android.chrome");
-				//cap.setCapability("skip_first_run_ui", "true");
-
-				// Activity name for the Android activity you want to launch from your
-				// package
-				//cap.setCapability("appActivity", "com.google.android.apps.chrome.Main");
 				cap.setCapability("appActivity", "com.google.android.apps.chrome.Main");
-				
+
 				cap.setCapability("noReset ", ClientsConfig.getInstance().isNoResetApp());
 				cap.setCapability("newCommandTimeout", 60 * 5);
-				 adriver = new AndroidDriver<MobileElement>(MobileService.appiumService, cap);
-				 eDriver = new EventFiringWebDriver(adriver);
-					driver.set(eDriver);
-					eDriver.register(handler);
-					eDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-				
+				adriver = new AndroidDriver<MobileElement>(MobileService.appiumService, cap);
+				eDriver = new EventFiringWebDriver(adriver);
+				driver.set(eDriver);
+				eDriver.register(handler);
+				eDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
 				break;
-		
-			}
-			case "iOSWebApp":
-			{
-
-				try
-				{
-					//Initialize the capabilities object 
-					//DesiredCapabilities capabilities = new DesiredCapabilities();	
-					//Set the appium version in capabilities
-					cap.setCapability("platformName", "iOS");
-					//Set the appium version in capabilities
-					cap.setCapability("platformVersion", Config.iOSPlatformVersion);
-					//Set the appium version in capabilities
-					cap.setCapability("deviceName", Config.iOSDeviceName);	
-					cap.setCapability("platform", "Mac");
-					//Set the browser name
-					//cap.setCapability("app","settings");	
-					cap.setCapability(CapabilityType.BROWSER_NAME, Config.iOSBrowserName);	
-					//cap.setCapability(MobileCapabilityType.UDID, "AF7B1F6AE74AD6B04965EA819F4B16FE8576C1C1");
-					//cap.setCapability("udid", "AF7B1F6AE74AD6B04965EA819F4B16FE8576C1C1");
-					//cap.setCapability("udid", "386E4E6C3D854F84844541770F5CD9EA");
-					//capabilities.setCapability("app", "/Users/nagarro/Desktop/P51.ipa");		
-					//Launch the appium driver with the above required capabilities---
-					//driver = new AppiumDriver(new URL("http://10.175.1.20:4723/wd/hub"), cap);
-					//IOSDriver driver = new IOSDriver(new URL("http://10.175.0.217:4723/wd/hub"), cap);
-					macip = "http://" + Config.macIP + ":4723/wd/hub";
-					//AppiumDriver<IOSElement> driver = new IOSDriver<IOSElement>(new URL("http://10.175.0.165:4723/wd/hub"), cap);
-					AppiumDriver<IOSElement> driver = new IOSDriver<IOSElement>(new URL(macip), cap);
-					//driver.manage().timeouts().implicitlyWait(380, TimeUnit.SECONDS);
-					//driver.get("http://www.google.com");
-
-					eDriver = new EventFiringWebDriver(driver);
-					eDriver.register(handler);
-					eDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					//eDriver.manage().window().maximize();
-					eDriver.get(Config.ApplicationURL);
-
-					//	driver.get(Config.ApplicationURL);
-				}
-				catch (Exception ex)
-				{
-					System.out.println("set up exception is ...." ); ex.printStackTrace();
-
-				}
-				catch (Error e)
-				{
-					System.out.println("set up error is ...." ); e.printStackTrace();
-
-				}		
-				break;
-			}
-			case "iOSNativeApp":
-			{
-
-				try
-				{
-					//Initialize the capabilities object 
-					//DesiredCapabilities capabilities = new DesiredCapabilities();	
-					//Set the appium version in capabilities
-					cap.setCapability("platformName", "iOS");
-					//Set the appium version in capabilities
-					cap.setCapability("platformVersion", Config.iOSPlatformVersion);
-					//Set the appium version in capabilities
-					cap.setCapability("deviceName", Config.iOSDeviceName);	
-					cap.setCapability("platform", "Mac");
-					//Set the browser name
-					//cap.setCapability("app","settings");	
-					cap.setCapability(CapabilityType.BROWSER_NAME, Config.iOSBrowserName);	
-					//cap.setCapability(MobileCapabilityType.UDID, "AF7B1F6AE74AD6B04965EA819F4B16FE8576C1C1");
-					//cap.setCapability("udid", "AF7B1F6AE74AD6B04965EA819F4B16FE8576C1C1");
-					//cap.setCapability("udid", "386E4E6C3D854F84844541770F5CD9EA");
-					cap.setCapability("app", "/Users/nagarro/Desktop/P51.ipa");		
-					//Launch the appium driver with the above required capabilities---
-					//driver = new AppiumDriver(new URL("http://10.175.1.20:4723/wd/hub"), cap);
-					//IOSDriver driver = new IOSDriver(new URL("http://10.175.0.217:4723/wd/hub"), cap);
-					macip = "http://" + Config.macIP + ":4723/wd/hub";
-					//AppiumDriver<IOSElement> driver = new IOSDriver<IOSElement>(new URL("http://10.175.0.165:4723/wd/hub"), cap);
-					AppiumDriver<IOSElement> driver = new IOSDriver<IOSElement>(new URL(macip), cap);
-					//driver.manage().timeouts().implicitlyWait(380, TimeUnit.SECONDS);
-					//driver.get("http://www.google.com");
-
-					eDriver = new EventFiringWebDriver(driver);
-
-					eDriver.register(handler);
-					eDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-					//eDriver.manage().window().maximize();
-					eDriver.get(Config.ApplicationURL);
-
-					//	driver.get(Config.ApplicationURL);
-				}
-				catch (Exception ex)
-				{
-					System.out.println("set up exception is ...." ); ex.printStackTrace();
-
-				}
-				catch (Error e)
-				{
-					System.out.println("set up error is ...." ); e.printStackTrace();
-
-				}		
-				break;
-			}
 
 			}
 
+			}
 		}
-
 	}
 
-	public void setDriverForDesktop(String webdriverHost, int webdriverPort, String browser, String platform) throws Exception {
-		
-		platformType = platform;
-		options = new DesktopOptions();
-		/*options.setApplicationPath(Config.DesktopApp);
-		File driverPath = new File((Config.DriverPath) + "\\Winium.Desktop.Driver.exe");*/
-		options.setApplicationPath(Config.DesktopApp);
-		File driverPath = new File("D:\\SVN_Repositories\\LutronAutomation\\Master_JavaFramework\\HubNodeConfig\\drivers\\Winium.Desktop.Driver.exe");
-		CommonFunctionUtil.killAProcess("22672");
-		service = new WiniumDriverService.Builder().usingDriverExecutable(driverPath).usingPort(9999).withVerbose(true).withSilent(false).buildDesktopService();
-		service.start();
-		wdriver = new WiniumDriver(service, options);
-		//WebDriverEventListners handler = new WebDriverEventListners();
-	
-	}
-	
 	public void setAPIHost() {
 		RestAssured.baseURI = Config.APIHost;		
 		httpRequest = RestAssured.given();
 	}
-	
+
 	public void quit()
 	{
 		service.stop();
-		
+
 	}
-	
+
 }

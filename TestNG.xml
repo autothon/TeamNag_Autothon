@@ -11,16 +11,7 @@
 		<parameter name="webdriverHost" value="127.0.0.1"></parameter>
 		<parameter name="webdriverPort" value="5555"></parameter>
 		<parameter name="platform" value="windows" />
-		
-		<groups>
-			<define name="all">
-				<include name="Smoke" /> <!-- Include group names you want to execute -->	
-			</define>
-			<run>
-           		 <include name = "all"/>
-         	</run>
-		</groups>
-
+	
 		<classes>
 	      <class name="com.autothon.tests.LoginScreen"/>
 		</classes>

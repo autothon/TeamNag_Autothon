@@ -24,6 +24,7 @@ import org.testng.asserts.SoftAssert;
 
 import com.autothon.common.keywords.MKeywords;
 import com.autothon.logs.ExtentManager;
+import com.autothon.mobile.MobileService;
 import com.autothon.util.CommonFunctionUtil;
 import com.autothon.util.ReadFileUtil;
 import com.aventstack.extentreports.ExtentReports;
@@ -33,8 +34,6 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import atu.testrecorder.ATUTestRecorder;
 import atu.testrecorder.exceptions.ATUTestRecorderException;
-import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.restassured.RestAssured;
 import net.rcarz.jiraclient.JiraException;
 
 /**
@@ -132,20 +131,9 @@ public class TestBase
 			log.info(" Browser called -> " + browser);
 			softAssert = new SoftAssert();
 			String grid = Config.SeleniumGrid;
-
-			AppiumDriverLocalService abc = null;
 			systemPlatform = platform;
-			/*Check whether internet connectivity is available or not */
-			/*Process process = java.lang.Runtime.getRuntime().exec("ping www.google.com");
-			if(process.waitFor() == 1){
-				throw new FrameworkException("Internet not available");
-			}*/
-
-			if(platform.equalsIgnoreCase("DESKTOP"))
-			{
-				DriverFactory.getInstance().setDriverForDesktop(webdriverHost, webdriverPort, browser, platform);	
-			}
-			else if((platform.equalsIgnoreCase("WINDOWS") && grid.equalsIgnoreCase("Yes")))
+			
+			if((platform.equalsIgnoreCase("WINDOWS") && grid.equalsIgnoreCase("Yes")))
 			{
 				DriverFactory.getInstance().setDriverWithGrid(webdriverHost, webdriverPort, browser, platform);
 			}
@@ -153,36 +141,13 @@ public class TestBase
 			{
 				DriverFactory.getInstance().setDriverNoGrid(browser, platform);
 			}
-			else if(((platform.equalsIgnoreCase("LINUX")) || (platform.equalsIgnoreCase("UNIX"))) && grid.equalsIgnoreCase("Yes"))
-			{
-				DriverFactory.getInstance().setDriverWithGrid(webdriverHost, webdriverPort, browser, platform);
-			}
-			else if(((platform.equalsIgnoreCase("LINUX")) || (platform.equalsIgnoreCase("UNIX"))) && grid.equalsIgnoreCase("No"))
-			{
-				DriverFactory.getInstance().setDriverNoGrid(browser, platform);
-			}
 			else if (platform.equalsIgnoreCase("REST"))
 			{
 					DriverFactory.getInstance().setAPIHost();
-				
 			} 
 			else if (platform.equalsIgnoreCase("mobile"))
 			{
-				if(Config.deviceType.equalsIgnoreCase("android"))
-				{ 
-					//Appium.startAppium();
-					abc = new Appium2().startServer();
-				}
-				else
-				{
-					System.out.println("Write code to start appium on macbook");
-					/*	AppiumonremotefromWIndowstoMac telnet =new AppiumonremotefromWIndowstoMac(Config.macIP, Config.macUserName, Config.macPwd);
-   					System.out.println("Got connection..");
-   					telnet.startServer("node /Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js");
-   					System.out.println("");
-   					System.out.println("Server Started");*/
-				}
-				DriverFactory.getInstance().setDriverForMobile(abc,platform);
+					DriverFactory.getInstance().setDriverForMobile(platform);
 			}
 			ExtentTest child = parentTest.get().createNode(method.getName());
 			test.set(child);
@@ -251,6 +216,7 @@ public class TestBase
 		}
 	}
 
+	@SuppressWarnings("static-access")
 	@AfterClass(alwaysRun = true)
 	protected void AfterClass() {
 		log.info(" : TestBase - AfterClass called");
@@ -260,12 +226,7 @@ public class TestBase
 			quitBrowser();
 			if(systemPlatform.equalsIgnoreCase("Mobile"))
 			{
-				Appium2 app2 = new Appium2();
-				if(app2.AppiumServerStatus())
-					app2.stopAppiumServer();
-			}else if(systemPlatform.equalsIgnoreCase("desktop"))
-			{
-				DriverFactory.getInstance().quit();
+				new MobileService().stopAppiumServer();
 			}
 		}catch (Exception e) {
 			log.error(e.getStackTrace());
@@ -276,10 +237,6 @@ public class TestBase
 	protected void AfterTest() 
 	{
 		log.info(" : TestBase - AfterTest called");
-		/*if(systemPlatform.equalsIgnoreCase("Mobile"))
-		{
-		Appium.stopAppiumServer();
-		}*/
 	}
 
 	/**

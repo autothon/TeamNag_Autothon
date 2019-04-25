@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Modules>	
 	<Login>
-		<ElementProperty NameOfElement="PasswordTextBox" Type="id">field-password</ElementProperty>
-		<ElementProperty NameOfElement="LoginButton" Type="id">btn-login</ElementProperty>
-		<ElementProperty NameOfElement="UsernameTextBox" Type="id">field-userName</ElementProperty>
+		<ElementProperty NameOfElement="PasswordTextBox" Type="xpath">//div[@class='signin-dialog-body']//input[@class='text-input']</ElementProperty>
+		<ElementProperty NameOfElement="LoginButton" Type="xpath">//form[contains(@class,'js-front-signin')]/input[1]</ElementProperty>
+		<ElementProperty NameOfElement="UsernameTextBox" Type="xpath">//div[@class='signin-dialog-body']//input[contains(@class,'js-signin-email')]</ElementProperty>
 	</Login>
+	
+	<StepInForum>
+		<ElementProperty NameOfElement="ViewAll" Type="xpath">//a[contains(@class,'js-view-all-link')]</ElementProperty>
+	</StepInForum>
+	<WhoToFollow>
+		<ElementProperty NameOfElement="ListGrid" Type="xpath">//div[@class='stream']//ol[@id='stream-items-id']</ElementProperty>
+		<ElementProperty NameOfElement="ListOptions" Type="tagName">li</ElementProperty>
+	</WhoToFollow>
 </Modules>	
