@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.autothon.listeners.TestNGListeners" />
+		<listener class-name="com.autothon.listeners.PriorityInterceptor" />
+	</listeners>
+
+	<test name="TestAll">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="webdriverHost" value="127.0.0.1"></parameter>
+		<parameter name="webdriverPort" value="5555"></parameter>
+		<parameter name="platform" value="windows" />
+		
+		<groups>
+			<define name="all">
+				<include name="Smoke" /> <!-- Include group names you want to execute -->	
+			</define>
+			<run>
+           		 <include name = "all"/>
+         	</run>
+		</groups>
+
+		<classes>
+	      <class name="com.autothon.tests.LoginScreen"/>
+		</classes>
+	</test> 
+</suite>

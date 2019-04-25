@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="6549" started-at="2019-04-25T03:35:37Z" finished-at="2019-04-25T03:35:43Z">
+    <groups>
+      <group name="Smoke">
+        <method signature="LoginScreen.tc001_LoginToApplication(java.lang.String, java.lang.String)[pri:0, instance:com.autothon.tests.LoginScreen@43a0cee9]" name="tc001_LoginToApplication" class="com.autothon.tests.LoginScreen"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test name="TestAll" duration-ms="6549" started-at="2019-04-25T03:35:37Z" finished-at="2019-04-25T03:35:43Z">
+      <class name="com.autothon.tests.LoginScreen">
+        <test-method status="PASS" signature="BeforeSuite()[pri:0, instance:com.autothon.tests.LoginScreen@43a0cee9]" name="BeforeSuite" is-config="true" duration-ms="132" started-at="2019-04-25T09:05:36Z" finished-at="2019-04-25T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeSuite -->
+        <test-method status="PASS" signature="BeforeTest()[pri:0, instance:com.autothon.tests.LoginScreen@43a0cee9]" name="BeforeTest" is-config="true" duration-ms="0" started-at="2019-04-25T09:05:37Z" finished-at="2019-04-25T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeTest -->
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.autothon.tests.LoginScreen@43a0cee9]" name="BeforeClass" is-config="true" duration-ms="0" started-at="2019-04-25T09:05:37Z" finished-at="2019-04-25T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method status="PASS" signature="BeforeMethod(java.lang.String, int, java.lang.String, java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.autothon.tests.LoginScreen@43a0cee9]" name="BeforeMethod" is-config="true" duration-ms="4268" started-at="2019-04-25T09:05:37Z" finished-at="2019-04-25T09:05:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[127.0.0.1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[5555]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[public void com.autothon.tests.LoginScreen.tc001_LoginToApplication(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method status="PASS" signature="tc001_LoginToApplication(java.lang.String, java.lang.String)[pri:0, instance:com.autothon.tests.LoginScreen@43a0cee9]" name="tc001_LoginToApplication" duration-ms="1613" started-at="2019-04-25T09:05:41Z" data-provider="TestData" finished-at="2019-04-25T09:05:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[nagarro@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc001_LoginToApplication -->
+        <test-method status="PASS" signature="AfterMethod(org.testng.ITestResult)[pri:0, instance:com.autothon.tests.LoginScreen@43a0cee9]" name="AfterMethod" is-config="true" duration-ms="642" started-at="2019-04-25T09:05:43Z" finished-at="2019-04-25T09:05:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc001_LoginToApplication status=SUCCESS method=LoginScreen.tc001_LoginToApplication(java.lang.String, java.lang.String)[pri:0, instance:com.autothon.tests.LoginScreen@43a0cee9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.autothon.tests.LoginScreen@43a0cee9]" name="AfterClass" is-config="true" duration-ms="2" started-at="2019-04-25T09:05:43Z" finished-at="2019-04-25T09:05:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+        <test-method status="PASS" signature="AfterTest()[pri:0, instance:com.autothon.tests.LoginScreen@43a0cee9]" name="AfterTest" is-config="true" duration-ms="1" started-at="2019-04-25T09:05:43Z" finished-at="2019-04-25T09:05:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.autothon.tests.LoginScreen@43a0cee9]" name="afterSuite" is-config="true" duration-ms="227" started-at="2019-04-25T09:05:43Z" finished-at="2019-04-25T09:05:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.autothon.tests.LoginScreen -->
+    </test> <!-- TestAll -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Modules>	
+	<Login>
+		<ElementProperty NameOfElement="PasswordTextBox" Type="id">field-password</ElementProperty>
+		<ElementProperty NameOfElement="LoginButton" Type="id">btn-login</ElementProperty>
+		<ElementProperty NameOfElement="UsernameTextBox" Type="id">field-userName</ElementProperty>
+	</Login>
+</Modules>	
