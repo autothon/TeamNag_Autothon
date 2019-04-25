@@ -22,7 +22,7 @@ public class LoginScreen extends TestBase
 	 * @param password 			password
 	 */
 	@Priority(1)
-	@Test(dataProvider = "TestData", dataProviderClass = DataProviders.class/*, groups = "Smoke"*/)
+	@Test(dataProvider = "TestData", dataProviderClass = DataProviders.class)
 	public void tc002_GetWhoToFollowList(String username, String password) 
 	{
 		LoginPage.setUsername(username);
