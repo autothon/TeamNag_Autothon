@@ -86,6 +86,7 @@ public class Config {
 	public static String Username;
 	public static String Password;
 	public static String UMUri; 
+	public static String APIHost;
 
 	// Desktop application path
 	public static String DesktopApp;
@@ -111,6 +112,7 @@ public class Config {
 			if (ofileInputStream != null) {
 				prop.load(ofileInputStream);
 				ApplicationURL = prop.getProperty("ApplicationURL");
+				APIHost = prop.getProperty("APIHost");
 				dataInputFile = System.getProperty("user.dir") + prop.getProperty("CSVFile");
 				locatorsFile = System.getProperty("user.dir") + prop.getProperty("ORXmlFile");
 				Browser = prop.getProperty("browser");

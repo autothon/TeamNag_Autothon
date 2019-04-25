@@ -34,6 +34,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import atu.testrecorder.ATUTestRecorder;
 import atu.testrecorder.exceptions.ATUTestRecorderException;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.restassured.RestAssured;
 import net.rcarz.jiraclient.JiraException;
 
 /**
@@ -162,7 +163,8 @@ public class TestBase
 			}
 			else if (platform.equalsIgnoreCase("REST"))
 			{
-				log.info("Executing rest cases");
+					DriverFactory.getInstance().setAPIHost();
+				
 			} 
 			else if (platform.equalsIgnoreCase("mobile"))
 			{

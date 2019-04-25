@@ -40,6 +40,8 @@ import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.restassured.RestAssured;
+import io.restassured.specification.RequestSpecification;
 
 public class DriverFactory {
 
@@ -49,6 +51,7 @@ public class DriverFactory {
 	public static String INTERNET_EXPLORER = "ie";
 	public static String SAFARI = "safari";
 	public static String EDGE = "edge";
+	public static RequestSpecification httpRequest;
 	
 	public static String URL;
 	private static Logger log = Logger.getLogger(TestBase.class);
@@ -531,6 +534,11 @@ public class DriverFactory {
 		wdriver = new WiniumDriver(service, options);
 		//WebDriverEventListners handler = new WebDriverEventListners();
 	
+	}
+	
+	public void setAPIHost() {
+		RestAssured.baseURI = Config.APIHost;		
+		httpRequest = RestAssured.given();
 	}
 	
 	public void quit()

@@ -143,7 +143,7 @@ public abstract class AbstractMobileDriver extends TestBase {
 
 	public void click_hold(By mobileElement) {
 		log.debug("Clicking and holding on element: {}", mobileElement);
-		new TouchAction(driver).longPress(driver.findElement(mobileElement)).release().perform();
+	//	new TouchAction(driver).longPress(driver.findElement(mobileElement)).release().perform();
 		extentReportLogger().log(Status.PASS, "clicking and holding on  the element: " + "\"" + mobileElement + "\"");
 	}
 
